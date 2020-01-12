@@ -14,8 +14,22 @@ class CreateStudentListsTable extends Migration
     public function up()
     {
         Schema::create('student_lists', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->string('subject_name');
+            $table->integer('index');
+
             $table->timestamps();
+
+
+        });
+
+        Schema::table('student_lists', function (Blueprint $table) {
+
+            $table->foreign('subject_name')->references('name')->on('subjects');
+            $table->foreign('index')->references('index')->on('students');
+
+
+
         });
     }
 

@@ -14,8 +14,15 @@ class CreateSubjectClasTable extends Migration
     public function up()
     {
         Schema::create('subject_clas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->string('title');
+            $table->string('subject_name')->unique();
+            $table->text('description');
+            $table->integer('number')->unique();
+            $table->foreign('subject_name')->references('name')->on('subjects');
             $table->timestamps();
+
+
         });
     }
 

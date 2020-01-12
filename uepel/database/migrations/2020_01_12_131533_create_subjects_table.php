@@ -14,8 +14,16 @@ class CreateSubjectsTable extends Migration
     public function up()
     {
         Schema::create('subjects', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->string('name')->unique();
+            $table->integer('teacher_id')->unique();
+            $table->integer('signup_capacity');
+            $table->integer('signup_current');
+           // $table->integer('teacher_id')->unique();
             $table->timestamps();
+
+            $table->foreign('teacher_id')->references('teacher_id')->on('teachers');
+
         });
     }
 

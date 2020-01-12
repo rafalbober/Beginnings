@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDegreesTable extends Migration
+class CreatePresencesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,18 @@ class CreateDegreesTable extends Migration
      */
     public function up()
     {
-        Schema::create('degrees', function (Blueprint $table) {
+        Schema::create('presences', function (Blueprint $table) {
             $table->Increments('id');
             $table->integer('student_index');
             $table->integer('class_number');
             $table->string('subject_name');
-            $table->float('degree');
+            $table->boolean('confirm');
 
 
             $table->timestamps();
         });
 
-        Schema::table('degrees', function (Blueprint $table) {
-
+        Schema::table('presences', function(Blueprint $table) {
             $table->foreign('student_index')->references('index')->on('students');
             $table->foreign('subject_name')->references('name')->on('subjects');
             $table->foreign('class_number')->references('number')->on('subject_clas');
@@ -40,6 +39,6 @@ class CreateDegreesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('degrees');
+        Schema::dropIfExists('presences');
     }
 }

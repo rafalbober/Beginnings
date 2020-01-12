@@ -14,7 +14,12 @@ class CreateDeaneriesTable extends Migration
     public function up()
     {
         Schema::create('deaneries', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->string('name');
+            $table->string('surname');
+            $table->string('email')->nullable();
+            $table->integer('admin_id')->unique();
+            $table->string('password');
             $table->timestamps();
         });
     }
