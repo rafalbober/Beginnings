@@ -35,6 +35,8 @@ class AdminLoginController extends Controller
 
     public function login(Request $request)
     {
+        Session::flush();
+
         $this->validate($request, [
             'email' => 'required',
             'password' => 'required'

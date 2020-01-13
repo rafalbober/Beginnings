@@ -42,7 +42,7 @@ Route::post('/admin/logout', 'Auth\AdminLoginController@logout')->name('admin.lo
 // Teacher
 Route::get('/teacher/login', 'Auth\TeacherLoginController@showLoginForm')->name('teacher.login');
 Route::post('/teacher/login', 'Auth\TeacherLoginController@login')->name('teacher.login.submit');
-Route::get('/teacher', 'TeacherController@index')->name('teacher.home');
+Route::get('/teacher', 'TeacherController@index')->name('teacher.home')->middleware('auth:teacher');
 Route::post('/teacher/logout', 'Auth\TeacherLoginController@logout')->name('teacher.logout');
 
 
