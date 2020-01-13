@@ -1,4 +1,3 @@
-@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -35,14 +34,14 @@
             position: relative;
         }
 
-        .navbar {
+        .top-right {
             position: absolute;
+            right: 10px;
             top: 18px;
         }
 
         .content {
             text-align: center;
-            position: relative;
         }
 
         .title {
@@ -65,11 +64,22 @@
     </style>
 </head>
 <body>
-<div class="container">
+<div class="flex-center position-ref full-height">
+    @if (Route::has('login'))
+        <form id="logout-form" method="post" action="{{ route('logout') }}">
+            @csrf
+            <div class="top-right links">
+                @auth
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+
+                @endauth
+            </div>
+        </form>
+    @endif
 
     <div class="content">
         <div class="title m-b-md">
-            Üpel
+            Üpel Student
         </div>
         <div style="font-size:30px">
             Stundeplatforme
@@ -82,7 +92,6 @@
             <a href="#">Teachers</a>
         </div>
     </div>
-
 </div>
 </body>
 </html>

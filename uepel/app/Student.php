@@ -10,6 +10,8 @@ class Student extends /*Model*/ Authenticatable
 {
     use Notifiable;
 
+    protected $guard = 'student';
+
     protected $fillable = [
         'name', 'surname', 'email', 'index', 'password',
     ];

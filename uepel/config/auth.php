@@ -14,9 +14,10 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'student',
+        'guard' => 'web',
         'passwords' => 'users',
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ return [
     'guards' => [
         'admin' => [
             'driver' => 'session',
-            'provider' => 'admins',
+            'provider' => 'deaneries',
         ],
 
         'student' => [
@@ -81,7 +82,7 @@ return [
             'model' => App\User::class,
         ],
 
-        'admins' => [
+        'deaneries' => [
             'driver' => 'eloquent',
             'model' => App\Deanery::class,
         ],
@@ -115,6 +116,20 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'deaneries' => [
+            'provider' => 'deaneries',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'students' => [
+            'provider' => 'students',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

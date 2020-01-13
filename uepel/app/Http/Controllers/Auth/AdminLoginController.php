@@ -1,15 +1,14 @@
 <?php
 
-
 namespace App\Http\Controllers\Auth;
-use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-class LoginController extends Controller
+class AdminLoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -24,27 +23,14 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    //protected $redirectTo = '/home';
-
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
-        $this->middleware('guest:student')->except('logout');
+        $this->middleware('guest:admin')->except('logout');
     }
 
     public function showLoginForm()
     {
-        return view('auth.login');
+        return view('auth.admin_login');
     }
 
     public function login(Request $request)
@@ -54,9 +40,9 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if( Auth::guard('student')->attempt(['email' => $request->email, 'password' => $request->password]))
+        if( Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password]))
         {
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('admin.home'));
         }
 
         return redirect()->back()->withInput($request->only('email'));
@@ -66,6 +52,6 @@ class LoginController extends Controller
     {
         Auth::logout();
         Session::flush();
-        return redirect()->intended(route('login'));
+        return redirect()->intended(route('admin.login'));
     }
 }

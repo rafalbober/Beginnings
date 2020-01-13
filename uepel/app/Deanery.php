@@ -14,6 +14,9 @@ class Deanery extends Authenticatable
      *
      * @var array
      */
+
+    protected $guard = 'admin';
+
     protected $fillable = [
         'name', 'surname', 'email', 'admin_id', 'password',
     ];
