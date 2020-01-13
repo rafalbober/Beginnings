@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home');
-});
+});*/
+
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'DeanerieController@index')->name('admin');
 
