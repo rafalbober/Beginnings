@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/admin', 'DeanerieController@index')->name('admin');
 
 Route::resource('/posts', "PostsController")->middleware('auth');
 Route::resource('/comments', "CommentController");
