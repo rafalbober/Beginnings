@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Üpel</title>
+    <title>Üpel Teacher</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -66,11 +66,11 @@
 <body>
 <div class="flex-center position-ref full-height">
     @if (Route::has('login'))
-        <form id="logout-form" method="post" action="{{ route('admin.logout') }}">
+        <form id="logout-form" method="post" action="{{ route('teacher.logout') }}">
             @csrf
             <div class="top-right links">
                 @auth
-                    <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout Admin</a>
+                    <a href="{{ route('teacher.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout Teacher</a>
 
                 @endauth
             </div>
@@ -79,7 +79,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Üpel Admin
+            Üpel Teacher
         </div>
         <div style="font-size:30px">
             Stundeplatforme

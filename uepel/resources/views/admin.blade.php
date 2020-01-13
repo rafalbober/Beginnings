@@ -65,7 +65,7 @@
 </head>
 <body>
 <div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
+    @if (Route::has('admin.login'))
         <form id="logout-form" method="post" action="{{ route('admin.logout') }}">
             @csrf
             <div class="top-right links">
