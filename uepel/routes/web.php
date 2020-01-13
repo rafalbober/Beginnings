@@ -15,21 +15,25 @@
     return view('home');
 });*/
 
-Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/admin', 'DeanerieController@index')->name('admin');
 
-Route::resource('/posts', "PostsController")->middleware('auth');
-Route::resource('/comments', "CommentController");
+    Route::get('/', 'HomeController@index')->name('home');
 
-Route::resource('/books', "BooksController")->middleware('auth');
 
-Auth::routes();
+    Route::get('/admin', 'DeanerieController@index')->name('admin');
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('/posts', "PostsController")->middleware('auth');
+    Route::resource('/comments', "CommentController");
 
-Route::get('/books/{id}', 'BooksController@show');
+    Route::resource('/books', "BooksController")->middleware('auth');
 
-Route::get('/books/{id}/edit', 'BooksController@edit');
+    Auth::routes();
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('/books/{id}', 'BooksController@show');
+
+    Route::get('/books/{id}/edit', 'BooksController@edit');
+
 
 
