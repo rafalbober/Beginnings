@@ -46,3 +46,6 @@ Route::get('/teacher', 'TeacherController@index')->name('teacher.home')->middlew
 Route::post('/teacher/logout', 'Auth\TeacherLoginController@logout')->name('teacher.logout');
 
 
+Route::resource('/subjects', "SubjectController")->middleware('auth:teacher');
+
+
