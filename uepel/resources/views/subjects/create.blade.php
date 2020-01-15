@@ -16,12 +16,10 @@
             @endif
 
 
-            <form method="POST" action="{{ route('subject.store') }}">
-                {{ csrf_field() }}
+            <form method="POST" action="{{ route('subjects.store') }}" >
 
-                <label>ISBN: </label><input type="text" name="isbn" value="{{ old('isbn') }}">
-                <label>Title: </label><input type="text" name="title" value="{{ old('title') }}">
-                <label>Description: </label><input type="text" name="description" value="{{ old('description') }}">
+                <label>Title: </label><input type="text" name="name" > <br>
+                <label>Description: </label><input type="text" name="signup_capacity" > <br>
                 <input type="submit" name="create" value="Create">
             </form>
         </div>

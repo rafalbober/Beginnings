@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/faq/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/faq/faq.blade.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/uepel/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/uepel/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/uepel/vendor/composer" />
+      <path value="$PROJECT_DIR$/uepel/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/uepel/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/uepel/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/uepel/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/uepel/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/uepel/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/uepel/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/uepel/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/uepel/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/uepel/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/uepel/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/uepel/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/uepel/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/uepel/vendor/behat/gherkin" />
+      <path value="$PROJECT_DIR$/uepel/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/uepel/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/uepel/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/uepel/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/uepel/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/uepel/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/uepel/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/uepel/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/uepel/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/uepel/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/uepel/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/uepel/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/uepel/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/uepel/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/uepel/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/uepel/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/uepel/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/uepel/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/uepel/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/uepel/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/uepel/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/uepel/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/uepel/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/uepel/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/uepel/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/uepel/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/uepel/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/uepel/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/uepel/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/uepel/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/uepel/vendor/codeception/phpunit-wrapper" />
+      <path value="$PROJECT_DIR$/uepel/vendor/codeception/stub" />
+      <path value="$PROJECT_DIR$/uepel/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/uepel/vendor/codeception/codeception" />
+      <path value="$PROJECT_DIR$/uepel/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/uepel/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/uepel/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/uepel/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/file" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/ustring" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/event" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/stream" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/exception" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/consistency" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/console" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/protocol" />
+      <path value="$PROJECT_DIR$/uepel/vendor/hoa/iterator" />
+      <path value="$PROJECT_DIR$/uepel/vendor/facebook/webdriver" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/uepel/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/uepel/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/uepel/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/uepel/vendor/nikic/php-parser" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1WQTSDP9yJT9dB3NYuxf4MJez9i" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/uepel/resources/views/faq" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uepel/resources/views/faq" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="" />
+      <created>1579080816242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579080816242</updated>
+      <workItem from="1579080817714" duration="1749000" />
+      <workItem from="1579082599144" duration="1786000" />
+      <workItem from="1579084412035" duration="186000" />
+    </task>
+    <task id="LOCAL-00001" summary="added Route for Welcome.blade">
+      <created>1579082228609</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579082228609</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Welcome.blade Update">
+      <created>1579082753378</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579082753378</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Welcome.blade Update (adding Faq)">
+      <created>1579083827833</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579083827833</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="added Route for Welcome.blade" />
+    <MESSAGE value="Welcome.blade Update" />
+    <MESSAGE value="Welcome.blade Update (adding Faq)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Welcome.blade Update (adding Faq)" />
+  </component>
+</project>
