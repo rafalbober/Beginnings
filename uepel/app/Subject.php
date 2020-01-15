@@ -25,4 +25,9 @@ class Subject extends Model
     {
         return $this->hasMany(Degree::class);
     }
+
+    private $name;
+    private $signup_capacity;
+    private $description;
+    private $teacher_id;
 }

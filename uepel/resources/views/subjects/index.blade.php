@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h2>Subjects: </h2>
-            <a href="subjects/create">Create new...</a>
+            <a href="subject/create">Create new...</a>
             <ul>
 
             </ul>

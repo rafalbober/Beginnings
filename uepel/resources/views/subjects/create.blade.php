@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h2>New Subject</h2>
@@ -16,11 +17,12 @@
             @endif
 
 
-            <form method="POST" action="{{ route('subjects.store') }}" >
+            <form method="POST" action="../subject">
+                @csrf
 
                 <label>Title: </label><input type="text" name="name" > <br>
-                <label>Description: </label><input type="text" name="signup_capacity" > <br>
-                <input type="submit" name="create" value="Create">
+                <label>Signup_Capacity: </label><input type="text" name="signup_capacity" > <br>
+                <input type="submit"  value="Create">
             </form>
         </div>
     </div>

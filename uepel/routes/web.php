@@ -53,7 +53,8 @@ Route::post('/teacher/login', 'Auth\TeacherLoginController@login')->name('teache
 Route::get('/teacher', 'TeacherController@index')->name('teacher.home')->middleware('auth:teacher');
 Route::post('/teacher/logout', 'Auth\TeacherLoginController@logout')->name('teacher.logout');
 
-
-Route::resource('/subjects', "SubjectController")->middleware('auth:teacher');
+Route::post('/subject',"SubjectController@store")->middleware('auth:teacher');
+Route::get('/subject/create', "SubjectController@create")->middleware('auth:teacher');
+Route::get('/subjects', "SubjectController@index")->middleware('auth:teacher');
 
 

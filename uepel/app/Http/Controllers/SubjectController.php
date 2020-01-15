@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Subject;
 use Illuminate\Http\Request;
 
 class SubjectController extends Controller
@@ -9,6 +9,7 @@ class SubjectController extends Controller
 
     public function index()
     {
+        $subjects = Subject::all();
         return view('subjects.index');
     }
 
@@ -18,22 +19,25 @@ class SubjectController extends Controller
         return view('subjects.create');
     }
 
-    public function store(Request $request)
+    public function store()
     {
-        $request->validate([
+//        $request->validate([
+//
+//            'name' => 'required',
+//            'signup_capacity' => 'required'
+//
+//        ]);
 
-            'name' => 'required',
-            'signup_capacity' => 'required'
+//
+//        $Subject= new Subject();
+//
+//        $Subject->__set('name', $request->input('name'));
+//        $Subject->__set('signup_capacity', $request->input('signup_capacity'));
+//        $Subject->__set('teacher id', 23);
+//        $Subject->save();
+//
+//        return view('teacher');
+        dd(request()->all());
 
-        ]);
-
-
-        $Subject= new Subjects();
-
-        $Subject->__set('name', $request->input('name'));
-        $Subject->__set('signup_capacity', $request->input('signup_capacity'));
-        $Subject->save();
-
-        return redirect('Subjects/' . $Subject->__get('id'));
     }
 }
