@@ -80,6 +80,7 @@
     <div class="content">
         <div class="title m-b-md">
             Üpel Teacher
+            {{$teacher->email}}
         </div>
         <div style="font-size:30px">
             Stundeplatforme
@@ -87,7 +88,7 @@
 
         <div class="links">
             <a href="#">About Me</a>
-            <a href="/subjects">Subjects</a>
+            <a href="/subjects/{{$teacher->id}}">Subjects</a>
             <a href="#">Students</a>
             <a href="#">Teachers</a>
         </div>

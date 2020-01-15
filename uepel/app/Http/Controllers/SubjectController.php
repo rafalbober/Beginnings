@@ -11,10 +11,11 @@ use Illuminate\Support\Facades\Auth;
 class SubjectController extends Controller
 {
 
-    public function index()
+    public function index($teacher)
     {
-        $subjects = Subject::all();
-        return view('subjects.index');
+
+        $teacher = Teacher::findOrFail($teacher);
+        return view('subjects.index' , ['teacher' => $teacher]);
     }
 
 
@@ -44,6 +45,6 @@ class SubjectController extends Controller
         //auth()->user()->subjects()->create($data);
 
         //\App\Subject::create($data);
-        //return view('');
+        return redirect('/subjects/'.Auth::id());
     }
 }
