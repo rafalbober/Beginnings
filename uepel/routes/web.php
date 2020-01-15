@@ -26,11 +26,15 @@ Route::get('/books/{id}/edit', 'BooksController@edit');
 
 //Auth::routes();
 
+Route::get('/', function () {
+    return view('welcome');
+});
 // Student
-Route::get('/', 'HomeController@index')->name('home')->middleware('auth:student');
+
+
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login')->name('login.submit');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth:student');
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
 // Admin
