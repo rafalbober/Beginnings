@@ -19,7 +19,7 @@ class CreateSubjectsTable extends Migration
             $table->integer('teacher_id');
             $table->text('description');
             $table->integer('signup_capacity');
-            $table->integer('signup_current');
+            $table->integer('signup_current')->default(0);
            // $table->integer('teacher_id')->unique();
             $table->timestamps();
 

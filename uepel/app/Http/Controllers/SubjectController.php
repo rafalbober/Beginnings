@@ -21,23 +21,22 @@ class SubjectController extends Controller
 
     public function store()
     {
-//        $request->validate([
-//
-//            'name' => 'required',
-//            'signup_capacity' => 'required'
-//
-//        ]);
+        $data =request()->validate([
+            'description' => '',
+            'name' => 'required',
+            'capacity' => ['required','integer']
 
-//
-//        $Subject= new Subject();
-//
-//        $Subject->__set('name', $request->input('name'));
-//        $Subject->__set('signup_capacity', $request->input('signup_capacity'));
-//        $Subject->__set('teacher id', 23);
-//        $Subject->save();
-//
-//        return view('teacher');
-        dd(request()->all());
+        ]);
 
+        $Subject = new Subject();
+        $Subject->name = $data['name'];
+        $Subject->description = $data['description'];
+        $Subject->signup_capacity = $data['capacity'];
+        $Subject->teacher_id = 23;
+        $Subject->save();
+
+        //auth()->user()->subjects()->create($data);
+
+        //\App\Subject::create($data);
     }
 }

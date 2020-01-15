@@ -17,11 +17,12 @@
             @endif
 
 
-            <form method="POST" action="../subject">
+            <form method="POST" action="store">
                 @csrf
 
-                <label>Title: <input type="text" name="name" ></label> <br>
-                <label>Signup_Capacity: <input type="text" name="signup_capacity" ></label> <br>
+                <label>Name: <input type="text" name="name" ></label> <br>
+                <label>Desciption: <input type="text" name="description" ></label> <br>
+                <label>Capacity: <input type="text" name="capacity" ></label> <br>
                 <input type="submit"  value="Create">
             </form>
         </div>
