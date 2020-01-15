@@ -66,19 +66,7 @@
     <body>
         <div class="flex-center position-ref full-height">
             <div class="content">
-                <div class="title m-b-md">
-                    Üpel
-                </div>
-                <div style="font-size:30px">
-                    Stundeplatforme
-                </div><br/>
-
-                <div class="links">
-                    <a href="/admin">Admin Login</a>
-                    <a href="/home">Student Login</a>
-                    <a href="/teacher">Teacher Login</a>
-                    <a href="/faq">Faq</a>
-                </div>
+                <h4>FAQ</h4>
             </div>
         </div>
     </body>
