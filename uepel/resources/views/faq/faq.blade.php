@@ -1,3 +1,5 @@
+@extends('layouts.app')
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -61,25 +63,26 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .content {
+               position: absolute;
+                top: 50px;
+                padding: 10%;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
             <div class="content">
-                <div class="title m-b-md">
-                    Üpel
-                </div>
-                <div style="font-size:30px">
-                    Stundeplatforme
-                </div><br/>
-
-                <div class="links">
-                    <a href="/admin">Admin Login</a>
-                    <a href="/home">Student Login</a>
-                    <a href="/teacher">Teacher Login</a>
-                    <a href="/faq">Faq</a>
-                </div>
+                <h4>FAQ</h4>
+                <p>
+                    1. Why can't I see some sites?<br>
+                    - Because some of them are available only for specific user types.<br>
+                    2. Should we order sth to eat? I'm really hungry :/ <br>
+                    - Rafał - YEEEEEEESSSSSSSSSS!<br>
+                    - Frasio -<br>
+                    - Kasia -<br>
+                    - Łuki -<br>
+                </p>
             </div>
-        </div>
     </body>
 </html>
