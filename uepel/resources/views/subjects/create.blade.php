@@ -20,8 +20,8 @@
             <form method="POST" action="../subject">
                 @csrf
 
-                <label>Title: </label><input type="text" name="name" > <br>
-                <label>Signup_Capacity: </label><input type="text" name="signup_capacity" > <br>
+                <label>Title: <input type="text" name="name" ></label> <br>
+                <label>Signup_Capacity: <input type="text" name="signup_capacity" ></label> <br>
                 <input type="submit"  value="Create">
             </form>
         </div>
