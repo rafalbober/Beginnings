@@ -16,7 +16,8 @@ class CreateSubjectsTable extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('name')->unique();
-            $table->integer('teacher_id')->unique();
+            $table->integer('teacher_id');
+            $table->text('description');
             $table->integer('signup_capacity');
             $table->integer('signup_current');
            // $table->integer('teacher_id')->unique();
