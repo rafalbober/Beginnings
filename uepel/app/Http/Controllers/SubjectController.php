@@ -24,6 +24,12 @@ class SubjectController extends Controller
         return view('subjects.create');
     }
 
+    public function show($index)
+    {
+        $subject = Subject::findOrFail($index);
+        return view('subjects.show',  ['subject' => $subject]);
+    }
+
     public function store()
     {
         $data =request()->validate([

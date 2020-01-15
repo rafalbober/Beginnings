@@ -58,5 +58,7 @@ Route::post('/subject/store',"SubjectController@store")->name('subject.store')->
 Route::get('/subject/create', "SubjectController@create")->name('subject.create')->middleware('auth:teacher');
 Route::get('/subjects', "SubjectController@index")->name('subjects')->middleware('auth:teacher');
 Route::get('/subjects/{id}', ['as' => 'subjects.index', 'uses' => 'SubjectController@index'])->middleware('auth:teacher');
+Route::get('/subjects/show/{id}',"SubjectController@show")->name('subject.show')->middleware('auth:teacher');
+
 
 

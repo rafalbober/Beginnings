@@ -10,7 +10,7 @@
             <ul>
                 @foreach ($teacher->subject as $subject)
                     <li><strong>{{ $subject->name }}</strong></li>
-                    <a href="/Subjects/{{ $subject->sub_capacity }}">details</a>
+                    <a href={{route("subject.show",$subject->id)}}>details</a>
                 @endforeach
             </ul>
         </div>
