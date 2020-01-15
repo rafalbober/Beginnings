@@ -1,4 +1,4 @@
-# 10 LARAVEL PRACTICE
+# Witryna do zajeć Proj Proj
 
 To configure this application execute:
 
