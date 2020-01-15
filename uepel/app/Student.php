@@ -13,7 +13,7 @@ class Student extends /*Model*/ Authenticatable
     protected $guard = 'student';
 
     protected $fillable = [
-        'name', 'surname', 'email', 'index', 'password',
+        'name', 'surname', 'email', 'password',
     ];
 
     protected $hidden = [

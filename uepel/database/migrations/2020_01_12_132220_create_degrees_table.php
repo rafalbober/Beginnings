@@ -15,9 +15,9 @@ class CreateDegreesTable extends Migration
     {
         Schema::create('degrees', function (Blueprint $table) {
             $table->Increments('id');
-            $table->integer('student_index');
-            $table->integer('class_number');
-            $table->string('subject_name');
+            $table->integer('student_index')->unsigned();
+            $table->integer('class_number')->unsigned();
+            $table->integer('subject_id')->unsigned();
             $table->float('degree');
 
 
@@ -26,9 +26,9 @@ class CreateDegreesTable extends Migration
 
         Schema::table('degrees', function (Blueprint $table) {
 
-            $table->foreign('student_index')->references('index')->on('students');
-            $table->foreign('subject_name')->references('name')->on('subjects');
-            $table->foreign('class_number')->references('number')->on('subject_clas');
+            $table->foreign('student_index')->references('id')->on('students');
+            $table->foreign('subject_id')->references('id')->on('subjects');
+            $table->foreign('class_number')->references('id')->on('subject_clas');
 
         });
     }

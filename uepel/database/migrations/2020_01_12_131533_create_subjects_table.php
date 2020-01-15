@@ -15,15 +15,15 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->Increments('id');
-            $table->string('name')->unique();
-            $table->integer('teacher_id');
+            $table->string('name');
+            $table->integer('teacher_id')->unsigned();
             $table->text('description');
             $table->integer('signup_capacity');
             $table->integer('signup_current')->default(0);
            // $table->integer('teacher_id')->unique();
             $table->timestamps();
 
-            $table->foreign('teacher_id')->references('teacher_id')->on('teachers');
+            $table->foreign('teacher_id')->references('id')->on('teachers');
 
         });
     }

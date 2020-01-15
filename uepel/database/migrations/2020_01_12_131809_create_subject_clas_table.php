@@ -16,10 +16,10 @@ class CreateSubjectClasTable extends Migration
         Schema::create('subject_clas', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('title');
-            $table->string('subject_name')->unique();
+            $table->integer('subject_id')->unsigned();
             $table->text('description');
-            $table->integer('number')->unique();
-            $table->foreign('subject_name')->references('name')->on('subjects');
+            //$table->integer('number')->unique();
+            $table->foreign('subject_id')->references('id')->on('subjects');
             $table->timestamps();
 
 

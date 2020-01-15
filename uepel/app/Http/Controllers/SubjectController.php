@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Subject;
+use App\Teacher;
+use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SubjectController extends Controller
 {
@@ -29,14 +33,17 @@ class SubjectController extends Controller
         ]);
 
         $Subject = new Subject();
-        $Subject->name = $data['name'];
-        $Subject->description = $data['description'];
-        $Subject->signup_capacity = $data['capacity'];
-        $Subject->teacher_id = 23;
+
+        $Subject->__set('name', $data['name']);
+        $Subject->__set('description',$data['description']);
+        $Subject->__set('signup_capacity', $data['capacity']);
+        $Subject->__set('teacher_id', Auth::id());
+
         $Subject->save();
 
         //auth()->user()->subjects()->create($data);
 
         //\App\Subject::create($data);
+        //return view('');
     }
 }

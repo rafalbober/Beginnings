@@ -15,7 +15,6 @@ class StudentsTableSeeder extends Seeder
             'name' => 'Rafał',
             'surname' => 'Świstak',
             'email' => 'hehe@xd.pl',
-            'index' => '298000',
             'password' => bcrypt('hehe'),
         ]);
     }

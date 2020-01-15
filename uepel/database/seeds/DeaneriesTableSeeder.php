@@ -15,7 +15,6 @@ class DeaneriesTableSeeder extends Seeder
             'name' => 'admin',
             'surname' => 'admin',
             'email' => 'admin@ggios.pl',
-            'admin_id' => '000',
             'password' => bcrypt('admin'),
         ]);
     }

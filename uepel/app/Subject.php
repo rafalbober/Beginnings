@@ -6,9 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subject extends Model
 {
+
+
+    /**
+     * @var int|null
+     */
+    private $teacher_id;
+    private $name;
+    private $signup_capacity;
+    private $description;
+
     public function teacher()
     {
-        return $this->belongsTo(Teacher::class);
+        return $this->belongsTo(Teacher::class, 'teacher_id', 'id');
     }
 
     public function subject_cla()

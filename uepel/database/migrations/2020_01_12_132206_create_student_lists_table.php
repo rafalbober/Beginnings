@@ -15,8 +15,8 @@ class CreateStudentListsTable extends Migration
     {
         Schema::create('student_lists', function (Blueprint $table) {
             $table->Increments('id');
-            $table->string('subject_name');
-            $table->integer('index');
+            $table->integer('subject_id')->unsigned();
+            $table->integer('index')->unsigned();
 
             $table->timestamps();
 
@@ -25,8 +25,8 @@ class CreateStudentListsTable extends Migration
 
         Schema::table('student_lists', function (Blueprint $table) {
 
-            $table->foreign('subject_name')->references('name')->on('subjects');
-            $table->foreign('index')->references('index')->on('students');
+            $table->foreign('subject_id')->references('id')->on('subjects');
+            $table->foreign('index')->references('id')->on('students');
 
 
 

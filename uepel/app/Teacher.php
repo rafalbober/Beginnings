@@ -12,7 +12,7 @@ class Teacher extends Authenticatable
     protected $guard = 'teacher';
 
     protected $fillable = [
-        'name', 'surname', 'email', 'teacher_id', 'password',
+        'name', 'surname', 'email', 'password',
     ];
 
     protected $hidden = [
@@ -25,7 +25,10 @@ class Teacher extends Authenticatable
 
     public function subject()
     {
-        return $this->hasMany(Subject::class);
+        return $this->hasMany(Subject::class, '', 'id');
     }
+
+
+
 }
 

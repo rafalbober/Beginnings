@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Subject;
+use App\Teacher;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -15,4 +16,6 @@ class TeacherController extends Controller
     {
         return view('teacher');
     }
+
+
 }
