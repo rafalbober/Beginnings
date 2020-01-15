@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/uepel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,8 +169,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579080816242</updated>
-      <workItem from="1579080817714" duration="1238000" />
+      <workItem from="1579080817714" duration="1749000" />
     </task>
+    <task id="LOCAL-00001" summary="added Route for Welcome.blade">
+      <created>1579082228609</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579082228609</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,5 +194,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="added Route for Welcome.blade" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Route for Welcome.blade" />
   </component>
 </project>

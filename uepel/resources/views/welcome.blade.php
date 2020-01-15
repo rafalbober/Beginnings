@@ -84,10 +84,9 @@
                 </div><br/>
 
                 <div class="links">
-                    <a href="#">About Me</a>
-                    <a href="#">Subjects</a>
-                    <a href="#">Students</a>
-                    <a href="#">Teachers</a>
+                    <a href="/admin">Admin Login</a>
+                    <a href="/home">Student Login</a>
+                    <a href="/teacher">Teacher Login</a>
                 </div>
             </div>
         </div>
