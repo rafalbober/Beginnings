@@ -80,7 +80,7 @@
                     2. Should we order sth to eat? I'm really hungry :/ <br>
                     - Rafał - YEEEEEEESSSSSSSSSS!<br>
                     - Frasio -<br>
-                    - Kasia -<br>
+                    - Kasia -yep<br>
                     - Łuki -<br>
                 </p>
             </div>
