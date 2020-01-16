@@ -62,10 +62,10 @@ Route::get('/subjects/show/{id}',"SubjectController@show")->name('subject.show')
 Route::get('/subjects/edit/{id}',"SubjectController@edit")->name('subject.edit')->middleware('auth:teacher');
 Route::PATCH('/subjects/update/{id}',"SubjectController@store")->name('subject.update')->middleware('auth:teacher');
 
-Route::get('/deaneries/create/student', "DeanerieController@createStudent")->name('deaneries.student.create')->middleware('auth:admin');
-Route::get('/deaneries/create/teacher', "DeanerieController@createTeacher")->name('deaneries.teacher.create')->middleware('auth:admin');
-Route::get('/deaneries/teacher/index', 'DeanerieController@indexTeacher')->name('deaneries.teacher.index')->middleware('auth:admin');
-Route::get('/deaneries/student.index', 'DeanerieController@indexStudent')->name('deaneries.student.index')->middleware('auth:admin');
+Route::get('/deaneries/student_create', "DeanerieController@createStudent")->name('deaneries.student_create')->middleware('auth:admin');
+Route::get('/deaneries/teacher_create', "DeanerieController@createTeacher")->name('deaneries.teacher_create')->middleware('auth:admin');
+Route::get('/deaneries/teacher_index', 'DeanerieController@indexTeacher')->name('deaneries.teacher_index')->middleware('auth:admin');
+Route::get('/deaneries/student_index', 'DeanerieController@indexStudent')->name('deaneries.student_index')->middleware('auth:admin');
 
 
 

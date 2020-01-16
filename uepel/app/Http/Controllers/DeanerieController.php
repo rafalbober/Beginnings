@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Deanery;
 use Illuminate\Http\Request;
 
 class DeanerieController extends Controller
@@ -18,11 +18,11 @@ class DeanerieController extends Controller
 
     public function indexTeacher()
     {
-        return view('deaneries.teacher.index');
+        return view('deaneries.teacher_index');
     }
 
     public function indexStudent()
     {
-        return view('deaneries.student.index');
+        return view('deaneries.student_index');
     }
 }

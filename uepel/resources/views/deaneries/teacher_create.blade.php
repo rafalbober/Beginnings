@@ -17,7 +17,7 @@
             @endif
 
 
-            <form method="POST" action="{{route('subject.store')}}">
+            <form method="POST" action="">
                 @csrf
 
                 <label>Name: <input type="text" name="name" ></label> <br>
