@@ -30,6 +30,17 @@ class SubjectController extends Controller
         return view('subjects.show',  ['subject' => $subject]);
     }
 
+    public function edit($index)
+    {
+        $subject = Subject::findOrFail($index);
+        return view('subjects.edit',  ['subject' => $subject]);
+    }
+
+    public function update(Request $request, Subject $subject)
+    {
+
+    }
+
     public function store()
     {
         $data =request()->validate([
