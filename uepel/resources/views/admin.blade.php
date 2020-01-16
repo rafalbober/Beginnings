@@ -88,7 +88,7 @@
         <div class="links">
             <a href="#">About Me</a>
             <a href="#">Subjects</a>
-            <a href="#">Students</a>
+            <a href="{{route('deaneries.student.index')}}">Students</a>
             <a href="#">Teachers</a>
         </div>
     </div>
