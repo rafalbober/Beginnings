@@ -36,13 +36,13 @@ Route::get('/', function () {
 Route::get('/faq', function () {
     return view('faq.faq');
 });
+
 // Student
-
-
 Route::get('/student/login', 'Auth\StudentLoginController@showLoginForm')->name('login');
 Route::post('/student/login', 'Auth\StudentLoginController@login')->name('student.login.submit');
-Route::get('/students/home', 'StudentController@index')->name('student.home')->middleware('auth:student');
+Route::get('/student/home', 'StudentController@index')->name('student.home')->middleware('auth:student');
 Route::post('/student/logout', 'Auth\StudentLoginController@logout')->name('logout');
+Route::get('/student/subjects', 'StudentController@showSubjects')->name('student.subjects');
 
 // Admin
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
@@ -56,7 +56,7 @@ Route::post('/teacher/login', 'Auth\TeacherLoginController@login')->name('teache
 Route::get('/teachers/home', 'TeacherController@index')->name('teacher.home')->middleware('auth:teacher');
 Route::post('/teacher/logout', 'Auth\TeacherLoginController@logout')->name('teacher.logout');
 
-
+//Subjects
 Route::post('/subjects/store',"SubjectController@store")->name('subject.store')->middleware('auth:teacher');
 Route::get('/subjects/create', "SubjectController@create")->name('subject.create')->middleware('auth:teacher');
 //Route::get('/subjects', "SubjectController@index")->name('subjects')->middleware('auth:teacher');
@@ -66,11 +66,12 @@ Route::get('/subjects/edit/{id}',"SubjectController@edit")->name('subject.edit')
 Route::DELETE('/subjects/edit/delete/{id}',"SubjectController@delete")->name('subject.delete')->middleware('auth:teacher');
 Route::PATCH('/subjects/edit/update/{id}',"SubjectController@update")->name('subject.update')->middleware('auth:teacher');
 
+// Lessons
 Route::get('/lessons/create/{id}', "LessonController@create")->name('lesson.create')->middleware('auth:teacher');
 Route::post('/lessons/store',"LessonController@store")->name('lesson.store')->middleware('auth:teacher');
 
 
-
+// Users
 Route::get('/deaneries/student_create', "DeanerieController@createStudent")->name('deaneries.student_create')->middleware('auth:admin');
 Route::get('/deaneries/teacher_create', "DeanerieController@createTeacher")->name('deaneries.teacher_create')->middleware('auth:admin');
 Route::get('/deaneries/teacher_index', 'DeanerieController@indexTeacher')->name('deaneries.teacher_index')->middleware('auth:admin');

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Subject;
+
 
 class StudentController extends Controller
 {
@@ -24,5 +25,12 @@ class StudentController extends Controller
     public function index()
     {
         return view('students.home');
+    }
+
+    public function showSubjects()
+    {
+        $subjects = Subject::all();
+        return view('students.subjects', ['subjects' => $subjects]);
+
     }
 }
