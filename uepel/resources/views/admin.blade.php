@@ -1,3 +1,4 @@
+@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -65,17 +66,6 @@
 </head>
 <body>
 <div class="flex-center position-ref full-height">
-    @if (Route::has('admin.login'))
-        <form id="logout-form" method="post" action="{{ route('admin.logout') }}">
-            @csrf
-            <div class="top-right links">
-                @auth
-                    <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout Admin</a>
-
-                @endauth
-            </div>
-        </form>
-    @endif
 
     <div class="content">
         <div class="title m-b-md">
