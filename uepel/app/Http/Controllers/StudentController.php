@@ -32,7 +32,8 @@ class StudentController extends Controller
     public function showSubjects()
     {
         $subjects = Subject::all();
-        return view('students.subjects', ['subjects' => $subjects]);
+        $list = Student_list::all();
+        return view('students.subjects', ['subjects' => $subjects], ['list' => $list]);
 
     }
 

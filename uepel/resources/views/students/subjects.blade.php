@@ -8,11 +8,21 @@
             <h2>Subjects: </h2>
             <ul>
                 @foreach ($subjects as $subject)
+                    <?php $notJoined = 1 ?>
                     <li><strong>{{ $subject->name }}</strong></li>
-                <form method="POST" action={{route('student.join', $subject->id)}}>
-                    @csrf
-                    <input type="submit" value="Join it!">
-                </form>
+                    @foreach ($list as $listRecord)
+                        @if ($listRecord->subject_id == $subject->id && Auth::id() == $listRecord->index )
+                                <?php $notJoined = 0 ?>
+                        @endif
+                    @endforeach
+                    @if ($notJoined == 1)
+                        <form method="POST" action={{route('student.join', $subject->id)}}>
+                            @csrf
+                            <input type="submit" value="Join it!">
+                        </form>
+                        @else
+                            <p><strong>Already joined!</strong></p>
+                    @endif
                 @endforeach
             </ul>
         </div>
