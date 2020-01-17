@@ -33,7 +33,7 @@ class DeanerieController extends Controller
     public function storeTeacher()
     {
         $data =request()->validate([
-            'email' => 'required',
+            'email' => ['required', 'unique:teachers,email'],
             'name' => 'required',
             'surname' => 'required',
             'password' => 'required'
@@ -71,7 +71,7 @@ class DeanerieController extends Controller
     public function storeStudent()
     {
         $data =request()->validate([
-            'email' => 'required',
+            'email' => ['required','unique:students,email'],
             'name' => 'required',
             'surname' => 'required',
             'password' => 'required'

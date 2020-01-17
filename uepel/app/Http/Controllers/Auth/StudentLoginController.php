@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class LoginController extends Controller
+class StudentLoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -44,7 +44,7 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('auth.login');
+        return view('auth.student_login');
     }
 
     public function login(Request $request)
@@ -57,7 +57,7 @@ class LoginController extends Controller
 
         if( Auth::guard('student')->attempt(['email' => $request->email, 'password' => $request->password]))
         {
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('student.home'));
         }
 
         return redirect()->back()->withInput($request->only('email'));

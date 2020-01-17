@@ -81,7 +81,7 @@
                     - Rafał - YEEEEEEESSSSSSSSSS!<br>
                     - Frasio -<br>
                     - Kasia -yep<br>
-                    - Łuki -<br>
+                    - Łuki - Kebab z Luny pls<br>
                 </p>
             </div>
     </body>

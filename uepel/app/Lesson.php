@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Subject_cla extends Model
+class Lesson extends Model
 {
     public function subject()
     {
-        return $this->belongsTo( Teacher::class);
+        return $this->belongsTo( Subject::class);
 
     }
     public function presence()

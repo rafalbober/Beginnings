@@ -78,4 +78,12 @@ class SubjectController extends Controller
         //\App\Subject::create($data);
         return redirect('/subjects/'.Auth::id());
     }
+
+    public function delete($index)
+    {
+        $subject = Subject::findOrFail($index);
+        $subject->delete();
+
+        return redirect('/subjects/'.Auth::id());
+    }
 }

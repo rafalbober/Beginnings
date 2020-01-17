@@ -21,9 +21,9 @@ class Subject extends Model
         return $this->belongsTo(Teacher::class, 'teacher_id', 'id');
     }
 
-    public function subject_cla()
+    public function lesson()
     {
-        return $this->hasMany(Subject_cla::class);
+        return $this->hasMany(Lesson::class);
     }
 
     public function presence()

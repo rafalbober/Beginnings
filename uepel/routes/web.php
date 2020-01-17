@@ -28,7 +28,10 @@ Route::get('/books/{id}/edit', 'BooksController@edit');
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
+
+
 
 Route::get('/faq', function () {
     return view('faq.faq');
@@ -36,10 +39,10 @@ Route::get('/faq', function () {
 // Student
 
 
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/login', 'Auth\LoginController@login')->name('login.submit');
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth:student');
-Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/student/login', 'Auth\StudentLoginController@showLoginForm')->name('login');
+Route::post('/student/login', 'Auth\StudentLoginController@login')->name('student.login.submit');
+Route::get('/students/home', 'StudentController@index')->name('student.home')->middleware('auth:student');
+Route::post('/student/logout', 'Auth\StudentLoginController@logout')->name('logout');
 
 // Admin
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
@@ -60,7 +63,13 @@ Route::get('/subjects/create', "SubjectController@create")->name('subject.create
 Route::get('/subjects/{id}', ['as' => 'subjects.index', 'uses' => 'SubjectController@index'])->middleware('auth:teacher');
 Route::get('/subjects/show/{id}',"SubjectController@show")->name('subject.show')->middleware('auth:teacher');
 Route::get('/subjects/edit/{id}',"SubjectController@edit")->name('subject.edit')->middleware('auth:teacher');
-Route::PATCH('/subjects/edit/update/{subject}',"SubjectController@update")->name('subject.update')->middleware('auth:teacher');
+Route::DELETE('/subjects/edit/delete/{id}',"SubjectController@delete")->name('subject.delete')->middleware('auth:teacher');
+Route::PATCH('/subjects/edit/update/{id}',"SubjectController@update")->name('subject.update')->middleware('auth:teacher');
+
+Route::get('/lessons/create', "LessonController@create")->name('lesson.create')->middleware('auth:teacher');
+Route::post('/lessons/store',"LessonController@store")->name('lesson.store')->middleware('auth:teacher');
+
+
 
 Route::get('/deaneries/student_create', "DeanerieController@createStudent")->name('deaneries.student_create')->middleware('auth:admin');
 Route::get('/deaneries/teacher_create', "DeanerieController@createTeacher")->name('deaneries.teacher_create')->middleware('auth:admin');

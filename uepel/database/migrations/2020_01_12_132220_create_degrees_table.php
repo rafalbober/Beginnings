@@ -28,7 +28,7 @@ class CreateDegreesTable extends Migration
 
             $table->foreign('student_index')->references('id')->on('students');
             $table->foreign('subject_id')->references('id')->on('subjects');
-            $table->foreign('class_number')->references('id')->on('subject_clas');
+            $table->foreign('class_number')->references('id')->on('lessons');
 
         });
     }
