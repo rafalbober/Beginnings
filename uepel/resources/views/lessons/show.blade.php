@@ -4,14 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2>{{ $subject->name }} ({{ $subject->sub_capacity }})</h2>
-            <p>{{ $subject->description }}</p>
-            <a href="{{route('subject.edit',$subject->id)}}">edit</a>
-            <form method="POST" action="/books/{{ $subject->id }}">
-                {{ csrf_field() }}
-                {{ method_field('DELETE')  }}
-                <input type="submit" value="Delete" name="delete">
-            </form>
+            <h2>{{ $lesson->title }} </h2>
+            <p>{{ $lesson->description }}</p>
+            <a href="{{route('lesson.edit',$lesson->id)}}">edit</a>
         </div>
     </div>
 </div>

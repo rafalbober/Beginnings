@@ -14,10 +14,22 @@ class LessonController extends Controller
         return view('lessons.index' , ['teacher' => $subject]);
     }
 
+    public function show($index)
+    {
+        $lesson = Lesson::findOrFail($index);
+        return view('lessons.show',  ['lesson' => $lesson]);
+    }
+
     public function create($index)
     {
 
         return view('lessons.create',['index'=>$index]);
+    }
+
+    public function edit($index)
+    {
+        $lesson = Lesson::findOrFail($index);
+        return view('lessons.edit',['lesson' => $lesson]);
     }
 
     public function store()
@@ -41,5 +53,35 @@ class LessonController extends Controller
 
         //\App\Subject::create($data);
         return redirect('/subjects/show/'.$data['id']);
+    }
+
+    public function update($index)
+    {
+        $lesson = Lesson::findOrFail($index);
+        $data =request()->validate([
+            'description' => '',
+            'title' => 'required'
+
+
+        ]);
+
+
+        $lesson->__set('title', $data['title']);
+        $lesson->__set('description',$data['description']);
+        $lesson->update();
+
+        return redirect('/lessons/show/'.$index);
+    }
+
+    public function delete($index)
+    {
+
+        $lesson = Lesson::findOrFail($index);
+        $index = $lesson->subject->id;
+        $lesson->delete();
+
+
+
+        return redirect('/subjects/show/'.$index);
     }
 }

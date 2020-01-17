@@ -16,13 +16,18 @@
             @endif
 
 
-            <form method="POST" action="{{ route('subject.update', $subject) }}">
-                {{ csrf_field() }}
-                {{ method_field('PUT') }}
-                <label>ISBN: </label><input type="text" name="isbn" value="{{ $subject->name }}">
-                <label>Title: </label><input type="text" name="title" value="{{ $subject->description }}">
-                <label>Description: </label><input type="text" name="description" value="{{ $subject->description }}">
+            <form method="POST" action="{{ route('lesson.update', $lesson) }}">
+                @csrf
+                {{ method_field('PATCH') }}
+                <label>Current Name: {{$lesson->title}}<br>Name: <input type="text" name="title"></label> <br>
+                <label>Current Description: {{$lesson->description}}<br>Desciption: <input type="text" name="description"  ></label> <br>
+
                 <input type="submit" name="update" value="Update">
+            </form>
+            <form method="POST" action="{{route('lesson.delete', $lesson->id)}}">
+                {{ csrf_field() }}
+                {{ method_field('DELETE')  }}
+                <input type="submit" value="Delete" name="delete">
             </form>
         </div>
     </div>

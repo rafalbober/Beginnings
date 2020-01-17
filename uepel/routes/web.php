@@ -68,6 +68,13 @@ Route::PATCH('/subjects/edit/update/{id}',"SubjectController@update")->name('sub
 
 Route::get('/lessons/create/{id}', "LessonController@create")->name('lesson.create')->middleware('auth:teacher');
 Route::post('/lessons/store',"LessonController@store")->name('lesson.store')->middleware('auth:teacher');
+Route::get('/lessons/show/{id}',"LessonController@show")->name('lesson.show')->middleware('auth:teacher');
+Route::get('/lessons/edit/{id}',"LessonController@edit")->name('lesson.edit')->middleware('auth:teacher');
+Route::PATCH('/lessons/edit/update/{id}',"LessonController@update")->name('lesson.update')->middleware('auth:teacher');
+Route::DELETE('/lessons/edit/delete/{id}',"LessonController@delete")->name('lesson.delete')->middleware('auth:teacher');
+
+
+
 
 
 
