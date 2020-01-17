@@ -65,17 +65,7 @@
 </head>
 <body>
 <div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <form id="logout-form" method="post" action="{{ route('logout') }}">
-            @csrf
-            <div class="top-right links">
-                @auth
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
 
-                @endauth
-            </div>
-        </form>
-    @endif
 
     <div class="content">
         <div class="title m-b-md">
