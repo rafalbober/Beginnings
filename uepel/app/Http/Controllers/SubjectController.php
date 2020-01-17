@@ -82,6 +82,11 @@ class SubjectController extends Controller
     public function delete($index)
     {
         $subject = Subject::findOrFail($index);
+        foreach ($subject->lesson as $value) {
+            $value->delete();
+        }
+
+
         $subject->delete();
 
         return redirect('/subjects/'.Auth::id());
