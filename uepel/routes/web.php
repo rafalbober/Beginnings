@@ -42,7 +42,9 @@ Route::get('/student/login', 'Auth\StudentLoginController@showLoginForm')->name(
 Route::post('/student/login', 'Auth\StudentLoginController@login')->name('student.login.submit');
 Route::get('/student/home', 'StudentController@index')->name('student.home')->middleware('auth:student');
 Route::post('/student/logout', 'Auth\StudentLoginController@logout')->name('logout');
-Route::get('/student/subjects', 'StudentController@showSubjects')->name('student.subjects');
+Route::get('/student/subjects', 'StudentController@showSubjects')->name('student.subjects')->middleware('auth:student');
+Route::post('/student/subjects/join', 'StudentController@joinSubject')->name('student.join');
+
 
 // Admin
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

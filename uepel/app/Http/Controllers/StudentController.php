@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Student_list;
 use App\Subject;
+use Illuminate\Support\Facades\Auth;
 
 
 class StudentController extends Controller
@@ -34,6 +36,14 @@ class StudentController extends Controller
 
     }
 
-    public function joinSubject() {}
+    public function joinSubject($subject) {
+        $list = new Student_list();
+        $list->index = Auth::id();
+        $list->subject_id = $subject->id;
+        $list->save();
+
+        return view('student.subjects');
+
+    }
 
 }

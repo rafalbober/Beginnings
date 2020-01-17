@@ -64,6 +64,10 @@ class Handler extends ExceptionHandler
             return redirect('teacher/login');
         }
 
+        if ( in_array('student', $exception->guards()) ) {
+            return redirect('student/login');
+        }
+
         return redirect()->guest('login');
     }
 }

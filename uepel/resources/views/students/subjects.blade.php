@@ -10,7 +10,7 @@
             <ul>
                 @foreach ($subjects as $subject)
                     <li><strong>{{ $subject->name }}</strong></li>
-                    <a href="#">join</a>
+                    <a href={{route('student.join')}}>join</a>
                 @endforeach
             </ul>
         </div>
