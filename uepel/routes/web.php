@@ -60,7 +60,7 @@ Route::get('/subjects/create', "SubjectController@create")->name('subject.create
 Route::get('/subjects/{id}', ['as' => 'subjects.index', 'uses' => 'SubjectController@index'])->middleware('auth:teacher');
 Route::get('/subjects/show/{id}',"SubjectController@show")->name('subject.show')->middleware('auth:teacher');
 Route::get('/subjects/edit/{id}',"SubjectController@edit")->name('subject.edit')->middleware('auth:teacher');
-Route::PATCH('/subjects/update/{id}',"SubjectController@update")->name('subject.update')->middleware('auth:teacher');
+Route::PATCH('/subjects/edit/update/{subject}',"SubjectController@update")->name('subject.update')->middleware('auth:teacher');
 
 Route::get('/deaneries/student_create', "DeanerieController@createStudent")->name('deaneries.student_create')->middleware('auth:admin');
 Route::get('/deaneries/teacher_create', "DeanerieController@createTeacher")->name('deaneries.teacher_create')->middleware('auth:admin');

@@ -16,12 +16,12 @@
             @endif
 
 
-            <form method="POST" action="{{ route('subject.update', $subject) }}">
-                {{ csrf_field() }}
-                {{ method_field('PUT') }}
-                <label>ISBN: </label><input type="text" name="isbn" value="{{ $subject->name }}">
-                <label>Title: </label><input type="text" name="title" value="{{ $subject->description }}">
-                <label>Description: </label><input type="text" name="description" value="{{ $subject->description }}">
+            <form method="POST" action="{{ route('subject.update',['subject' =>$subject->id]) }}">
+                @csrf
+                {{ method_field('PATCH') }}
+                <label>Name: <input type="text" name="name"></label> <br>
+                <label>Desciption: <input type="text" name="description"  ></label> <br>
+                <label>Capacity: <input type="text" name="capacity"></label> <br>
                 <input type="submit" name="update" value="Update">
             </form>
         </div>

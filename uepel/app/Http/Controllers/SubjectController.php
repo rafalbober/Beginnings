@@ -33,12 +33,26 @@ class SubjectController extends Controller
     public function edit($index)
     {
         $subject = Subject::findOrFail($index);
-        return view('subjects.edit',  ['subject' => $subject]);
+        return view('subjects.edit',['subject' => $subject]);
     }
 
-    public function update(Request $request, Subject $subject)
+    public function update($index)
     {
+        $subject = Subject::findOrFail($index);
+        $data =request()->validate([
+            'description' => '',
+            'name' => 'required',
+            'capacity' => ['required','integer']
 
+        ]);
+
+
+        $subject->__set('name', $data['name']);
+        $subject->__set('description',$data['description']);
+        $subject->__set('signup_capacity', $data['capacity']);
+        $subject->update();
+
+        //return redirect('/subjects/show/'.Auth::id());
     }
 
     public function store()

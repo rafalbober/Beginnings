@@ -18,7 +18,7 @@
 
             <form method="POST" action="{{ route('books.update', $book) }}">
                 {{ csrf_field() }}
-                {{ method_field('PUT') }}
+                {{ method_field('PATCH') }}
                 <label>ISBN: </label><input type="text" name="isbn" value="{{ $book->isbn }}">
                 <label>Title: </label><input type="text" name="title" value="{{ $book->title }}">
                 <label>Description: </label><input type="text" name="description" value="{{ $book->description }}">
