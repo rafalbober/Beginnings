@@ -36,13 +36,14 @@ class StudentController extends Controller
 
     }
 
-    public function joinSubject($subject) {
-        $list = new Student_list();
-        $list->index = Auth::id();
-        $list->subject_id = $subject->id;
-        $list->save();
+    public function joinSubject($id) {
+        $listRecord = new Student_list();
+        $listRecord->index = Auth::id();
+        $listRecord->subject_id = $id;
+        $listRecord->__set('joined', false);
+        $listRecord->save();
 
-        return view('student.subjects');
+        return redirect('student/subjects');
 
     }
 
