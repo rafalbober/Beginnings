@@ -66,6 +66,9 @@ Route::get('/deaneries/student_create', "DeanerieController@createStudent")->nam
 Route::get('/deaneries/teacher_create', "DeanerieController@createTeacher")->name('deaneries.teacher_create')->middleware('auth:admin');
 Route::get('/deaneries/teacher_index', 'DeanerieController@indexTeacher')->name('deaneries.teacher_index')->middleware('auth:admin');
 Route::get('/deaneries/student_index', 'DeanerieController@indexStudent')->name('deaneries.student_index')->middleware('auth:admin');
+Route::post('/deaneries/teacher_store',"DeanerieController@storeTeacher")->name('deaneries.teacher_store')->middleware('auth:admin');
+Route::post('/deaneries/student_store',"DeanerieController@storeStudent")->name('deaneries.student_store')->middleware('auth:admin');
+
 
 
 

@@ -1,5 +1,16 @@
 # Witryna do zajeć Proj Proj
 
+Do ogarniecia:
+
+    -zabezpieczenie dodawania zytkownikow/przedmiotow, o tym samym mailu,nazwie
+    -zabezpieczenie wyswietlania przedmiotow danego naucyzciela
+    -prawidlowe paski wylogowywania
+    -resetowanie hasel przez admina, losowo przydzielane haslo
+    -frontend
+    -testy
+    -edycja uzytkownikow
+    
+
 To configure this application execute:
 
 ```bash
