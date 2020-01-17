@@ -3,12 +3,20 @@
 Do ogarniecia:
 
     -zabezpieczenie dodawania zytkownikow/przedmiotow, o tym samym mailu,nazwie
+    -FRONTEND
     -zabezpieczenie wyswietlania przedmiotow danego naucyzciela
+    -FRONTEND
     -prawidlowe paski wylogowywania
+    -FRONTEND
     -resetowanie hasel przez admina, losowo przydzielane haslo
-    -frontend
+    -FRONTEND
     -testy
+    -FRONTEND
     -edycja uzytkownikow
+    -FRONTEND
+    -dodawanie lekcji do przedmiotow
+    -FRONTEND
+    
     
 
 To configure this application execute:
