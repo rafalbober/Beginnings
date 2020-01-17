@@ -1,7 +1,11 @@
 # Witryna do zajeć Proj Proj
 
 Do ogarniecia:
-    
+
+    -segregacja plikow view do odpowiednich katalogów teachers, students etc i zmiany w routsach w ziazku z tym
+    -FRONTEND
+    -refactoring -> admin -> deanerie or deanerie->admin (less changes in other files when it comes to an admin)
+    -FRONTEND
     -cofanie do strony poprzedniej
     -FRONTEND
     -przycisk cofania do panelu konkretnego uzytkownika, nie do panelu logowania

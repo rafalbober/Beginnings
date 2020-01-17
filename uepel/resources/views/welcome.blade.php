@@ -76,7 +76,7 @@
                 <div class="links">
                     <a href="/admin">Admin Login</a>
                     <a href="/home">Student Login</a>
-                    <a href="/teacher">Teacher Login</a>
+                    <a href="{{route('teacher.home')}}">Teacher Login</a>
                     <a href="/faq">Faq</a>
                 </div>
             </div>

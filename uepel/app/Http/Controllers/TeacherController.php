@@ -17,8 +17,8 @@ class TeacherController extends Controller
 
     public function index()
     {
-        $teacher = Teacher::find(Auth::id());
-        return view('teacher', ['teacher' => $teacher]);
+        $teacher = Teacher::findOrFail(Auth::id());
+        return view('teachers.home', ['teacher' => $teacher]);
     }
 
 
