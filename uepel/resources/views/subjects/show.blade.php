@@ -9,14 +9,14 @@
             </div>
             <p>{{ $subject->description }}</p>
 
-            <a href={{route('lesson.create')}}>Create new lesson</a>
+            <a href={{route('lesson.create',$subject->id)}}>Create new lesson</a>
 
-{{--            <ul>--}}
-{{--                @foreach ($teacher->subject as $subject)--}}
-{{--                    <li><strong>{{ $subject->name }}</strong></li>--}}
-{{--                    <a href={{route("subject.show",$subject->id)}}>details</a>--}}
-{{--                @endforeach--}}
-{{--            </ul>--}}
+            <ul>
+                @foreach ($subject->lesson as $lesson)
+                    <li><strong>{{ $lesson->title }}</strong></li>
+                    <a href={{route("subject.show",$lesson->id)}}>details</a>
+                @endforeach
+            </ul>
             <form method="POST" action="{{route('subject.delete', $subject->id)}}">
                 {{ csrf_field() }}
                 {{ method_field('DELETE')  }}

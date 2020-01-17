@@ -20,9 +20,9 @@
             <form method="POST" action="{{route('lesson.store')}}">
                 @csrf
 
-                <label>Name: <input type="text" name="name" ></label> <br>
-                <label>Desciption: <input type="text" name="description" ></label> <br>
-                <label>Capacity: <input type="text" name="capacity" ></label> <br>
+                <label>Title: <input type="text" name="title" ></label> <br>
+                <label>Description: <input type="text" name="description" ></label> <br>
+                <input type="hidden" name="id" value={{$index}} <br>
                 <input type="submit"  value="Create">
             </form>
         </div>

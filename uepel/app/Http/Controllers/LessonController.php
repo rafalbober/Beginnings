@@ -14,32 +14,32 @@ class LessonController extends Controller
         return view('lessons.index' , ['teacher' => $subject]);
     }
 
-    public function create()
+    public function create($index)
     {
-        return view('lessons.create');
+
+        return view('lessons.create',['index'=>$index]);
     }
 
     public function store()
     {
         $data =request()->validate([
             'description' => '',
-            'name' => 'required',
-            'capacity' => ['required','integer']
+            'title' => 'required',
+            'id' => 'required'
 
         ]);
 
         $Lesson = new Lesson();
 
-        $Lesson->__set('name', $data['name']);
+        $Lesson->__set('title', $data['title']);
         $Lesson->__set('description',$data['description']);
-        $Lesson->__set('signup_capacity', $data['capacity']);
-        $Lesson->__set('teacher_id', Auth::id());
+        $Lesson->__set('subject_id', $data['id']);
 
         $Lesson->save();
 
         //auth()->user()->subjects()->create($data);
 
         //\App\Subject::create($data);
-        return redirect('/subjects/'.Auth::id());
+        return redirect('/subjects/show/'.$data['id']);
     }
 }
