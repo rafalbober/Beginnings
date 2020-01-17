@@ -17,7 +17,7 @@ class CreateStudentListsTable extends Migration
             $table->Increments('id');
             $table->integer('subject_id')->unsigned();
             $table->integer('index')->unsigned();
-
+            $table->boolean('joined')->nullable;
             $table->timestamps();
 
 
