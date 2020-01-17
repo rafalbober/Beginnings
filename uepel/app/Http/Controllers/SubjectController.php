@@ -52,7 +52,7 @@ class SubjectController extends Controller
         $subject->__set('signup_capacity', $data['capacity']);
         $subject->update();
 
-        //return redirect('/subjects/show/'.Auth::id());
+        return redirect('/subjects/show/'.Auth::id());
     }
 
     public function store()

@@ -1,7 +1,10 @@
 # Witryna do zajeć Proj Proj
 
 Do ogarniecia:
-
+    
+    -cofanie do strony poprzedniej
+    -FRONTEND
+    -przycisk cofania do panelu konkretnego uzytkownika, nie do panelu logowania
     -zabezpieczenie dodawania zytkownikow/przedmiotow, o tym samym mailu,nazwie
     -FRONTEND
     -zabezpieczenie wyswietlania przedmiotow danego naucyzciela

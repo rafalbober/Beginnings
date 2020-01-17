@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2>{{ $subject->name }} ({{ $subject->sub_capacity }})</h2>
+            <h2>{{ $subject->name }} ({{ $subject->signup_capacity }})</h2>
             <p>{{ $subject->description }}</p>
             <a href="{{route('subject.edit',$subject)}}">edit</a>
             <form method="POST" action="/books/{{ $subject->id }}">
