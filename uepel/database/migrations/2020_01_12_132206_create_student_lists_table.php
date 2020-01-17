@@ -17,7 +17,8 @@ class CreateStudentListsTable extends Migration
             $table->Increments('id');
             $table->integer('subject_id')->unsigned();
             $table->integer('index')->unsigned();
-            $table->boolean('joined')->nullable;
+            $table->boolean('joined')->nullable();
+
             $table->timestamps();
 
 
@@ -27,7 +28,6 @@ class CreateStudentListsTable extends Migration
 
             $table->foreign('subject_id')->references('id')->on('subjects');
             $table->foreign('index')->references('id')->on('students');
-
 
 
         });
