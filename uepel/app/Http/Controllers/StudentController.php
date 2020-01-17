@@ -33,4 +33,7 @@ class StudentController extends Controller
         return view('students.subjects', ['subjects' => $subjects]);
 
     }
+
+    public function joinSubject() {}
+
 }
