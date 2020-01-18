@@ -45,7 +45,7 @@ class DeanerieController extends Controller
         $Teacher->__set('name', $data['name']);
         $Teacher->__set('email',$data['email']);
         $Teacher->__set('surname', $data['surname']);
-        $Teacher->__set('password', $data['password']);
+        $Teacher->__set('password', bcrypt($data['password']));
         //$Teacher->__set('Teacher_id', Auth::id());
 
         $Teacher->save();
@@ -83,7 +83,7 @@ class DeanerieController extends Controller
         $Student->__set('name', $data['name']);
         $Student->__set('email',$data['email']);
         $Student->__set('surname', $data['surname']);
-        $Student->__set('password', $data['password']);
+        $Student->__set('password', bcrypt($data['password']));
         //$Student->__set('Student_id', Auth::id());
 
         $Student->save();

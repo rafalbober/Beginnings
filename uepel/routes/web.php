@@ -60,6 +60,10 @@ Route::post('/teacher/login', 'Auth\TeacherLoginController@login')->name('teache
 Route::post('/teacher/logout', 'Auth\TeacherLoginController@logout')->name('teacher.logout');
 Route::get('/teachers/home', 'TeacherController@home')->name('teacher.home')->middleware('auth:teacher');
 Route::get('/teachers/index/{id}','TeacherController@index')->name('teacher.index')->middleware('auth:teacher');
+Route::get('/teachers/request','TeacherController@request')->name('teacher.request')->middleware('auth:teacher');
+Route::get('/teachers/request/{id}','TeacherController@request')->name('teacher.request')->middleware('auth:teacher');
+
+
 
 
 //Subjects
