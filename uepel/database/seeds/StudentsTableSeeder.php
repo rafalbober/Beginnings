@@ -17,5 +17,12 @@ class StudentsTableSeeder extends Seeder
             'email' => 'hehe@xd.pl',
             'password' => bcrypt('hehe'),
         ]);
+
+        DB::table('students')->insert([
+            'name' => 'rafalinka',
+            'surname' => 'Bobcio',
+            'email' => 'bober@xd.pl',
+            'password' => bcrypt('hehe'),
+        ]);
     }
 }

@@ -34,6 +34,28 @@ class TeacherController extends Controller
         $list = Student_list::all();
         return view('teachers.request', ['subject' => $subject],['list'=>$list]);
     }
+    public function requestAccept($index)
+    {
+        $list = Student_list::findOrFail($index);
+        $subject = Subject::findOrFail($list->subject_id);
+        $list->__set('joined', 1);
+        $helper = $subject->signup_current + 1;
+        $subject->__set('signup_current', $helper);
+        $list->save();
+        $list = Student_list::all();
+        return view('teachers.request', ['subject' => $subject],['list'=>$list]);
+    }
+    public function requestReject($index)
+    {
+        $list = Student_list::findOrFail($index);
+        $subject = Subject::findOrFail($list->subject_id);
+        $list->__set('joined', 0);
+        $list->save();
+        $list = Student_list::all();
+        return view('teachers.request', ['subject' => $subject],['list'=>$list]);
+    }
+
+
 
 
 }

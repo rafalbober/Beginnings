@@ -49,7 +49,7 @@ class StudentController extends Controller
         $listRecord = new Student_list();
         $listRecord->index = Auth::id();
         $listRecord->subject_id = $id;
-        $listRecord->__set('joined', false);
+        //$listRecord->__set('joined', false);
         $listRecord->save();
 
         return redirect('student/subjects');

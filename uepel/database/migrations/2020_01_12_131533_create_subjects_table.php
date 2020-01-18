@@ -17,7 +17,7 @@ class CreateSubjectsTable extends Migration
             $table->Increments('id');
             $table->string('name')->unique();
             $table->integer('teacher_id')->unsigned();
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->integer('signup_capacity');
             $table->integer('signup_current')->default(0);
            // $table->integer('teacher_id')->unique();
