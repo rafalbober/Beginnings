@@ -32,18 +32,24 @@
             <div class="container">
                 @if(Auth::guard('admin')->check())
                     <a class="navbar-brand" href="{{ route('admin.home') }}">
-                        Üpel Deanery Home
+                        Deanery Home
                     </a>
                 @elseif(Auth::guard('teacher')->check())
                     <a class="navbar-brand" href="{{ route('teacher.home') }}">
-                        Üpel Teacher Home
+                        Teacher Home
                     </a>
                 @elseif((Auth::guard('student')->check()))
                     <a class="navbar-brand" href="{{ route('student.home') }}">
-                        Üpel Student Home
+                        Student Home Üpel
                     </a>
                 @endif
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    @guest
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            Üpel
+                        </a>
+                    @endguest
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
