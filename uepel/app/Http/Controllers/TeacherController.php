@@ -15,10 +15,16 @@ class TeacherController extends Controller
         $this->middleware('auth:teacher');
     }
 
-    public function index()
+    public function home()
     {
         $teacher = Teacher::findOrFail(Auth::id());
         return view('teachers.home', ['teacher' => $teacher]);
+    }
+
+    public function index($index)
+    {
+        $teacher = Teacher::findOrFail($index);
+        return view('teachers.index', ['teacher' => $teacher]);
     }
 
 

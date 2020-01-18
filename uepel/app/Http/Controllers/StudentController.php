@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Student;
 use App\Student_list;
 use App\Subject;
 use Illuminate\Support\Facades\Auth;
@@ -24,9 +25,10 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function home()
     {
-        return view('students.home');
+        $student = Student::findOrFail(Auth::id());
+        return view('students.home',['student'=>$student]);
     }
 
     public function showSubjects()
@@ -35,6 +37,12 @@ class StudentController extends Controller
         $list = Student_list::all();
         return view('students.subjects', ['subjects' => $subjects], ['list' => $list]);
 
+    }
+
+    public function index($index)
+    {
+        $student = Student::findOrFail($index);
+        return view('students.index',['student'=>$student]);
     }
 
     public function joinSubject($id) {

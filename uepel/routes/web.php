@@ -40,10 +40,12 @@ Route::get('/faq', function () {
 // Student
 Route::get('/student/login', 'Auth\StudentLoginController@showLoginForm')->name('login');
 Route::post('/student/login', 'Auth\StudentLoginController@login')->name('student.login.submit');
-Route::get('/student/home', 'StudentController@index')->name('student.home')->middleware('auth:student');
 Route::post('/student/logout', 'Auth\StudentLoginController@logout')->name('logout');
+Route::get('/student/home', 'StudentController@home')->name('student.home')->middleware('auth:student');
 Route::get('/student/subjects', 'StudentController@showSubjects')->name('student.subjects')->middleware('auth:student');
 Route::post('/student/subjects/join/{id}', 'StudentController@joinSubject')->name('student.join')->middleware('auth:student');;
+Route::get('/students/index/{id}','StudentController@index')->name('student.index')->middleware('auth:student');
+
 
 
 // Admin
@@ -55,8 +57,10 @@ Route::post('/admin/logout', 'Auth\AdminLoginController@logout')->name('admin.lo
 // Teacher
 Route::get('/teacher/login', 'Auth\TeacherLoginController@showLoginForm')->name('teacher.login');
 Route::post('/teacher/login', 'Auth\TeacherLoginController@login')->name('teacher.login.submit');
-Route::get('/teachers/home', 'TeacherController@index')->name('teacher.home')->middleware('auth:teacher');
 Route::post('/teacher/logout', 'Auth\TeacherLoginController@logout')->name('teacher.logout');
+Route::get('/teachers/home', 'TeacherController@home')->name('teacher.home')->middleware('auth:teacher');
+Route::get('/teachers/index/{id}','TeacherController@index')->name('teacher.index')->middleware('auth:teacher');
+
 
 //Subjects
 Route::post('/subjects/store',"SubjectController@store")->name('subject.store')->middleware('auth:teacher');

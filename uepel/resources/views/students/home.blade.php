@@ -70,6 +70,7 @@
 
     <div class="content">
         <div class="title m-b-md">
+            {{$student->email}}
             Üpel Student
 
         </div>
@@ -78,8 +79,8 @@
         </div><br/>
 
         <div class="links">
-            <a href="#">About Me</a>
-            <a href="{{route("student.subjects")}}">Subjects</a>
+            <a href="{{route('student.index',$student->id )}}">About Me</a>
+            <a href="{{route('student.subjects')}}">Subjects</a>
             <a href="#">Students</a>
             <a href="#">Teachers</a>
         </div>
