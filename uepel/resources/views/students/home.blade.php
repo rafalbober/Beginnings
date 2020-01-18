@@ -80,7 +80,7 @@
 
         <div class="links">
             <a href="{{route('student.index',$student->id )}}">About Me</a>
-            <a href="{{route('student.subjects')}}">Subjects</a>
+            <a href="{{route('student.subjects_show')}}">Subjects</a>
             <a href="#">Students</a>
             <a href="#">Teachers</a>
         </div>

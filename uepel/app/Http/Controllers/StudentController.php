@@ -35,7 +35,7 @@ class StudentController extends Controller
     {
         $subjects = Subject::all();
         $list = Student_list::all();
-        return view('students.subjects', ['subjects' => $subjects], ['list' => $list]);
+        return view('students.subjects_show', ['subjects' => $subjects], ['list' => $list]);
 
     }
 
@@ -52,7 +52,7 @@ class StudentController extends Controller
         //$listRecord->__set('joined', false);
         $listRecord->save();
 
-        return redirect('student/subjects');
+        return redirect('student/subjects_show');
 
     }
 
