@@ -39,6 +39,14 @@ class StudentController extends Controller
 
     }
 
+    public function showMySubjects()
+    {
+        $subjects = Subject::all();
+        $list = Student_list::all();
+        return view('students.my_subjects', ['subjects' => $subjects], ['list' => $list]);
+
+    }
+
     public function index($index)
     {
         $student = Student::findOrFail($index);
