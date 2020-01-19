@@ -22,10 +22,8 @@
                         @if($exist == 1)
                             @if ($notJoined == 0)
                                 <li><strong>{{ $subject->name }}</strong></li>
-                                <form method="POST" action={{route('student.join', $subject->id)}}>
-                                    @csrf
-                                    <button class="btn btn-primary">See more</button>
-                                </form>
+                                    <a href={{route("student_lessons.show",$subject->id)}}> See topics</a>
+                                @endif
                         @endif
                     @endforeach
                 </ul>

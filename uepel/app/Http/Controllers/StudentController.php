@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Lesson;
 use App\Student;
 use App\Student_list;
 use App\Subject;
@@ -64,4 +65,9 @@ class StudentController extends Controller
 
     }
 
+    public function showLessons($id) {
+        $subject = Subject::findOrFail($id);
+
+        return view('students.lessons',  ['subject' => $subject]);
+    }
 }

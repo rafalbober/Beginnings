@@ -46,7 +46,7 @@ Route::get('/student/subjects_show', 'StudentController@showSubjects')->name('st
 Route::post('/student/subjects_show/join/{id}', 'StudentController@joinSubject')->name('student.join')->middleware('auth:student');;
 Route::get('/students/index/{id}','StudentController@index')->name('student.index')->middleware('auth:student');
 Route::get('/student/my_subjects', 'StudentController@showMySubjects')->name('student.my_subjects')->middleware('auth:student');
-Route::get('/student/my_subjects/show/{id}',"StudentController@showLessons")->name('subject.show')->middleware('auth:student');
+Route::get('/student/my_subjects/show/{id}',"StudentController@showLessons")->name('student_lessons.show')->middleware('auth:student');
 
 
 // Admin
@@ -65,10 +65,6 @@ Route::get('/teachers/index/{id}','TeacherController@index')->name('teacher.inde
 Route::get('/teachers/request/{id}','TeacherController@request')->name('teacher.request')->middleware('auth:teacher');
 Route::post('/teachers/request/accept/{id}','TeacherController@requestAccept')->name('request.accept')->middleware('auth:teacher');
 Route::post('/teachers/request/reject/{id}','TeacherController@requestReject')->name('request.reject')->middleware('auth:teacher');
-
-
-
-
 
 
 //Subjects
