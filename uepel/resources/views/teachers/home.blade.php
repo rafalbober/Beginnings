@@ -9,9 +9,79 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+</head>
+
+
+<body>
+<div class="container-fluid mb-12">
+<div class="row justify-content-center "  >
+    <div class=" text-center " >
+        <h1></h1>
+        <h2 style="font-weight: 500; font-size: 60px">daje tu tytuł bo tak i dlatego bo bo jebie mi sie widok i nachodzi na navbar a nie mam siły myslec jak to na razie naprawic</h2>
+
+    </div>
+</div>
+
+    <div class="container-fluid mb-5"  >
+
+        <div class="row">
+            <div class="col-md-2" style="background: #ffffff">
+                <div class="card md-12">
+                    <div class="card-body text-center">
+                        <h2 class="col-md-12 text-center">Teacher Panel</h2>
+"
+                        <img src="{{URL::asset('/images/profile1.jpg')}}" class="rounded-circle">
+                        <h3 class="card-title mt-3">  {{$teacher->name}}</h3>
+                        <h4 class="card-title mt-3">  {{$teacher->email}}</h4>
+                        <p>
+                            I admire good jokes, passats and some lemonade.
+                        </p>
+                        <div class="col mb-12">
+                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="{{route('teacher.index',$teacher->id)}}" >About me </a> </div>
+                        <div class="col mb-12">
+                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="{{route('subjects.index',$teacher->id)}}" >My Subjects </a> </div>
+                        <div class="col mb-12">
+                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >Add new Subject </a> </div>
+                        <div class="col mb-12">
+                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >My Students</a> </div>
+                        <div class="col mb-12">
+                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >Requests</a> </div>
+
+
+                    </div>
+            </div>
+
+            </div>
+            <div class="col-md-8 ">
+                <div class="container mb-5">
+
+                <h2 class="text-center">
+                    Activity
+                </h2>
+                <div class="media">
+                    <img src="{{URL::asset('/images/avatar1.jpg')}}" width="48" class="rounded-circle">
+                    <div class="media-body">
+                        <p class="mb-1">
+                            <a href="#">{{$teacher->name}} </a>  added new subject , a while ago
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>
 
     <!-- Styles -->
-    <style>
+<!--  <style>
         html, body {
             background-color: #fff;
             color: #636b6f;
@@ -64,6 +134,7 @@
         }
     </style>
 </head>
+
 <body>
 <div class="flex-center position-ref full-height">
     <div class="content">
@@ -84,4 +155,7 @@
     </div>
 </div>
 </body>
+
+
 </html>
+-->

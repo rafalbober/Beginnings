@@ -19,7 +19,7 @@
         <div class="row justify-content-center">
             <div class="col-md-4" style="background: rgba(0,0,0,0.4); margin-top: 90px; height: 500px; box-shadow: 1px 4px 40px black">
                 <div class="">
-                    <div class=""><h2 class="text-center text-white-50" style="font-weight: 700;padding-top: 10px">Login Admin</h2></div>
+                    <div class=""><h2 class="text-center text-white-50"style="font-family: Verdana, sans-serif;font-weight: 700;padding-top: 10px">Login Admin</h2></div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('admin.login.submit') }}">

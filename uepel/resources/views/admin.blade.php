@@ -69,7 +69,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Üpel Admin
+            Üpel Adm
         </div>
         <div style="font-size:30px">
             Stundeplatforme
