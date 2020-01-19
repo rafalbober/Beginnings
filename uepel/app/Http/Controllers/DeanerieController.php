@@ -24,6 +24,12 @@ class DeanerieController extends Controller
         return view('deaneries.teacher_index', ['teacher'=>$teacher]);
     }
 
+    public function showTeacher($index)
+    {
+        $teacher = Teacher::findOrFail($index);
+        return view('deaneries.teacher_show',['teacher'=>$teacher]);
+    }
+
     public function createTeacher()
     {
         $teacher = Teacher::all();
@@ -66,6 +72,12 @@ class DeanerieController extends Controller
     {
         $student = Student::all();
         return view('deaneries.student_create', ['student'=>$student]);
+    }
+
+    public function showStudent($index)
+    {
+        $student = Student::findOrFail($index);
+        return view('deaneries.student_show',['student'=>$student]);
     }
 
     public function storeStudent()

@@ -28,6 +28,14 @@ class TeacherController extends Controller
         return view('teachers.index', ['teacher' => $teacher]);
     }
 
+    public function edit($index)
+    {
+        $teacher = Teacher::findOrFail($index);
+        return view('teachers.edit',['teacher' => $teacher]);
+    }
+
+
+
     public function request($index)
     {
         $subject = Subject::findOrFail($index);
@@ -53,6 +61,26 @@ class TeacherController extends Controller
         $list->save();
         $list = Student_list::all();
         return view('teachers.request', ['subject' => $subject],['list'=>$list]);
+    }
+
+    public function update($index)
+    {
+        $teacher = Teacher::findOrFail($index);
+
+
+        $data =request()->validate([
+            'new'=>'required|same:repeat',
+            'previous'=>'same:'.$teacher->password
+        ]);
+
+
+
+
+        $teacher->__set('password', bcrypt($data['new']));
+
+        $teacher->update();
+
+        return redirect('/teachers/index/'.Auth::id());
     }
 
 
