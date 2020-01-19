@@ -6,7 +6,8 @@
         <div class="col-md-8">
             <h1></h1>
             <h2>Subjects: </h2>
-            <ul>
+
+
                 @foreach ($subjects as $subject)
                     <?php $notJoined = 1 ?>
                     <li><strong>{{ $subject->name }}</strong></li>
@@ -24,7 +25,7 @@
                             <p><strong>Already requested!</strong></p>
                     @endif
                 @endforeach
-            </ul>
+
         </div>
     </div>
 </div>
