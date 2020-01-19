@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="" />
+    <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HomeCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HelloCept.php" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +195,9 @@
       <workItem from="1579390078633" duration="615000" />
       <workItem from="1579392466282" duration="1788000" />
       <workItem from="1579394282830" duration="438000" />
-      <workItem from="1579394869900" duration="252000" />
+      <workItem from="1579394869900" duration="1562000" />
+      <workItem from="1579396688130" duration="1787000" />
+      <workItem from="1579398501299" duration="723000" />
     </task>
     <task id="LOCAL-00001" summary="added Route for Welcome.blade">
       <created>1579082228609</created>
