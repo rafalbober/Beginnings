@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Subject;
 use App\Teacher;
 use App\Student_list;
+use App\Degree;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -53,6 +54,8 @@ class TeacherController extends Controller
         $helper = $subject->signup_current + 1;
         $subject->__set('signup_current', $helper);
         $list->save();
+        (new DegreeController)->create($list->id);
+        (new PresenceController)->create($list->id);
         $list = Student_list::all();
         return view('teachers.request', ['subject' => $subject],['list'=>$list]);
     }

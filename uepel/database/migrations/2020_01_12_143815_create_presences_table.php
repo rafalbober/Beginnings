@@ -16,9 +16,9 @@ class CreatePresencesTable extends Migration
         Schema::create('presences', function (Blueprint $table) {
             $table->Increments('id');
             $table->integer('student_index')->unsigned();
-            $table->integer('class_number')->unsigned();
+            $table->integer('lesson_number')->unsigned();
             $table->integer('subject_id')->unsigned();
-            $table->boolean('confirm');
+            $table->boolean('presence')->nullable();
 
 
             $table->timestamps();
@@ -27,7 +27,7 @@ class CreatePresencesTable extends Migration
         Schema::table('presences', function(Blueprint $table) {
             $table->foreign('student_index')->references('id')->on('students');
             $table->foreign('subject_id')->references('id')->on('subjects');
-            $table->foreign('class_number')->references('id')->on('lessons');
+            $table->foreign('lesson_number')->references('id')->on('lessons');
 
         });
     }
