@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HomeCept.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HelloCept.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/TeacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +147,7 @@
   <component name="ProjectId" id="1WQTSDP9yJT9dB3NYuxf4MJez9i" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/uepel/resources/views/faq" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -198,6 +198,7 @@
       <workItem from="1579394869900" duration="1562000" />
       <workItem from="1579396688130" duration="1787000" />
       <workItem from="1579398501299" duration="723000" />
+      <workItem from="1579425779179" duration="1338000" />
     </task>
     <task id="LOCAL-00001" summary="added Route for Welcome.blade">
       <created>1579082228609</created>
