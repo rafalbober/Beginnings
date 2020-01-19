@@ -114,4 +114,13 @@ class DeanerieController extends Controller
         $Student->update();
         return redirect('/deaneries/student_index');
     }
+
+    public function resetTeacherPass($id, Request $request)
+    {
+        $Teacher = Teacher::findOrFail($id);
+        $new = $request->input('new');
+        $Teacher->__set('password', bcrypt($new));
+        $Teacher->update();
+        return redirect('/deaneries/teacher_index');
+    }
 }

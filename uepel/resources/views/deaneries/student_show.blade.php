@@ -10,13 +10,13 @@
 
                 <h2>Email: {{$student->email}}</h2>
 
-                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#resetModal" onclick="document.getElementById('reset').disabled = true">Reset password</button>
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#resetModal" onclick="document.getElementById('reset').disabled = true; document.getElementById('newpassword').value = ''">Reset password</button>
                 <!-- Pop up modal -->
                 <div class="modal fade" id="resetModal" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title">Reset password</h4>
+                                <h4 class="modal-title">Reset student password</h4>
                             </div>
                             <div class="modal-body">
                                 <p>Click randomize to create new password. It will appear here.</p>
@@ -31,7 +31,6 @@
                                             return (Math.random().toString(36).substr(2, length));
                                         }
                                     </script>
-                                    <?php  $new = 'haslo888'; ?>
                                     <form method="POST" action="{{ route('deaneries.student_resetPass', ['id' => $student->id]) }}">
                                         @csrf
                                         {{method_field('PATCH')}}
