@@ -117,7 +117,7 @@ class DeanerieController extends Controller
 
     public function resetTeacherPass($id, Request $request)
     {
-        $Teacher = Student::findOrFail($id);
+        $Teacher = Teacher::findOrFail($id);
         $new = $request->input('new');
         $Teacher->__set('password', bcrypt($new));
         $Teacher->update();

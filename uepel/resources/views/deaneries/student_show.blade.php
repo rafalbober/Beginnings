@@ -10,7 +10,7 @@
 
                 <h2>Email: {{$student->email}}</h2>
 
-                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#resetModal" onclick="document.getElementById('reset').disabled = true">Reset password</button>
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#resetModal" onclick="document.getElementById('reset').disabled = true; document.getElementById('newpassword').value = ''">Reset password</button>
                 <!-- Pop up modal -->
                 <div class="modal fade" id="resetModal" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">
