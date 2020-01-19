@@ -38,15 +38,9 @@
                         </p>
 
                         <div class="col mb-12">
-                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%"href="#" >Subjects </a> </div>
+                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="{{route('deaneries.student_index')}}" >Teachers</a> </div>
                         <div class="col mb-12">
-                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#">Add new Subject </a> </div>
-                        <div class="col mb-12">
-                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >Teachers</a> </div>
-                        <div class="col mb-12">
-                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >Students</a> </div>
-                        <div class="col mb-12">
-                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >Requests</a> </div>
+                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="{{route('deaneries.teacher_index')}}" >Students</a> </div>
 
 
                     </div>

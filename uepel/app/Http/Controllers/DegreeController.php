@@ -25,6 +25,11 @@ class DegreeController extends Controller
 
             }
         }
+        $degree = new Degree();
+
+        $degree->__set('student_index',$list->index);
+        $degree->__set('subject_id',$list->subject_id);
+        $degree->save();
     }
 
     public function newLesson($lesson)
@@ -43,6 +48,12 @@ class DegreeController extends Controller
                 $degree->save();
             }
         }
+    }
+
+    public function addDegreeLesson($lesson, $student, $value)
+    {
+        $degree = Degree::all();
+
     }
     //
 }
