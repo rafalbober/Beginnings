@@ -35,8 +35,8 @@
                                     <form method="POST" action="{{ route('deaneries.student_resetPass', ['id' => $student->id]) }}">
                                         @csrf
                                         {{method_field('PATCH')}}
-                                        <input type='hidden' name='new' value='<?php echo "$new";?>'/>
-                                        <button type="button" class="btn btn-primary" onclick="document.getElementById('newpassword').value = randPass(8); document.getElementById('reset').disabled = false; ">Randomize</button>
+                                        <input type='hidden' id="new" name='new'/>
+                                        <button type="button" class="btn btn-primary" onclick="document.getElementById('newpassword').value = randPass(8); document.getElementById('reset').disabled = false; document.getElementById('new').value = document.getElementById('newpassword').value">Randomize</button>
                                         <input type="submit" disabled id="reset" name="reset" class="btn btn-success" value="Reset">
                                     </form>
                                 </span>
