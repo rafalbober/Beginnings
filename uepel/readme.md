@@ -12,7 +12,7 @@ Do ogarniecia:
 
     -testy
 
-    -edycja uzytkownikow -> zmiana hasla
+    //DONE-edycja uzytkownikow -> zmiana hasla
     
     -panel szczegolow przedmiotow w studencie
     

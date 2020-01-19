@@ -13,11 +13,11 @@ class Lesson extends Model
     }
     public function presence()
     {
-        return $this->hasMany(Presence::class);
+        return $this->hasMany(Presence::class,'lesson_number','id');
     }
 
     public function degree()
     {
-        return $this->hasMany(Degree::class);
+        return $this->hasMany(Degree::class,'lesson_number','id');
     }
 }

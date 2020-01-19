@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Presence;
+use App\Student_list;
 use App\Subject;
 use App\Teacher;
+use App\Degree;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -81,13 +84,39 @@ class SubjectController extends Controller
     public function delete($index)
     {
         $subject = Subject::findOrFail($index);
-        foreach ($subject->lesson as $value) {
-            $value->delete();
-        }
 
+        $this->deleteAllDependences($index);
 
         $subject->delete();
 
         return redirect('/subjects/'.Auth::id());
+    }
+
+    public function deleteAllDependences($index)
+    {
+        $subject = Subject::findOrFail($index);
+        foreach ($subject->lesson as $value) {
+            $degree = Degree::all();
+            $presence = Presence::all();
+            foreach ($degree as $degrees){
+                if($degrees->lesson_number == $value->id){
+                    $degrees->delete();
+                }
+            }
+            foreach ($presence as $presences){
+                if($presences->lesson_number == $value->id){
+                    $presences->delete();
+                }
+            }
+            $value->delete();
+        }
+        $list = Student_list::all();
+        foreach ($list as $lists){
+            if($lists->subject_id == $subject->id)
+            {
+                $lists->delete();
+            }
+
+        }
     }
 }
