@@ -45,6 +45,9 @@ Route::get('/student/home', 'StudentController@home')->name('student.home')->mid
 Route::get('/student/subjects_show', 'StudentController@showSubjects')->name('student.subjects_show')->middleware('auth:student');
 Route::post('/student/subjects_show/join/{id}', 'StudentController@joinSubject')->name('student.join')->middleware('auth:student');;
 Route::get('/students/index/{id}','StudentController@index')->name('student.index')->middleware('auth:student');
+Route::get('/students/edit/{id}',"StudentController@edit")->name('student.edit')->middleware('auth:student');
+Route::PATCH('/students/edit/update/{id}',"StudentController@update")->name('student.update')->middleware('auth:student');
+
 
 
 

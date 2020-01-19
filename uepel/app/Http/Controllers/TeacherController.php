@@ -6,7 +6,10 @@ use App\Teacher;
 use App\Student_list;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\MessageBag;
+use Illuminate\Validation\Rule;
 
 class TeacherController extends Controller
 {
@@ -68,15 +71,26 @@ class TeacherController extends Controller
         $teacher = Teacher::findOrFail($index);
 
 
-        $data =request()->validate([
+        $validator = Validator::make(request()->all(), [
             'new'=>'required|same:repeat',
-            'previous'=>'same:'.$teacher->password
+            'current'=>'required'
         ]);
 
+        if(!Hash::check(request()->input('current'),$teacher->password))
+        {
+            $validator->after(function($validator) {
+                $validator->errors()->add('current', 'Old Password wrong.');
+            });
+        }
+
+        if ($validator->fails()) {
+            return redirect('teachers/edit/'.$teacher->id)
+                ->withErrors($validator)
+                ->withInput();
+        }
 
 
-
-        $teacher->__set('password', bcrypt($data['new']));
+        $teacher->__set('password', bcrypt(request()->input('new')));
 
         $teacher->update();
 

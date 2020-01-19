@@ -16,7 +16,7 @@
             @endif
 
 
-            <form method="POST" action="{{ route('teacher.update',['id' =>$teacher->id]) }}">
+            <form method="POST" action="{{ route('student.update',['id' =>$student->id]) }}">
                 @csrf
                 {{ method_field('PATCH') }}
                 <label>Current Password: <br><input type="password" name="current"></label> <br>

@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Student;
 use App\Student_list;
 use App\Subject;
+use App\Teacher;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 
 class StudentController extends Controller
@@ -45,6 +48,12 @@ class StudentController extends Controller
         return view('students.index',['student'=>$student]);
     }
 
+    public function edit($index)
+    {
+        $student = Student::findOrFail($index);
+        return view('students.edit',['student' => $student]);
+    }
+
     public function joinSubject($id) {
         $listRecord = new Student_list();
         $listRecord->index = Auth::id();
@@ -54,6 +63,37 @@ class StudentController extends Controller
 
         return redirect('student/subjects_show');
 
+    }
+
+    public function update($index)
+    {
+        $student = Student::findOrFail($index);
+
+
+        $validator = Validator::make(request()->all(), [
+            'new'=>'required|same:repeat',
+            'current'=>'required'
+        ]);
+
+        if(!Hash::check(request()->input('current'),$student->password))
+        {
+            $validator->after(function($validator) {
+                $validator->errors()->add('current', 'Old Password wrong.');
+            });
+        }
+
+        if ($validator->fails()) {
+            return redirect('students/edit/'.$student->id)
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+
+        $student->__set('password', bcrypt(request()->input('new')));
+
+        $student->update();
+
+        return redirect('/students/index/'.Auth::id());
     }
 
 }
