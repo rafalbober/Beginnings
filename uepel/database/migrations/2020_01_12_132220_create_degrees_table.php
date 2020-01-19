@@ -16,7 +16,7 @@ class CreateDegreesTable extends Migration
         Schema::create('degrees', function (Blueprint $table) {
             $table->Increments('id');
             $table->integer('student_index')->unsigned();
-            $table->integer('lesson_number')->unsigned();
+            $table->integer('lesson_number')->unsigned()->nullable();
             $table->integer('subject_id')->unsigned();
             $table->float('degree')->nullable();
 

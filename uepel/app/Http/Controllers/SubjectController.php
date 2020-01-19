@@ -102,6 +102,9 @@ class SubjectController extends Controller
                 if($degrees->lesson_number == $value->id){
                     $degrees->delete();
                 }
+                if($degrees->subject_id == $subject->id && is_null($degrees->lesson_number)){
+                    $degrees->delete();
+                }
             }
             foreach ($presence as $presences){
                 if($presences->lesson_number == $value->id){

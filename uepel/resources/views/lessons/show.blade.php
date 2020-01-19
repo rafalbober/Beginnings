@@ -8,6 +8,15 @@
             <p>{{ $lesson->description }}</p>
             <a href="{{route('lesson.edit',$lesson->id)}}">edit</a>
         </div>
+
     </div>
+    <?php
+    $Student = \App\Student::all();
+        foreach ($Student as $student)
+            {
+                echo "<div class = 'row'>$student->name</div>";
+            }
+
+    ?>
 </div>
 @endsection

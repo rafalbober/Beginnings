@@ -100,6 +100,11 @@ class TeacherController extends Controller
         return redirect('/teachers/index/'.Auth::id());
     }
 
+    public function addDegreeLesson($index)
+    {
+
+    }
+
 
 
 

@@ -20,7 +20,7 @@ Do ogarniecia:
     
     -Ogarniecie bazy z ocenkami, obecnosciami w sensie podpiecia pod sucject->zapisani->uczen->ocena i presence
     
-    -FRONTEND
+    IN PROGRESS - FRONTEND
     
     -segregacja plikow view do odpowiednich katalogów teachers, students etc i zmiany w routsach w ziazku z tym
     
