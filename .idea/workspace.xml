@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/resources/views/faq/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/faq/faq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php_2019_witryna_do_prowadzenia_zajec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php_2019_witryna_do_prowadzenia_zajec.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +139,9 @@
       <path value="$PROJECT_DIR$/uepel/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/uepel/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/uepel/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/uepel/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/uepel/vendor/league/commonmark-ext-table" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/error-handler" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WQTSDP9yJT9dB3NYuxf4MJez9i" />
@@ -178,6 +181,7 @@
       <workItem from="1579080817714" duration="1749000" />
       <workItem from="1579082599144" duration="1786000" />
       <workItem from="1579084412035" duration="186000" />
+      <workItem from="1579385800385" duration="112000" />
     </task>
     <task id="LOCAL-00001" summary="added Route for Welcome.blade">
       <created>1579082228609</created>
