@@ -101,6 +101,7 @@ Route::post('/deaneries/student_store',"DeanerieController@storeStudent")->name(
 Route::get('/deaneries/student_show/{id}',"DeanerieController@showStudent")->name('deaneries.student_show')->middleware('auth:admin');
 Route::get('/deaneries/teacher_show/{id}',"DeanerieController@showTeacher")->name('deaneries.teacher_show')->middleware('auth:admin');
 Route::PATCH('/deaneries/student_show/update/{id}',"DeanerieController@resetStudentPass")->name('deaneries.student_resetPass')->middleware('auth:admin');
+Route::PATCH('/deaneries/teacher_show/update/{id}',"DeanerieController@resetTeacherPass")->name('deaneries.teacher_resetPass')->middleware('auth:admin');
 
 
 
