@@ -17,7 +17,7 @@
 <div class="row justify-content-center "  >
     <div class=" text-center " >
         <h1></h1>
-        <h2 style="font-weight: 500; font-size: 60px">daje tu tytuł bo tak i dlatego bo bo jebie mi sie widok i nachodzi na navbar a nie mam siły myslec jak to na razie naprawic</h2>
+        <br style="font-weight: 500; font-size: 60px"></br></br></h2>
 
     </div>
 </div>
@@ -30,7 +30,7 @@
                     <div class="card-body text-center">
                         <h2 class="col-md-12 text-center">Teacher Panel</h2>
 "
-                        <img src="{{URL::asset('/images/profile1.jpg')}}" class="rounded-circle">
+                        <img src="{{URL::asset('/images/avatar1.jpg')}}" class="rounded-circle">
                         <h3 class="card-title mt-3">  {{$teacher->name}}</h3>
                         <h4 class="card-title mt-3">  {{$teacher->email}}</h4>
                         <p>
@@ -55,17 +55,53 @@
             <div class="col-md-8 ">
                 <div class="container mb-5">
 
-                <h2 class="text-center">
+                <h2 class="text-left">
                     Activity
                 </h2>
-                <div class="media">
+                <div class="media" style="padding-top: 2%;padding-bottom: 2%">
                     <img src="{{URL::asset('/images/avatar1.jpg')}}" width="48" class="rounded-circle">
                     <div class="media-body">
-                        <p class="mb-1">
+                        <p class="mb-1" style="margin-left: 1%">
                             <a href="#">{{$teacher->name}} </a>  added new subject , a while ago
                         </p>
+                        <div class="card" style="margin-top: 3%">
+                            <div class="media" >
+                                <img src="{{URL::asset('/images/subject.jpg')}}" width="20%" >
+                                <div class="media-body text-muted" style="margin-left: 2%; margin-top: 1%">
+                                    <h5>subject name</h5>
+                                    <p>tu powinien byc opis przedmiotu ktory zostal oddany chyba, ale nie wiem to nowy koncept.
+                                    Co sądzicie dzieciaczki wypowiedzcie się i podlączcie mi tu php jesli ja zapomne
+                                    loftki <3 buziaczek
+                                        </br> ps całość powinna byc w tej hujowej pętli foricz </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
+                    <div class="media" style="padding-top: 2%;padding-bottom: 2%">
+                        <img src="{{URL::asset('/images/avatar1.jpg')}}" width="48" class="rounded-circle" style="margin-bottom: 5%">
+                        <div class="media-body">
+                            <p class="mb-1" style="margin-left: 1%">
+                                <a href="#">{{$teacher->name}} </a>  added new subject , a while ago
+                            </p>
+                            <div class="card" style="margin-top: 3%">
+                                <div class="media" >
+                                    <img src="{{URL::asset('/images/subject.jpg')}}" width="20%" >
+                                    <div class="media-body text-muted" style="margin-left: 2%; margin-top: 1%">
+                                        <h5>subject name</h5>
+                                        <p>tu powinien byc opis przedmiotu ktory zostal oddany chyba, ale nie wiem to nowy koncept.
+                                            Co sądzicie dzieciaczki wypowiedzcie się i podlączcie mi tu php jesli ja zapomne
+                                            loftki <3 buziaczek
+                                            </br> ps całość powinna byc w tej hujowej pętli foricz </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
 
 
