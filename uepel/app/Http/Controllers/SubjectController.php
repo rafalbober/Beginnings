@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Student_list;
 use App\Subject;
 use App\Teacher;
+use App\Degree;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -82,7 +84,21 @@ class SubjectController extends Controller
     {
         $subject = Subject::findOrFail($index);
         foreach ($subject->lesson as $value) {
+            $degree = Degree::all();
+            foreach ($degree as $degrees){
+                if($degrees->lesson_number == $value->id){
+                    $degrees->delete();
+                }
+            }
             $value->delete();
+        }
+        $list = Student_list::all();
+        foreach ($list as $lists){
+            if($lists->subject_id == $subject->id)
+            {
+                $lists->delete();
+            }
+
         }
 
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Lesson;
+use App\Degree;
+use App\Http\Controllers\DegreeController;
 use Illuminate\Http\Request;
 
 class LessonController extends Controller
@@ -47,7 +49,12 @@ class LessonController extends Controller
         $Lesson->__set('description',$data['description']);
         $Lesson->__set('subject_id', $data['id']);
 
+        //Degree::newLesson($Lesson->id);
+
+
+
         $Lesson->save();
+        (new DegreeController)->newLesson($Lesson->id);
 
         //auth()->user()->subjects()->create($data);
 
@@ -78,6 +85,12 @@ class LessonController extends Controller
 
         $lesson = Lesson::findOrFail($index);
         $index = $lesson->subject->id;
+        $degree = Degree::all();
+        foreach ($degree as $degrees){
+            if($degrees->lesson_number == $lesson->id){
+                $degrees->delete();
+            }
+        }
         $lesson->delete();
 
 
