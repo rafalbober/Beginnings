@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php_2019_witryna_do_prowadzenia_zajec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php_2019_witryna_do_prowadzenia_zajec.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/resources/views/faq/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/faq/faq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HelloCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HelloCept.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +24,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/uepel/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/uepel/vendor/composer" />
       <path value="$PROJECT_DIR$/uepel/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/uepel/vendor/doctrine/inflector" />
@@ -139,12 +140,21 @@
       <path value="$PROJECT_DIR$/uepel/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/uepel/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/uepel/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/uepel/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/uepel/vendor/league/commonmark-ext-table" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WQTSDP9yJT9dB3NYuxf4MJez9i" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/uepel/resources/views/faq" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
@@ -177,7 +187,14 @@
       <updated>1579080816242</updated>
       <workItem from="1579080817714" duration="1749000" />
       <workItem from="1579082599144" duration="1786000" />
-      <workItem from="1579084412035" duration="186000" />
+      <workItem from="1579084412035" duration="1408000" />
+      <workItem from="1579374945319" duration="1447000" />
+      <workItem from="1579376751116" duration="911000" />
+      <workItem from="1579381622313" duration="1112000" />
+      <workItem from="1579383494872" duration="1882000" />
+      <workItem from="1579387709934" duration="2040000" />
+      <workItem from="1579390078633" duration="615000" />
+      <workItem from="1579392466282" duration="1788000" />
     </task>
     <task id="LOCAL-00001" summary="added Route for Welcome.blade">
       <created>1579082228609</created>
@@ -200,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579083827833</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Back to Welcome.blade from Faq">
+      <created>1579084820053</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579084820053</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +249,7 @@
     <MESSAGE value="added Route for Welcome.blade" />
     <MESSAGE value="Welcome.blade Update" />
     <MESSAGE value="Welcome.blade Update (adding Faq)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Welcome.blade Update (adding Faq)" />
+    <MESSAGE value="Back to Welcome.blade from Faq" />
+    <option name="LAST_COMMIT_MESSAGE" value="Back to Welcome.blade from Faq" />
   </component>
 </project>
