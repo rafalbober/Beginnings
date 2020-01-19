@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/app/Degree.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Degree.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/DegreeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/DegreeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/LessonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/PresenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/PresenceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/SubjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/TeacherController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/app/Lesson.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Lesson.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/app/Presence.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Presence.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/database/migrations/2020_01_12_132220_create_degrees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/database/migrations/2020_01_12_132220_create_degrees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/database/migrations/2020_01_12_143815_create_presences_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/database/migrations/2020_01_12_143815_create_presences_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +247,7 @@
       <workItem from="1579394869900" duration="1562000" />
       <workItem from="1579396688130" duration="1787000" />
       <workItem from="1579398501299" duration="723000" />
-      <workItem from="1579425779179" duration="8344000" />
+      <workItem from="1579425779179" duration="10122000" />
     </task>
     <task id="LOCAL-00001" summary="added Route for Welcome.blade">
       <created>1579082228609</created>
@@ -291,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579429071435</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Adding Degrees and deleting them by deleting lessons, subjects works perfectly find, hope it wroks also fast">
+      <created>1579436602741</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579436602741</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +318,7 @@
     <MESSAGE value="Welcome.blade Update (adding Faq)" />
     <MESSAGE value="Back to Welcome.blade from Faq" />
     <MESSAGE value="Readme update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme update" />
+    <MESSAGE value="Adding Degrees and deleting them by deleting lessons, subjects works perfectly find, hope it wroks also fast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Degrees and deleting them by deleting lessons, subjects works perfectly find, hope it wroks also fast" />
   </component>
 </project>

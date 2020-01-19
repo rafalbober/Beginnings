@@ -55,6 +55,7 @@ class TeacherController extends Controller
         $subject->__set('signup_current', $helper);
         $list->save();
         (new DegreeController)->create($list->id);
+        (new PresenceController)->create($list->id);
         $list = Student_list::all();
         return view('teachers.request', ['subject' => $subject],['list'=>$list]);
     }
