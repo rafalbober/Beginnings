@@ -158,7 +158,7 @@
             <div class="button-box col-lg-12 text-center">
                 <a href="{{route('student.home')}}" class="btn text-center">Student Panel</a>
                 <a href="{{route('teacher.home')}}" class="btn text-center">Teacher Panel</a>
-
+                <a href="{{route('admin.home')}}" class="btn text-center">Deanery Panel</a>
             </div>
         </div>
     </div>
