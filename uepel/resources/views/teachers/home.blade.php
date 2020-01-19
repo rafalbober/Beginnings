@@ -69,7 +69,6 @@
     <div class="content">
         <div class="title m-b-md">
             Üpel Teacher
-            {{$teacher->email}}
         </div>
         <div style="font-size:30px">
             Stundeplatforme
