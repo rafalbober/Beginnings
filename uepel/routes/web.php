@@ -42,9 +42,13 @@ Route::get('/student/login', 'Auth\StudentLoginController@showLoginForm')->name(
 Route::post('/student/login', 'Auth\StudentLoginController@login')->name('student.login.submit');
 Route::post('/student/logout', 'Auth\StudentLoginController@logout')->name('logout');
 Route::get('/student/home', 'StudentController@home')->name('student.home')->middleware('auth:student');
-Route::get('/student/subjects', 'StudentController@showSubjects')->name('student.subjects')->middleware('auth:student');
-Route::post('/student/subjects/join/{id}', 'StudentController@joinSubject')->name('student.join')->middleware('auth:student');;
-Route::get('/students/index/{id}','StudentController@index')->name('student.index')->middleware('auth:student');
+Route::get('/student/subjects_show', 'StudentController@showSubjects')->name('student.subjects_show')->middleware('auth:student');
+Route::post('/student/subjects_show/join/{id}', 'StudentController@joinSubject')->name('student.join')->middleware('auth:student');;
+Route::get('/student/index/{id}','StudentController@index')->name('student.index')->middleware('auth:student');
+Route::get('/student/edit/{id}',"StudentController@edit")->name('student.edit')->middleware('auth:student');
+Route::PATCH('/student/edit/update/{id}',"StudentController@update")->name('student.update')->middleware('auth:student');
+Route::get('/student/my_subjects', 'StudentController@showMySubjects')->name('student.my_subjects')->middleware('auth:student');
+Route::get('/student/my_subjects/show/{id}',"StudentController@showLessons")->name('student_lessons.show')->middleware('auth:student');
 
 
 
@@ -64,10 +68,8 @@ Route::get('/teachers/index/{id}','TeacherController@index')->name('teacher.inde
 Route::get('/teachers/request/{id}','TeacherController@request')->name('teacher.request')->middleware('auth:teacher');
 Route::post('/teachers/request/accept/{id}','TeacherController@requestAccept')->name('request.accept')->middleware('auth:teacher');
 Route::post('/teachers/request/reject/{id}','TeacherController@requestReject')->name('request.reject')->middleware('auth:teacher');
-
-
-
-
+Route::get('/teachers/edit/{id}',"TeacherController@edit")->name('teacher.edit')->middleware('auth:teacher');
+Route::PATCH('/teachers/edit/update/{id}',"TeacherController@update")->name('teacher.update')->middleware('auth:teacher');
 
 
 //Subjects
@@ -99,6 +101,10 @@ Route::get('/deaneries/teacher_index', 'DeanerieController@indexTeacher')->name(
 Route::get('/deaneries/student_index', 'DeanerieController@indexStudent')->name('deaneries.student_index')->middleware('auth:admin');
 Route::post('/deaneries/teacher_store',"DeanerieController@storeTeacher")->name('deaneries.teacher_store')->middleware('auth:admin');
 Route::post('/deaneries/student_store',"DeanerieController@storeStudent")->name('deaneries.student_store')->middleware('auth:admin');
+Route::get('/deaneries/student_show/{id}',"DeanerieController@showStudent")->name('deaneries.student_show')->middleware('auth:admin');
+Route::get('/deaneries/teacher_show/{id}',"DeanerieController@showTeacher")->name('deaneries.teacher_show')->middleware('auth:admin');
+
+
 
 
 

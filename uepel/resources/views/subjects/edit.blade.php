@@ -20,7 +20,7 @@
                 @csrf
                 {{ method_field('PATCH') }}
                 <label>Current Name: {{$subject->name}}<br>Name: <input type="text" name="name"></label> <br>
-                <label>Current Description: {{$subject->description}}<br>Desciption: <input type="text" name="description"  ></label> <br>
+                <label>Current Description: {{$subject->description}}<br>Description: <input type="text" name="description"  ></label> <br>
                 <label>Current Capacity: {{$subject->signup_capacity}}   Current Signup Students number: {{$subject->signup_current}}<br>Capacity: <input type="text" name="capacity"></label> <br>
                 <input type="submit" name="update" value="Update">
             </form>

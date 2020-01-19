@@ -30,10 +30,26 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Üpel
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                @if(Auth::guard('admin')->check())
+                    <a class="navbar-brand" href="{{ route('admin.home') }}">
+                        Deanery Home
+                    </a>
+                @elseif(Auth::guard('teacher')->check())
+                    <a class="navbar-brand" href="{{ route('teacher.home') }}">
+                        Teacher Home
+                    </a>
+                @elseif((Auth::guard('student')->check()))
+                    <a class="navbar-brand" href="{{ route('student.home') }}">
+                        Student Home
+                    </a>
+                @endif
+                    @guest
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            Üpel
+                        </a>
+                    @endguest
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 

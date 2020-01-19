@@ -2,10 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php_2019_witryna_do_prowadzenia_zajec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php_2019_witryna_do_prowadzenia_zajec.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uepel/resources/views/deaneries/student_show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uepel/resources/views/deaneries/teacher_show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uepel/resources/views/students/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uepel/resources/views/students/lessons.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uepel/resources/views/students/my_subjects.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uepel/resources/views/students/subjects_show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uepel/resources/views/subjects/show_lessons.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uepel/resources/views/teachers/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HelloCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HelloCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/DeanerieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/DeanerieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/SubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/TeacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/deaneries/student_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/deaneries/student_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/deaneries/student_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/deaneries/student_index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/deaneries/teacher_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/deaneries/teacher_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/deaneries/teacher_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/deaneries/teacher_index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/students/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/students/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/students/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/students/subjects.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/subjects/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/subjects/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/subjects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/subjects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/subjects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/subjects/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/teachers/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/teachers/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/teachers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/teachers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/resources/views/teachers/request.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/resources/views/teachers/request.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,6 +223,7 @@
       <workItem from="1579387709934" duration="2040000" />
       <workItem from="1579390078633" duration="615000" />
       <workItem from="1579392466282" duration="1788000" />
+      <workItem from="1579394282830" duration="438000" />
     </task>
     <task id="LOCAL-00001" summary="added Route for Welcome.blade">
       <created>1579082228609</created>

@@ -10,7 +10,7 @@
             <ul>
                 @foreach ($student as $students)
                     <li><strong>{{ $students->email }}</strong></li>
-                    <a href={{}}>details</a>
+                    <a href={{route('deaneries.student_show',$students->id)}}>details</a>
                 @endforeach
             </ul>
         </div>

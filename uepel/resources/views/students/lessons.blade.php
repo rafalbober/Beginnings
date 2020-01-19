@@ -4,17 +4,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="row">
-                    <h2>{{ $subject->name }} ({{ $subject->signup_capacity }})</h2><a href="{{route('subject.edit',$subject)}}">edit</a>
-                </div>
-                <p>{{ $subject->description }}</p>
-
-                <a href={{route('lesson.create',$subject->id)}}>Create new lesson</a>
-
+                <h2>{{$subject->name}}</h2>
                 <ul>
                     @foreach ($subject->lesson as $lesson)
                         <li><strong>{{ $lesson->title }}</strong></li>
-                        <a href={{route("lesson.show",$lesson->id)}}> details</a>
+                        <a href={{route("student_lessons.show",$lesson->id)}}> details</a>
                     @endforeach
                 </ul>
 

@@ -43,7 +43,6 @@ class SubjectController extends Controller
             'description' => '',
             'name' => 'required',
             'capacity' => ['required','integer']
-
         ]);
 
 

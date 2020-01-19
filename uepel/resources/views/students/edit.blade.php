@@ -2,10 +2,9 @@
 
 @section('content')
 <div class="container">
-
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2>New Student</h2>
+            <h2>Edit subject:</h2>
             @if( $errors->any() )
                 <div class="alert alert-danger">
                     <ul>
@@ -17,15 +16,15 @@
             @endif
 
 
-            <form method="POST" action="{{route('deaneries.student_store')}}">
+            <form method="POST" action="{{ route('student.update',['id' =>$student->id]) }}">
                 @csrf
-
-                <label>Name: <input type="text" name="name" ></label> <br>
-                <label>Surname: <input type="text" name="surname" ></label> <br>
-                <label>email: <input type="text" name="email" ></label> <br>
-                <label>password: <input type = "password" name = "password" ></label>
-                <input type="submit"  value="Create">
+                {{ method_field('PATCH') }}
+                <label>Current Password: <br><input type="password" name="current"></label> <br>
+                <label>New Password: <br><input type="password" name="new"></label> <br>
+                <label>Retype Password: <br><input type="password" name="repeat"></label> <br>
+                <input type="submit" name="update" value="Update">
             </form>
+
         </div>
     </div>
 </div>

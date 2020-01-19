@@ -2,27 +2,29 @@
 
 Do ogarniecia:
 
-    -segregacja plikow view do odpowiednich katalogów teachers, students etc i zmiany w routsach w ziazku z tym
-    -FRONTEND
-    -refactoring -> admin -> deanerie or deanerie->admin (less changes in other files when it comes to an admin)
-    -FRONTEND
+    TO DO:
+    
     -cofanie do strony poprzedniej
-    -FRONTEND
-    -przycisk cofania do panelu konkretnego uzytkownika, nie do panelu logowania
-    -zabezpieczenie dodawania zytkownikow/przedmiotow, o tym samym mailu,nazwie
-    -FRONTEND
+
     -zabezpieczenie wyswietlania przedmiotow danego naucyzciela
-    -FRONTEND
-    -prawidlowe paski wylogowywania
-    -FRONTEND
+
     -resetowanie hasel przez admina, losowo przydzielane haslo
-    -FRONTEND
+
     -testy
+
+    -edycja uzytkownikow -> zmiana hasla
+    
+    -panel szczegolow przedmiotow w studencie
+    
+    -Wyswietlanie zapisanych studentow na kurs u ticzera
+    
+    -Ogarniecie bazy z ocenkami, obecnosciami w sensie podpiecia pod sucject->zapisani->uczen->ocena i presence
+    
     -FRONTEND
-    -edycja uzytkownikow
-    -FRONTEND
-    -dodawanie lekcji do przedmiotow
-    -FRONTEND
+    
+    -segregacja plikow view do odpowiednich katalogów teachers, students etc i zmiany w routsach w ziazku z tym
+    
+    SZIET ZACZYNAM BYC PRZYTLOCZONY ILOSCIA RZECZY DO ZROBIENIA
     
     
 

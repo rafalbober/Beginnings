@@ -23,7 +23,7 @@
                 <label>Name: <input type="text" name="name" ></label> <br>
                 <label>Surname: <input type="text" name="surname" ></label> <br>
                 <label>email: <input type="text" name="email" ></label> <br>
-                <label>password: <input type = "text" name = "password" ></label>
+                <label>password: <input type = "password" name = "password" ></label>
                 <input type="submit"  value="Create">
             </form>
         </div>

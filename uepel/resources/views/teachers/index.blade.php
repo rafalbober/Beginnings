@@ -10,6 +10,8 @@
 
             <h2>Email: {{$teacher->email}}</h2>
 
+            <a href="{{route('teacher.edit',$teacher->id)}}">Change Password</a>
+
         </div>
     </div>
 </div>
