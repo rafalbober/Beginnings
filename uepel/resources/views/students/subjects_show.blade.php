@@ -28,7 +28,7 @@
                             </form>
                         @else
                                 <li><strong>{{ $subject->name }}</strong></li>
-                            <p><strong>Already requested!</strong></p>
+                            <p>Already requested!</p>
                         @endif
                     @endif
                 @endforeach
