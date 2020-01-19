@@ -105,4 +105,13 @@ class DeanerieController extends Controller
         //\App\Student::create($data);
         return $this->indexStudent();
     }
+
+    public function resetStudentPass($id, Request $request)
+    {
+        $Student = Student::findOrFail($id);
+        $new = $request->input('new');
+        $Student->__set('password', bcrypt($new));
+        $Student->update();
+        return redirect('/deaneries/student_index');
+    }
 }
