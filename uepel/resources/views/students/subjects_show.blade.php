@@ -20,16 +20,16 @@
                         @endif
                     @endforeach
                     @if($exist == 0)
-                    @if ($notJoined == 1)
-                            <li><strong>{{ $subject->name }}</strong></li>
-                        <form method="POST" action={{route('student.join', $subject->id)}}>
-                            @csrf
-                            <input type="submit" value="Join it!">
-                        </form>
-                    @else
-                            <li><strong>{{ $subject->name }}</strong></li>
-                        <p><strong>Already requested!</strong></p>
-                    @endif
+                        @if ($notJoined == 1)
+                                <li><strong>{{ $subject->name }}</strong></li>
+                            <form method="POST" action={{route('student.join', $subject->id)}}>
+                                @csrf
+                                <button class="btn btn-primary">Join it!</button>
+                            </form>
+                        @else
+                                <li><strong>{{ $subject->name }}</strong></li>
+                            <p><strong>Already requested!</strong></p>
+                        @endif
                     @endif
                 @endforeach
             </ul>

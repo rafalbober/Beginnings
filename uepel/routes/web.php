@@ -44,10 +44,11 @@ Route::post('/student/logout', 'Auth\StudentLoginController@logout')->name('logo
 Route::get('/student/home', 'StudentController@home')->name('student.home')->middleware('auth:student');
 Route::get('/student/subjects_show', 'StudentController@showSubjects')->name('student.subjects_show')->middleware('auth:student');
 Route::post('/student/subjects_show/join/{id}', 'StudentController@joinSubject')->name('student.join')->middleware('auth:student');;
-Route::get('/students/index/{id}','StudentController@index')->name('student.index')->middleware('auth:student');
-Route::get('/students/edit/{id}',"StudentController@edit")->name('student.edit')->middleware('auth:student');
-Route::PATCH('/students/edit/update/{id}',"StudentController@update")->name('student.update')->middleware('auth:student');
-
+Route::get('/student/index/{id}','StudentController@index')->name('student.index')->middleware('auth:student');
+Route::get('/student/edit/{id}',"StudentController@edit")->name('student.edit')->middleware('auth:student');
+Route::PATCH('/student/edit/update/{id}',"StudentController@update")->name('student.update')->middleware('auth:student');
+Route::get('/student/my_subjects', 'StudentController@showMySubjects')->name('student.my_subjects')->middleware('auth:student');
+Route::get('/student/my_subjects/show/{id}',"StudentController@showLessons")->name('student_lessons.show')->middleware('auth:student');
 
 
 
@@ -69,10 +70,6 @@ Route::post('/teachers/request/accept/{id}','TeacherController@requestAccept')->
 Route::post('/teachers/request/reject/{id}','TeacherController@requestReject')->name('request.reject')->middleware('auth:teacher');
 Route::get('/teachers/edit/{id}',"TeacherController@edit")->name('teacher.edit')->middleware('auth:teacher');
 Route::PATCH('/teachers/edit/update/{id}',"TeacherController@update")->name('teacher.update')->middleware('auth:teacher');
-
-
-
-
 
 
 //Subjects

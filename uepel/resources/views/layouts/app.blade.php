@@ -40,7 +40,7 @@
                     </a>
                 @elseif((Auth::guard('student')->check()))
                     <a class="navbar-brand" href="{{ route('student.home') }}">
-                        Student Home Üpel
+                        Student Home
                     </a>
                 @endif
                     @guest
