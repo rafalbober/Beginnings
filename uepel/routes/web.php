@@ -11,20 +11,6 @@
 |
 */
 
-/*
-Route::get('/', function () {
-    return view('home');
-});
-*/
-/*
-Route::resource('/posts', "PostsController")->middleware('auth');
-Route::resource('/comments', "CommentController");
-Route::resource('/books', "BooksController")->middleware('auth');
-Route::get('/books/{id}', 'BooksController@show');
-Route::get('/books/{id}/edit', 'BooksController@edit');
-*/
-
-//Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
