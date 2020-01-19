@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2>Edit book:</h2>
+            <h2>Edit subject:</h2>
             @if( $errors->any() )
                 <div class="alert alert-danger">
                     <ul>
@@ -16,14 +16,15 @@
             @endif
 
 
-            <form method="POST" action="{{ route('books.update', $book) }}">
-                {{ csrf_field() }}
+            <form method="POST" action="{{ route('student.update',['id' =>$student->id]) }}">
+                @csrf
                 {{ method_field('PATCH') }}
-                <label>ISBN: </label><input type="text" name="isbn" value="{{ $book->isbn }}">
-                <label>Title: </label><input type="text" name="title" value="{{ $book->title }}">
-                <label>Description: </label><input type="text" name="description" value="{{ $book->description }}">
+                <label>Current Password: <br><input type="password" name="current"></label> <br>
+                <label>New Password: <br><input type="password" name="new"></label> <br>
+                <label>Retype Password: <br><input type="password" name="repeat"></label> <br>
                 <input type="submit" name="update" value="Update">
             </form>
+
         </div>
     </div>
 </div>

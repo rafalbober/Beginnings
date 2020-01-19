@@ -26,6 +26,7 @@
                         @endif
                     @endforeach
                     @if($exist == 0)
+
                     @if ($notJoined == 1)
                                 <div class="single-subject text-center" style="border:1px solid #ebebeb; background-color: #ffffffff;">
                                     <div class="subject-name" style="height: 200px; position: relative; background-image: url({{ URL::asset('images/subject.jpg') }});-webkit-background-size: cover; background-size: cover;background-position: center">
@@ -54,6 +55,7 @@
 
 
                     @endif
+
                     @endif
             </div>
         @endforeach

@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Lesson;
 use App\Student;
 use App\Student_list;
 use App\Subject;
+use App\Teacher;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 
 class StudentController extends Controller
@@ -39,10 +43,30 @@ class StudentController extends Controller
 
     }
 
+    public function showMySubjects()
+    {
+        $subjects = Subject::all();
+        $list = Student_list::all();
+        return view('students.my_subjects', ['subjects' => $subjects], ['list' => $list]);
+
+    }
+
     public function index($index)
     {
         $student = Student::findOrFail($index);
         return view('students.index',['student'=>$student]);
+    }
+
+    public function showLessons($id) {
+        $subject = Subject::findOrFail($id);
+
+        return view('students.lessons',  ['subject' => $subject]);
+    }
+
+    public function edit($index)
+    {
+        $student = Student::findOrFail($index);
+        return view('students.edit',['student' => $student]);
     }
 
     public function joinSubject($id) {
@@ -55,5 +79,39 @@ class StudentController extends Controller
         return redirect('student/subjects_show');
 
     }
+
+    public function update($index)
+    {
+        $student = Student::findOrFail($index);
+
+
+        $validator = Validator::make(request()->all(), [
+            'new'=>'required|same:repeat',
+            'current'=>'required'
+        ]);
+
+        if(!Hash::check(request()->input('current'),$student->password))
+        {
+            $validator->after(function($validator) {
+                $validator->errors()->add('current', 'Old Password wrong.');
+            });
+        }
+
+        if ($validator->fails()) {
+            return redirect('students/edit/'.$student->id)
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+
+        $student->__set('password', bcrypt(request()->input('new')));
+
+        $student->update();
+
+        return redirect('/students/index/'.Auth::id());
+    }
+
+
+
 
 }

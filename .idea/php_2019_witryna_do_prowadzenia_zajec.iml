@@ -20,7 +20,6 @@
       <excludeFolder url="file://$MODULE_DIR$/uepel/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/uepel/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/uepel/vendor/egulias/email-validator" />
-      <excludeFolder url="file://$MODULE_DIR$/uepel/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/uepel/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/uepel/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/uepel/vendor/facade/ignition-contracts" />

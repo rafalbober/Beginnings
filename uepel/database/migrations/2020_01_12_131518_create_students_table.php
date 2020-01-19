@@ -21,6 +21,7 @@ class CreateStudentsTable extends Migration
             //$table->integer('index')->unique();
             $table->string('password');
             $table->timestamps();
+            $table->rememberToken();
         });
     }
 

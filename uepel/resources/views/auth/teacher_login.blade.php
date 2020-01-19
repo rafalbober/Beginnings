@@ -62,16 +62,21 @@
 
                         <div class="form-group row">
                             <div class="col-md-12 text-center" style="padding-top: 15%">
-                                <button type="submit" class="btn" style="font-size: 30px ;background-color:#ebebeb; background-opacity:10%; border: 1px #ebebeb;width: 50%" id="login_button">
+                                <button type="submit" class="btn" style="margin-bottom:5%;font-size: 25px ;background-color:#ebebeb; background-opacity:10%; border: 1px #ebebeb;width: 50%" id="login_button">
                                     {{ __('Sign in') }}
                                 </button>
 
+
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-lg" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+
                             </div>
+                            <a class="btn btn-link text-center col-md-12 text-center" href="/faq">
+                                {{ __('Forgot Your Password?') }}
+                            </a>
                         </div>
                     </form>
                 </div>

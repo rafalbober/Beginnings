@@ -28,14 +28,30 @@
 </head>
 <body>
 
-    <div id="app" >
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container-fluid">
+                @if(Auth::guard('admin')->check())
+                    <a class="navbar-brand" href="{{ route('admin.home') }}">
+                        Deanery Home
+                    </a>
+                @elseif(Auth::guard('teacher')->check())
+                    <a class="navbar-brand" href="{{ route('teacher.home') }}">
+                        Teacher Home
+                    </a>
+                @elseif((Auth::guard('student')->check()))
+                    <a class="navbar-brand" href="{{ route('student.home') }}">
+                        Student Home
+                    </a>
+                @endif
+                    @guest
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            Üpel
+                        </a>
+                    @endguest
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" >
-            <div class="container-fluid" >
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Üpelllllllllllllll
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -59,7 +75,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
+                                    <p class="dropdown-item" style="color:gray">{{Auth::user()->email}}</p>
                                     @if(Auth::guard('admin')->check())
                                         <a class="dropdown-item" href="{{ route('admin.logout') }}"
                                            onclick="event.preventDefault();

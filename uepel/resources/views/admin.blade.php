@@ -17,7 +17,7 @@
     <div class="row justify-content-center "  >
         <div class=" text-center " >
             <h1></h1>
-            <br style="font-weight: 500; font-size: 60px"></br></br></h2>
+            <br style="font-weight: 500; font-size: 60px"> </br></br> </h2>
 
         </div>
     </div>

@@ -4,17 +4,17 @@ Do ogarniecia:
 
     TO DO:
     
-    -cofanie do strony poprzedniej
+    IN PROGRESS-cofanie do strony poprzedniej
 
     -zabezpieczenie wyswietlania przedmiotow danego naucyzciela
 
-    -resetowanie hasel przez admina, losowo przydzielane haslo
+    //DONE-resetowanie hasel przez admina, losowo przydzielane haslo
 
-    -testy
+    IN PROGRESS-testy
 
-    -edycja uzytkownikow -> zmiana hasla
+    //DONE-edycja uzytkownikow -> zmiana hasla
     
-    -panel szczegolow przedmiotow w studencie
+    IN PROGRESS-panel szczegolow przedmiotow w studencie
     
     -Wyswietlanie zapisanych studentow na kurs u ticzera
     

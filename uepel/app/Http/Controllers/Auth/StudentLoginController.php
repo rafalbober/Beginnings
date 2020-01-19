@@ -55,7 +55,12 @@ class StudentLoginController extends Controller
             'password' => 'required'
         ]);
 
-        if( Auth::guard('student')->attempt(['email' => $request->email, 'password' => $request->password]))
+        $rememberMe = false;
+        if( isset($request->remember) ) {
+            $rememberMe = true;
+        }
+
+        if( Auth::guard('student')->attempt(['email' => $request->email, 'password' => $request->password], $rememberMe))
         {
             return redirect()->intended(route('student.home'));
         }

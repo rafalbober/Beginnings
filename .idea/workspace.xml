@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ee7cda-684a-4a19-928b-dd3142fe55b1" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php_2019_witryna_do_prowadzenia_zajec.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php_2019_witryna_do_prowadzenia_zajec.iml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HomeCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/tests_codeception/acceptance/00_HomeCept.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/LessonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/LessonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/PresenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/PresenceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/SubjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/SubjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uepel/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/uepel/app/Http/Controllers/TeacherController.php" afterDir="false" />
+>>>>>>> 018ca5f8e2f6c3bab076dc815bd6e8c5eaa66629
+>>>>>>> 9b744c1907c4786c9db57f1f588a725088360921
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,12 +29,41 @@
       <executable path="composer" />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/uepel/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/uepel/vendor/composer" />
       <path value="$PROJECT_DIR$/uepel/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/uepel/vendor/doctrine/inflector" />
@@ -139,15 +180,29 @@
       <path value="$PROJECT_DIR$/uepel/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/uepel/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/uepel/vendor/nikic/php-parser" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/uepel/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/uepel/vendor/league/commonmark-ext-table" />
       <path value="$PROJECT_DIR$/uepel/vendor/symfony/error-handler" />
+=======
+      <path value="$PROJECT_DIR$/uepel/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/uepel/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/uepel/vendor/league/commonmark-ext-table" />
+>>>>>>> 9b744c1907c4786c9db57f1f588a725088360921
     </include_path>
   </component>
   <component name="ProjectId" id="1WQTSDP9yJT9dB3NYuxf4MJez9i" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/uepel/resources/views/faq" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
@@ -168,6 +223,21 @@
       </list>
     </option>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e0a1ddec" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -180,8 +250,31 @@
       <updated>1579080816242</updated>
       <workItem from="1579080817714" duration="1749000" />
       <workItem from="1579082599144" duration="1786000" />
+<<<<<<< HEAD
       <workItem from="1579084412035" duration="186000" />
       <workItem from="1579385800385" duration="112000" />
+=======
+      <workItem from="1579084412035" duration="1408000" />
+      <workItem from="1579374945319" duration="1447000" />
+      <workItem from="1579376751116" duration="911000" />
+      <workItem from="1579381622313" duration="1112000" />
+      <workItem from="1579383494872" duration="1882000" />
+      <workItem from="1579387709934" duration="2040000" />
+      <workItem from="1579390078633" duration="615000" />
+      <workItem from="1579392466282" duration="1788000" />
+      <workItem from="1579394282830" duration="438000" />
+      <workItem from="1579394869900" duration="1562000" />
+      <workItem from="1579396688130" duration="1787000" />
+<<<<<<< HEAD
+      <workItem from="1579398501299" duration="1102000" />
+      <workItem from="1579400035643" duration="403000" />
+      <workItem from="1579440250138" duration="1783000" />
+      <workItem from="1579442065241" duration="854000" />
+=======
+      <workItem from="1579398501299" duration="723000" />
+      <workItem from="1579425779179" duration="10122000" />
+>>>>>>> 018ca5f8e2f6c3bab076dc815bd6e8c5eaa66629
+>>>>>>> 9b744c1907c4786c9db57f1f588a725088360921
     </task>
     <task id="LOCAL-00001" summary="added Route for Welcome.blade">
       <created>1579082228609</created>
@@ -204,7 +297,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579083827833</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Back to Welcome.blade from Faq">
+      <created>1579084820053</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579084820053</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Readme update">
+      <created>1579429071435</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579429071435</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding Degrees and deleting them by deleting lessons, subjects works perfectly find, hope it wroks also fast">
+      <created>1579436602741</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579436602741</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +343,9 @@
     <MESSAGE value="added Route for Welcome.blade" />
     <MESSAGE value="Welcome.blade Update" />
     <MESSAGE value="Welcome.blade Update (adding Faq)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Welcome.blade Update (adding Faq)" />
+    <MESSAGE value="Back to Welcome.blade from Faq" />
+    <MESSAGE value="Readme update" />
+    <MESSAGE value="Adding Degrees and deleting them by deleting lessons, subjects works perfectly find, hope it wroks also fast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Degrees and deleting them by deleting lessons, subjects works perfectly find, hope it wroks also fast" />
   </component>
 </project>

@@ -13,6 +13,7 @@
 
     <div class="row" style="margin-left:10%; margin-right: 10% ">
                 @foreach ($teacher->subject as $subject)
+
                         <div class="col-sm-4 text-center" style="   margin-top:5%;margin-bottom: 2%" >
                            <div class="single-subject text-center" style="border:1px solid #ebebeb; background-color: #ffffffff;">
                                <div class="subject-name" style="height: 200px; position: relative; background-image: url({{ URL::asset('images/subject.jpg') }});-webkit-background-size: cover; background-size: cover;background-position: center">
@@ -25,6 +26,7 @@
                             </div>
                            </div>
                         </div>
+
 
 
                 @endforeach
