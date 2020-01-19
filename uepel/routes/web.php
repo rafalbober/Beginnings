@@ -91,9 +91,6 @@ Route::PATCH('/lessons/edit/update/{id}',"LessonController@update")->name('lesso
 Route::DELETE('/lessons/edit/delete/{id}',"LessonController@delete")->name('lesson.delete')->middleware('auth:teacher');
 
 
-
-
-
 // Users
 Route::get('/deaneries/student_create', "DeanerieController@createStudent")->name('deaneries.student_create')->middleware('auth:admin');
 Route::get('/deaneries/teacher_create', "DeanerieController@createTeacher")->name('deaneries.teacher_create')->middleware('auth:admin');
@@ -103,6 +100,8 @@ Route::post('/deaneries/teacher_store',"DeanerieController@storeTeacher")->name(
 Route::post('/deaneries/student_store',"DeanerieController@storeStudent")->name('deaneries.student_store')->middleware('auth:admin');
 Route::get('/deaneries/student_show/{id}',"DeanerieController@showStudent")->name('deaneries.student_show')->middleware('auth:admin');
 Route::get('/deaneries/teacher_show/{id}',"DeanerieController@showTeacher")->name('deaneries.teacher_show')->middleware('auth:admin');
+Route::PATCH('/deaneries/student_show/update/{id}',"DeanerieController@resetStudentPass")->name('deaneries.student_resetPass')->middleware('auth:admin');
+
 
 
 

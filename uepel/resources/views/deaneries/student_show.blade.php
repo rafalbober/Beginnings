@@ -21,13 +21,24 @@
                             <div class="modal-body">
                                 <p>Click randomize to create new password. It will appear here.</p>
                                 <label>Password:</label><br>
-                                <textarea class="justify-content-center" style="width:70%" disabled></textarea>
+                                <textarea id="newpassword" class="justify-content-center" style="width:70%" disabled></textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 <span class="pull-right">
-                                    <button type="button" class="btn btn-primary">Randomize</button>
-                                    <button type="button" class="btn btn-success">Reset</button>
+                                    <script>
+                                        function randPass(length) {
+                                            return (Math.random().toString(36).substr(2, length));
+                                        }
+                                    </script>
+                                    <?php  $new = 'haslo888'; ?>
+                                    <form method="POST" action="{{ route('deaneries.student_resetPass', ['id' => $student->id]) }}">
+                                        @csrf
+                                        {{method_field('PATCH')}}
+                                        <input type='hidden' name='new' value='<?php echo "$new";?>'/>
+                                        <button type="button" class="btn btn-primary" onclick="document.getElementById('newpassword').value = randPass(8); document.getElementById('reset').disabled = false; ">Randomize</button>
+                                        <input type="submit" disabled id="reset" name="reset" class="btn btn-success" value="Reset">
+                                    </form>
                                 </span>
                             </div>
                         </div>
