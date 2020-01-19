@@ -13,7 +13,7 @@
 @section('content')
 <div class="container-fluid ">
     <div class="row justify-content-center">
-        <div class="col-md-4" style="background: rgba(0,0,0,0.4); margin-top: 90px; height: 500px; box-shadow: 1px 4px 40px black">
+        <div class="col-md-4" style="background: rgba(0,0,0,0.4); margin-top: 90px;  box-shadow: 1px 4px 40px black">
             <h2 class=" text-center" style="margin-top: 2%; color: #d8d8d8">Change Password:</h2>
             @if( $errors->any() )
                 <div class="alert alert-danger">
