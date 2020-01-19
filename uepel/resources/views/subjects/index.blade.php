@@ -6,7 +6,8 @@
         <div class=" text-center " >
             <h1></h1>
             <h2 style="font-weight: 500; font-size: 60px">Subjects: </h2>
-            <a class="btn-lg btn-dark" style="font-size: 30px; font-weight: 400" href={{route('subject.create')}}>Create new</a>
+            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href={{route('subject.create')}} >Add new Subject </a> </div>
+
         </div>
     </div>
 

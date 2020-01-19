@@ -41,7 +41,7 @@
                         <div class="col mb-12">
                             <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="{{route('subjects.index',$teacher->id)}}" >My Subjects </a> </div>
                         <div class="col mb-12">
-                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >Add new Subject </a> </div>
+                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href={{route('subject.create')}} >Add new Subject </a> </div>
                         <div class="col mb-12">
                             <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >My Students</a> </div>
                         <div class="col mb-12">
@@ -58,6 +58,7 @@
                 <h2 class="text-left">
                     Activity
                 </h2>
+                    <!-- activity log-->
                 <div class="media" style="padding-top: 2%;padding-bottom: 2%">
                     <img src="{{URL::asset('/images/avatar1.jpg')}}" width="48" class="rounded-circle">
                     <div class="media-body">
