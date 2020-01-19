@@ -11,12 +11,12 @@
 
                 <a href={{route('lesson.create',$subject->id)}}>Create new lesson</a>
 
-                <ul>
+                <ol>
                     @foreach ($subject->lesson as $lesson)
                         <li><strong>{{ $lesson->title }}</strong></li>
                         <a href={{route("lesson.show",$lesson->id)}}> details</a>
                     @endforeach
-                </ul>
+                </ol>
 
             </div>
         </div>

@@ -14,10 +14,16 @@ class TeachersTableSeeder extends Seeder
         ]);
 
         DB::table('teachers')->insert([
-            'name' => 'test',
-            'surname' => 'test',
-            'email' => 'test@test.com',
-            'password' => bcrypt('test'),
+            'name' => 'Kazimierz',
+            'surname' => 'Zwodziciel',
+            'email' => 'lysy@ggios.pl',
+            'password' => bcrypt('hahaha'),
+        ]);
+        DB::table('teachers')->insert([
+            'name' => 'Maciej',
+            'surname' => 'Przywodziciel',
+            'email' => 'chudy@ggios.pl',
+            'password' => bcrypt('hahaha'),
         ]);
     }
 }
