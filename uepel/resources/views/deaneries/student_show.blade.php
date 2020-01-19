@@ -9,8 +9,14 @@
                 <h1>{{$student->name." ".$student->surname}}</h1>
 
                 <h2>Email: {{$student->email}}</h2>
-
-                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#resetModal" onclick="document.getElementById('reset').disabled = true; document.getElementById('newpassword').value = ''">Reset password</button>
+                <div class="row">
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#resetModal" onclick="document.getElementById('reset').disabled = true; document.getElementById('newpassword').value = ''">Reset password</button>
+                    <form method="POST" action="{{route('student.delete', $student->id)}}">
+                        @csrf
+                        {{ method_field('DELETE')  }}
+                        <input type="submit" value="Delete" name="delete">
+                    </form>
+                </div>
                 <!-- Pop up modal -->
                 <div class="modal fade" id="resetModal" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">

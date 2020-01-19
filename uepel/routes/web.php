@@ -88,6 +88,10 @@ Route::get('/deaneries/student_show/{id}',"DeanerieController@showStudent")->nam
 Route::get('/deaneries/teacher_show/{id}',"DeanerieController@showTeacher")->name('deaneries.teacher_show')->middleware('auth:admin');
 Route::PATCH('/deaneries/student_show/update/{id}',"DeanerieController@resetStudentPass")->name('deaneries.student_resetPass')->middleware('auth:admin');
 Route::PATCH('/deaneries/teacher_show/update/{id}',"DeanerieController@resetTeacherPass")->name('deaneries.teacher_resetPass')->middleware('auth:admin');
+Route::DELETE('/deaneries/teacher_show/delete/{id}',"DeanerieController@deleteTeacher")->name('teacher.delete')->middleware('auth:admin');
+Route::DELETE('/deaneries/student_show/delete/{id}',"DeanerieController@deleteStudent")->name('student.delete')->middleware('auth:admin');
+
+
 
 
 

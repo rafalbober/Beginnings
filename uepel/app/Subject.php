@@ -11,10 +11,10 @@ class Subject extends Model
     /**
      * @var int|null
      */
-    private $teacher_id;
-    private $name;
-    private $signup_capacity;
-    private $description;
+//    private $teacher_id;
+//    private $name;
+//    private $signup_capacity;
+//    private $description;
 
     public function teacher()
     {

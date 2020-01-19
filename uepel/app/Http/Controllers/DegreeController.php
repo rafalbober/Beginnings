@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Degree;
 use App\Lesson;
+use App\Student;
 use Illuminate\Http\Request;
 use App\Student_list;
 
@@ -50,10 +51,36 @@ class DegreeController extends Controller
         }
     }
 
-    public function addDegreeLesson($lesson, $student, $value)
+    public function addDegreeLesson()
     {
         $degree = Degree::all();
 
+        foreach ($degree as $degrees)
+        {
+            if($degrees->student_index == request()->input('student_id') && $degrees->lesson_number == request()->input('lesson_id') )
+            {
+                $degrees->__set('degree',request()->input('degree'));
+                $degrees->update();
+            }
+        }
+
+
     }
-    //
+
+    public function addDegreeSubject()
+    {
+        $degree = Degree::all();
+
+        foreach ($degree as $degrees)
+        {
+            if($degrees->student_index == request()->input('student_id') && $degrees->subject_id == request()->input('subject_id') && is_null($degrees->lesson_number))
+            {
+                $degrees->__set('degree',request()->input('degree'));
+                $degrees->update();
+            }
+        }
+
+
+    }
+   //
 }

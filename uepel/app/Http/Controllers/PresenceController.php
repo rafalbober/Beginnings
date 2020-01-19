@@ -44,4 +44,18 @@ class PresenceController extends Controller
             }
         }
     }
+
+    public function updatePresence()
+    {
+        $presence = Presence::all();
+
+        foreach ($presence as $presences)
+        {
+            if($presences->student_index == request()->input('student_id') && $presences->lesson_number == request()->input('lesson_id') )
+            {
+                $presences->__set('presence',request()->input('presence'));
+                $presences->update();
+            }
+        }
+    }
 }
