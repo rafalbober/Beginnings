@@ -142,15 +142,9 @@
         <div class="col-md-12">
             <nav class="navbar navbar-expand-md">
                 <div class="navbar-brand">
-                    UEPEL
+                    ÜPEL
                 </div>
                 <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href=# >Uepel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=# >Uepel</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/faq">Faq</a>
                     </li>
@@ -158,12 +152,12 @@
             </nav>
         </div>
         <div class="col-md-8 offset-md-2 info ">
-            <h1 class="text-center">WELCOME TO UEPEL</h1>
+            <h1 class="text-center">WELCOME TO ÜPEL</h1>
             <p class="text-center">firtst time here eher ehreh? </p>
 
             <div class="button-box col-lg-12 text-center">
-                <a href="/student/login" class="btn text-center">Student Panel</a>
-                <a href="/teacher/login" class="btn text-center">Teacher Panel</a>
+                <a href="{{route('student.home')}}" class="btn text-center">Student Panel</a>
+                <a href="{{route('teacher.home')}}" class="btn text-center">Teacher Panel</a>
 
             </div>
         </div>
