@@ -73,7 +73,7 @@
                                             @if(is_null($presence->presence))
                                                 Not Checked
                                                 @elseif($presence->presence == 0)
-                                                    Not Present
+                                                    Absent
                                                 @else
                                                     Present
 

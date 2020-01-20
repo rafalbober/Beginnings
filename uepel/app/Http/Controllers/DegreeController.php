@@ -55,6 +55,11 @@ class DegreeController extends Controller
     {
         $degree = Degree::findOrFail($index);
 
+        $data =request()->validate([
+            'degree' => 'required',
+        ]);
+
+
         $degree->__set('degree',request()->input('degree'));
         $degree->update();
 
