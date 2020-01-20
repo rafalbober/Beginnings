@@ -59,7 +59,7 @@
         foreach($Student as $student){
         foreach ($Degree as $degree)
         {
-        if($student->id == $degree->student_index && is_null($degree->lesson_number)){
+        if($student->id == $degree->student_index && is_null($degree->lesson_number) && $degree->subject_id == $subject->id){
         $i = $student->id;
         ?>
         <li>
@@ -87,5 +87,8 @@
             }
         }
         ?>
-    </div>
+        </div>
+
+    </li>
+</div>
 @endsection
