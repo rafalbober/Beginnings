@@ -45,6 +45,25 @@ class PresenceController extends Controller
         }
     }
 
+    public function addPresenceLesson($index)
+    {
+        $presence = Presence::findOrFail($index);
+
+        if(is_null(request()->input('presence')))
+        {
+            $presence->__set('presence',0);
+        }
+        else
+        {
+            $presence->__set('presence',1);
+        }
+
+        $presence->update();
+
+        return redirect( '/lessons/show/'.$presence->lesson_number);
+
+    }
+
     public function updatePresence()
     {
         $presence = Presence::all();

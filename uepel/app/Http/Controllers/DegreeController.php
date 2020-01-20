@@ -51,19 +51,14 @@ class DegreeController extends Controller
         }
     }
 
-    public function addDegreeLesson()
+    public function addDegreeLesson($index)
     {
-        $degree = Degree::all();
+        $degree = Degree::findOrFail($index);
 
-        foreach ($degree as $degrees)
-        {
-            if($degrees->student_index == request()->input('student_id') && $degrees->lesson_number == request()->input('lesson_id') )
-            {
-                $degrees->__set('degree',request()->input('degree'));
-                $degrees->update();
-            }
-        }
+        $degree->__set('degree',request()->input('degree'));
+        $degree->update();
 
+        return redirect( '/lessons/show/'.$degree->lesson_number);
 
     }
 

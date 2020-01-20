@@ -77,6 +77,14 @@ Route::PATCH('/lessons/edit/update/{id}',"LessonController@update")->name('lesso
 Route::DELETE('/lessons/edit/delete/{id}',"LessonController@delete")->name('lesson.delete')->middleware('auth:teacher');
 
 
+// Degree
+Route::PATCH('/lessons/add_Degree/{id}',"DegreeController@addDegreeLesson")->name('lesson.addDegree')->middleware('auth:teacher');
+
+Route::PATCH('/lessons/add_Presence/{id}',"PresenceController@addPresenceLesson")->name('lesson.addPresence')->middleware('auth:teacher');
+
+
+
+
 // Users
 Route::get('/deaneries/student_create', "DeanerieController@createStudent")->name('deaneries.student_create')->middleware('auth:admin');
 Route::get('/deaneries/teacher_create', "DeanerieController@createTeacher")->name('deaneries.teacher_create')->middleware('auth:admin');

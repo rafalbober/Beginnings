@@ -23,20 +23,79 @@
             document.getElementById(span).style.display = "block";
             document.getElementById(btn).style.display = "none";
         }
+
+        function showCheck(i) {
+            let span = 'szpan' + i;
+            let btn = 'showCheck' + i;
+            document.getElementById(span).style.display = "block";
+            document.getElementById(btn).style.display = "none";
+        }
     </script>
     <style>
         label, input, button, form {
             display: inline;
+            margin: 5px;
         }
     </style>
     <?php
     $Student = \App\Student::all();
-    $i = 0;
-        foreach ($Student as $student)
+    $Degree = \App\Degree::all();
+    $Presence = \App\Presence::all();
+
+    foreach($Student as $student){
+        foreach ($Degree as $degree)
             {
-                echo '<div class="row">' . $student->name . ' <button onclick="showSlider(' . $i . ')" id="showSlider' . $i . '">Choose degree</button><span style="display:none" id="span' . $i . '"><form method="POST"><input type="range" oninput="displayDegree(' . $i . ')" onchange="displayDegree(' . $i . ')" min="2" max="5" step="0.5" id="range' . $i . '"> <input type="text" disabled id="val' . $i . '""><label>Presence: </label><input type="checkbox" name="presence"><button type="submit">Add degree</button></form></span></div>';
-                $i++;
+                if($student->id == $degree->student_index && $lesson->id == $degree->lesson_number){
+                    $i = $student->id;
+                    ?>
+                        <li>
+                            <div> <h2>{{$student->name}}</h2>   Degree: {{$degree->degree}}
+                                <div class="row">
+                                    <button onclick="showSlider({{$i}})" id="showSlider{{$i}}">Edit Degree</button>
+                                    <span style="display:none" id="span{{$i}}">
+                                    <form method="POST" action="{{route('lesson.addDegree',$degree->id)}}">
+                                        @csrf
+                                        {{ method_field('PATCH') }}
+                                    <input type="range" oninput="displayDegree({{$i}})" onchange="displayDegree({{$i}})" min="2" max="5" step="0.5" id="range{{$i}}">
+                                    <input type="text" name="degree"  readonly ="true" id="val{{$i}}">
+                                    <button type="submit">Update degree</button></form></span>
+                                </div>
+
+                    <?php
+
+
+                    foreach ($Presence as $presence)
+                        {
+                            if($degree->student_index == $presence->student_index && $degree->lesson_number == $presence->lesson_number)
+                                {
+                                    ?>
+                                            Presence:
+                                            @if(is_null($presence->presence))
+                                                Not Checked
+                                                @elseif($presence->presence == 0)
+                                                    Not Present
+                                                @else
+                                                    Present
+
+                                            @endif
+                                            <div class = "row">
+                                                <button onclick="showCheck({{$i}})" id="showCheck{{$i}}">Edit Presence</button>
+                                                <span style="display:none" id="szpan{{$i}}">
+                                                <form method="POST" action="{{route('lesson.addPresence',$presence->id)}}">
+                                                    @csrf
+                                                    {{ method_field('PATCH') }}
+                                                <label>Presence: </label><input type="checkbox" name="presence">
+                                                <button type="submit">Update Presence</button></form></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <?php
+                                 }
+                        }
+                }
+
             }
+        }
 
     ?>
 </div>
