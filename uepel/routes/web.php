@@ -79,6 +79,7 @@ Route::DELETE('/lessons/edit/delete/{id}',"LessonController@delete")->name('less
 
 // Degree
 Route::PATCH('/lessons/add_Degree/{id}',"DegreeController@addDegreeLesson")->name('lesson.addDegree')->middleware('auth:teacher');
+Route::PATCH('/subjects/add_Degree/{id}',"DegreeController@addDegreeSubject")->name('subject.addDegree')->middleware('auth:teacher');
 
 Route::PATCH('/lessons/add_Presence/{id}',"PresenceController@addPresenceLesson")->name('lesson.addPresence')->middleware('auth:teacher');
 

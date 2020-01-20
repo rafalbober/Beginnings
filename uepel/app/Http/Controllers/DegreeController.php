@@ -67,19 +67,19 @@ class DegreeController extends Controller
 
     }
 
-    public function addDegreeSubject()
+    public function addDegreeSubject($index)
     {
-        $degree = Degree::all();
+        $degree = Degree::findOrFail($index);
 
-        foreach ($degree as $degrees)
-        {
-            if($degrees->student_index == request()->input('student_id') && $degrees->subject_id == request()->input('subject_id') && is_null($degrees->lesson_number))
-            {
-                $degrees->__set('degree',request()->input('degree'));
-                $degrees->update();
-            }
-        }
+        $data =request()->validate([
+            'degree' => 'required',
+        ]);
 
+
+        $degree->__set('degree',request()->input('degree'));
+        $degree->update();
+
+        return redirect( '/subjects/show/'.$degree->subject_id);
 
     }
    //

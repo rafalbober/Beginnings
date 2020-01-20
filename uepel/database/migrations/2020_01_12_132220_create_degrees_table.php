@@ -21,6 +21,7 @@ class CreateDegreesTable extends Migration
             $table->float('degree')->nullable();
 
 
+
             $table->timestamps();
         });
 
