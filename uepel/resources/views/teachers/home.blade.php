@@ -29,7 +29,7 @@
                 <div class="card md-12">
                     <div class="card-body text-center">
                         <h2 class="col-md-12 text-center">Teacher Panel</h2>
-"
+
                         <img src="{{URL::asset('/images/avatar1.jpg')}}" class="rounded-circle">
                         <h3 class="card-title mt-3">  {{$teacher->name}}</h3>
                         <h4 class="card-title mt-3">  {{$teacher->email}}</h4>
