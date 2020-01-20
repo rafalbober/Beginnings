@@ -207,7 +207,13 @@ class DeanerieController extends Controller
         {
             if($lists->index == $index)
             {
+                $subject = Subject::find($lists->subject_id);
+                $helper = $subject->signup_current;
+                $helper = $helper -1 ;
+                $subject->__set('signup_current',$helper);
+                $subject->update();
                 $lists->delete();
+
             }
         }
 

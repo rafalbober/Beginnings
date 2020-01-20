@@ -53,7 +53,8 @@ class TeacherController extends Controller
         $list->__set('joined', 1);
         $helper = $subject->signup_current + 1;
         $subject->__set('signup_current', $helper);
-        $list->save();
+        $list->update();
+        $subject->update();
         (new DegreeController)->create($list->id);
         (new PresenceController)->create($list->id);
         $list = Student_list::all();
