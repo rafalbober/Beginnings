@@ -49,7 +49,12 @@
                     $i = $student->id;
                     ?>
                         <li>
-                            <div> <h2>{{$student->name}}</h2>   Degree: {{$degree->degree}}
+                            <div> <h2>{{$student->name}}</h2>   Degree:
+                                @if(is_null($degree->degree))
+                                    No Degree
+                                @else
+                                    {{$degree->degree}}
+                                @endif
                                 <div class="row">
                                     <button onclick="showSlider({{$i}})" id="showSlider{{$i}}">Edit Degree</button>
                                     <span style="display:none" id="span{{$i}}">
