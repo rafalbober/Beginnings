@@ -16,13 +16,12 @@ Do ogarniecia:
     
     IN PROGRESS-panel szczegolow przedmiotow w studencie
     
-    -Wyswietlanie zapisanych studentow na kurs u ticzera
+    //Tak w sumie to Done-Wyswietlanie zapisanych studentow na kurs u ticzera
     
-    -Ogarniecie bazy z ocenkami, obecnosciami w sensie podpiecia pod sucject->zapisani->uczen->ocena i presence
+    //DONE-Ogarniecie bazy z ocenkami, obecnosciami w sensie podpiecia pod sucject->zapisani->uczen->ocena i presence
     
     IN PROGRESS - FRONTEND
     
-    -segregacja plikow view do odpowiednich katalogów teachers, students etc i zmiany w routsach w ziazku z tym
     
     SZIET ZACZYNAM BYC PRZYTLOCZONY ILOSCIA RZECZY DO ZROBIENIA
     
