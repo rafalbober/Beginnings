@@ -12,7 +12,7 @@ class Student_list extends Model
 
     public function student()
     {
-        return $this->hasMany(Student::class);
+        return $this->hasMany(Student::class, 'id','id');
     }
 
     public function subject()

@@ -31,7 +31,12 @@ class Student extends /*Model*/ Authenticatable
 
     public function presence()
     {
-        return $this->hasMany(Presence::class);
+        return $this->hasMany(Presence::class, 'student_index','id');
+    }
+
+    public function student_list()
+    {
+        return $this->belongsTo( Student_list::class,'id','id');
     }
 
 }

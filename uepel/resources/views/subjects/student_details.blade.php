@@ -63,10 +63,16 @@
                     @endforeach
                 </ol>
 
-            <?php $avg = $avg / $i ?>
+                <?php if ($avg != 0)
+                    $avg = $avg / $i;
+                ?>
 
 
-                        Srednia ocen: {{$avg}}
+                Average:
+                <?php
+                if ($avg != 0)
+                    echo $avg;
+                ?>
                     <br>
                         Ocena koncowa:
                                     <?php
