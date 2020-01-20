@@ -26,7 +26,7 @@ class Student extends /*Model*/ Authenticatable
 
     public function degree()
     {
-        return $this->hasMany(Degree::class);
+        return $this->hasMany(Degree::class,'student_index','id');
     }
 
     public function presence()

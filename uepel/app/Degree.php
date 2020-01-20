@@ -11,5 +11,10 @@ class Degree extends Model
         return $this->belongsTo( Lesson::class,'lesson_number','id');
     }
 
+    public function student()
+    {
+        return $this->belongsTo( Student::class,'student_index','id');
+    }
+
 
 }

@@ -24,34 +24,6 @@
 
             </div>
         </div>
-
-        <script>
-            function displayDegree(i) {
-                let val = 'val' + i;
-                let range = 'range' + i;
-                document.getElementById(val).value = document.getElementById(range).value;
-            }
-
-            function showSlider(i) {
-                let span = 'span' + i;
-                let btn = 'showSlider' + i;
-                document.getElementById(span).style.display = "block";
-                document.getElementById(btn).style.display = "none";
-            }
-
-            function showCheck(i) {
-                let span = 'szpan' + i;
-                let btn = 'showCheck' + i;
-                document.getElementById(span).style.display = "block";
-                document.getElementById(btn).style.display = "none";
-            }
-        </script>
-        <style>
-            label, input, button, form {
-                display: inline;
-                margin: 5px;
-            }
-        </style>
         <?php
         $Student = \App\Student::all();
         $Degree = \App\Degree::all();
@@ -63,22 +35,21 @@
         $i = $student->id;
         ?>
         <li>
-            <div> <h2>{{$student->name}}</h2>   Degree:
+            <div>
+            <div > <h2>{{$student->name}}
+                    <form method="POST" action="{{route('subject.student_details',$degree->student_index)}}">
+                        @csrf
+                        <input type = "hidden" name = "subject" value ="{{$degree->subject_id}}">
+                        <input type = "hidden" name = "degree" value ="{{$degree->id}}">
+                        <button type="submit">Student details</button></form>
+                </h2>
+            </div>
+                Degree:
                 @if(is_null($degree->degree))
                     No Degree
                 @else
                     {{$degree->degree}}
                 @endif
-                <div class="row">
-                    <button onclick="showSlider({{$i}})" id="showSlider{{$i}}">Edit Degree</button>
-                    <span style="display:none" id="span{{$i}}">
-                                    <form method="POST" action="{{route('subject.addDegree',$degree->id)}}">
-                                        @csrf
-                                        {{ method_field('PATCH') }}
-                                    <input type="range" oninput="displayDegree({{$i}})" onchange="displayDegree({{$i}})" min="2" max="5" step="0.5" id="range{{$i}}">
-                                    <input type="text" name="degree"  readonly ="true" id="val{{$i}}">
-                                    <button type="submit">Update degree</button></form></span>
-                </div>
 
                 <?php
 

@@ -79,7 +79,7 @@ class DegreeController extends Controller
         $degree->__set('degree',request()->input('degree'));
         $degree->update();
 
-        return redirect( '/subjects/show/'.$degree->subject_id);
+        return redirect( '/subjects/show/'.$degree->student_index);
 
     }
    //

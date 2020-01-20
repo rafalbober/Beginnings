@@ -67,6 +67,8 @@ Route::get('/subjects/show/{id}',"SubjectController@show")->name('subject.show')
 Route::get('/subjects/edit/{id}',"SubjectController@edit")->name('subject.edit')->middleware('auth:teacher');
 Route::DELETE('/subjects/edit/delete/{id}',"SubjectController@delete")->name('subject.delete')->middleware('auth:teacher');
 Route::PATCH('/subjects/edit/update/{id}',"SubjectController@update")->name('subject.update')->middleware('auth:teacher');
+Route::post('/subjects/show/student_details/{id}',"SubjectController@showStudent")->name('subject.student_details')->middleware('auth:teacher');
+
 
 // Lessons
 Route::get('/lessons/create/{id}', "LessonController@create")->name('lesson.create')->middleware('auth:teacher');
