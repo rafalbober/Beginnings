@@ -1,10 +1,11 @@
 <?php
 $I = new AcceptanceTester($scenario);
-$I->wantTo('check Admin Login page');
+$I->wantTo('see homepage link');
 
 $I->amOnPage("/admin");
 $I->seeCurrentUrlEquals("/admin/login");
 $I->seeLink("Üpel","/");
+$I->see("Login Admin");
 
 $I->wantTo("use homepage link");
 $I->click("Üpel");
@@ -23,5 +24,5 @@ $I->click('#login_button');
 
 $I->seeCurrentUrlEquals('/admin');
 
-$I->see("Üpel Admin");
+$I->see("Admin Panel");
 
