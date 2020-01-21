@@ -28,9 +28,6 @@
                         <?php if ($avg != 0)
                                 $avg = $avg / $i;
                         ?>
-
-
-
                 </ol>
 
             </div>
