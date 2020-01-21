@@ -7,22 +7,13 @@ Do ogarniecia:
     IN PROGRESS-cofanie do strony poprzedniej
 
     -zabezpieczenie wyswietlania przedmiotow danego naucyzciela
-
-    //DONE-resetowanie hasel przez admina, losowo przydzielane haslo
-
+    
     IN PROGRESS-testy
-
-    //DONE-edycja uzytkownikow -> zmiana hasla
-    
+ 
     IN PROGRESS-panel szczegolow przedmiotow w studencie
-    
-    -Wyswietlanie zapisanych studentow na kurs u ticzera
-    
-    -Ogarniecie bazy z ocenkami, obecnosciami w sensie podpiecia pod sucject->zapisani->uczen->ocena i presence
     
     IN PROGRESS - FRONTEND
     
-    -segregacja plikow view do odpowiednich katalogów teachers, students etc i zmiany w routsach w ziazku z tym
     
     SZIET ZACZYNAM BYC PRZYTLOCZONY ILOSCIA RZECZY DO ZROBIENIA
     

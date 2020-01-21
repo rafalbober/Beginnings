@@ -21,7 +21,10 @@
                         @endforeach
                         @if($exist == 1)
                             @if ($notJoined == 0)
-                                <li><strong>{{ $subject->name }}</strong></li>
+                                <li>
+                                    <strong>{{ $subject->name }}</strong>
+                                    <a href="{{route('student.resign',$subject->id)}}">Resign</a>
+                                </li>
                                     <a href={{route("student_lessons.show",$subject->id)}}> See topics</a>
                                 @endif
                         @endif

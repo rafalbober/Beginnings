@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Degree;
 use App\Lesson;
+use App\Presence;
 use App\Student;
 use App\Student_list;
 use App\Subject;
@@ -77,6 +79,40 @@ class StudentController extends Controller
         $listRecord->save();
 
         return redirect('student/subjects_show');
+
+    }
+
+    public function subjectResign($index)
+    {
+        $student = Student::findOrFail(Auth::id());
+        $degrees = Degree::all();
+        foreach($degrees as $degree)
+        {
+            if($degree->subject_id ==$index && $degree->student_index == Auth::id()) {
+                $degree->delete();
+            }
+        }
+
+        $presences = Presence::all();
+        foreach($presences as $presence)
+        {
+            if($presence->subject_id ==$index && $presence->student_indexc == Auth::id()) {
+                $presence->delete();
+            }
+        }
+        $lists = Student_list::all();
+        foreach($lists as $list)
+        {
+            if($list->subject_id ==$index && $list->index == Auth::id()) {
+                $list->__set('joined', 0);
+                $list->update();
+            }
+        }
+
+        $subjects = Subject::all();
+        $list = Student_list::all();
+        return view('students.my_subjects', ['subjects' => $subjects], ['list' => $list]);
+
 
     }
 

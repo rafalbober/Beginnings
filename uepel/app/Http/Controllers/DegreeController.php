@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Degree;
 use App\Lesson;
+use App\Student;
 use Illuminate\Http\Request;
 use App\Student_list;
+use Illuminate\Support\Facades\Auth;
 
 class DegreeController extends Controller
 {
@@ -50,10 +52,65 @@ class DegreeController extends Controller
         }
     }
 
-    public function addDegreeLesson($lesson, $student, $value)
+    public function addDegreeLesson($index)
     {
-        $degree = Degree::all();
+        $degree = Degree::findOrFail($index);
+
+        $data =request()->validate([
+            'degree' => 'required',
+        ]);
+
+
+        $degree->__set('degree',request()->input('degree'));
+        $degree->update();
+
+        return redirect( '/lessons/show/'.$degree->lesson_number);
 
     }
-    //
+
+    public function addDegreeSubject($index)
+    {
+        $degree = Degree::findOrFail($index);
+
+        $data =request()->validate([
+            'degree' => 'required',
+        ]);
+
+
+        $degree->__set('degree',request()->input('degree'));
+        $degree->update();
+
+        return redirect( '/subjects/show/'.$degree->student_index);
+
+    }
+
+    public function showDegree($index)
+    {
+        $degree = Degree::all();
+        $deg = 0;
+        foreach($degree as $degrees)
+        {
+            if($degrees->subject_id == $index && $degrees->student_index == Auth::id() && is_null($degrees->lesson_number))
+            {
+                $deg = $degrees->degree;
+            }
+        }
+
+        return $deg;
+    }
+
+    public function showLessonDegree($index, $lesson)
+    {
+        $degree = Degree::all();
+        $deg = 0;
+        foreach($degree as $degrees)
+        {
+            if($degrees->subject_id == $index && $degrees->lesson_number == $lesson && $degrees->student_index == Auth::id())
+            {
+                $deg = $degrees->degree;
+            }
+        }
+        return $deg;
+    }
+   //
 }

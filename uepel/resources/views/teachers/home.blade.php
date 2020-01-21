@@ -29,7 +29,7 @@
                 <div class="card md-12">
                     <div class="card-body text-center">
                         <h2 class="col-md-12 text-center">Teacher Panel</h2>
-"
+
                         <img src="{{URL::asset('/images/avatar1.jpg')}}" class="rounded-circle">
                         <h3 class="card-title mt-3">  {{$teacher->name}}</h3>
                         <h4 class="card-title mt-3">  {{$teacher->email}}</h4>
@@ -50,54 +50,44 @@
             </div>
             <div class="col-md-8 ">
                 <div class="container mb-5">
-
+<div>
                 <h2 class="text-left">
-                    Activity
+                    My Subjetcs
                 </h2>
-                    <!-- activity log-->
-                <div class="media" style="padding-top: 2%;padding-bottom: 2%">
-                    <img src="{{URL::asset('/images/avatar1.jpg')}}" width="48" class="rounded-circle">
-                    <div class="media-body">
-                        <p class="mb-1" style="margin-left: 1%">
-                            <a href="#">{{$teacher->name}} </a>  added new subject , a while ago
-                        </p>
-                        <div class="card" style="margin-top: 3%">
-                            <div class="media" >
-                                <img src="{{URL::asset('/images/subject.jpg')}}" width="20%" >
-                                <div class="media-body text-muted" style="margin-left: 2%; margin-top: 1%">
-                                    <h5>subject name</h5>
-                                    <p>tu powinien byc opis przedmiotu ktory zostal oddany chyba, ale nie wiem to nowy koncept.
-                                    Co sądzicie dzieciaczki wypowiedzcie się i podlączcie mi tu php jesli ja zapomne
-                                    loftki <3 buziaczek
-                                        </br> ps całość powinna byc w tej hujowej pętli foricz </p>
-                                </div>
-                            </div>
-                        </div>
+    <a class="btn btm-md " style="background-color: #D3D3D3;  " href={{route('subject.create')}} >Add new Subject </a> </div>
+                    <div class="row" style=" margin-right: 10% ">
+                        @foreach ($teacher->subject as $subject)
+                            <div class="media" style="padding-top: 2%;padding-bottom: 2% ">
+                                <img src="{{URL::asset('/images/avatar1.jpg')}}" width="48" class="rounded-circle">
+                                <div class="media-body" >
+                                    <p class="mb-1" style="margin-left: 1%">
+                                        <a href="#">{{$teacher->name}} </a>  added a new subject
+                                    </p>
+                                    <div class="card" style="margin-top: 3%">
+                                        <div class="media" >
+                                            <img src="{{URL::asset('/images/subject.jpg')}}" width="30%"  >
+                                            <div class="media-body text-muted" style="margin-left: 2%; margin-top: 1%">
+                                                <h2>{{ $subject->name }}</h2>
+                                                <p>tu powinien byc opis przedmiotu ktory zostal oddany chyba, ale nie wiem to nowy koncept.
+                                                    Co sądzicie dzieciaczki wypowiedzcie się i podlączcie mi tu php jesli ja zapomne
+                                                    loftki <3 buziaczek
+                                                    </br> ps całość powinna byc w tej hujowej pętli foricz </p>
+                                                <a class="btn btm-md " style="background-color: #D3D3D3;" href={{route("teacher.request",$subject->id)}}>request</a>
+                                                <a class="btn btm-md " style="background-color: #D3D3D3;" href={{route("subject.show",$subject->id)}}>more details</a>
 
-                    </div>
-                </div>
-
-                    <div class="media" style="padding-top: 2%;padding-bottom: 2%">
-                        <img src="{{URL::asset('/images/avatar1.jpg')}}" width="48" class="rounded-circle" style="margin-bottom: 5%">
-                        <div class="media-body">
-                            <p class="mb-1" style="margin-left: 1%">
-                                <a href="#">{{$teacher->name}} </a>  added new subject , a while ago
-                            </p>
-                            <div class="card" style="margin-top: 3%">
-                                <div class="media" >
-                                    <img src="{{URL::asset('/images/subject.jpg')}}" width="20%" >
-                                    <div class="media-body text-muted" style="margin-left: 2%; margin-top: 1%">
-                                        <h5>subject name</h5>
-                                        <p>tu powinien byc opis przedmiotu ktory zostal oddany chyba, ale nie wiem to nowy koncept.
-                                            Co sądzicie dzieciaczki wypowiedzcie się i podlączcie mi tu php jesli ja zapomne
-                                            loftki <3 buziaczek
-                                            </br> ps całość powinna byc w tej hujowej pętli foricz </p>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
 
-                        </div>
+
+
+
+                        @endforeach
                     </div>
+
 
                 </div>
 
