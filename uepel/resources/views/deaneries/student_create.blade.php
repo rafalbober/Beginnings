@@ -14,7 +14,6 @@
 
 @section('content')
 <div class="container">
-
     <div class="row justify-content-center">
         <div class="col-md-6" style="background: rgba(0,0,0,0.4); margin-top: 2%;  box-shadow: 1px 4px 40px black">
             <h2 class="text-center" style="margin: 2%">New Student</h2>
@@ -27,11 +26,8 @@
                     </ul>
                 </div>
             @endif
-
-
             <form method="POST" action="{{route('deaneries.student_store')}}">
                 @csrf
-
                 <input type="text" name="name" placeholder="Name" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br>
                 <input type="text" name="surname" placeholder="Surname" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br>
                 <input type="text" name="email" placeholder="Email" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br>
