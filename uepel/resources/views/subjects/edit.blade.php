@@ -4,7 +4,6 @@
             background-image: url({{ URL::asset('images/b1.jpg') }});
             background-attachment: fixed;
             background-size: cover;
-
         }
         h2{
             color: #ebebeb;
@@ -12,7 +11,6 @@
         label{
             color: #ebebeb;
         }
-
     </style>
 </head>
 @extends('layouts.app')
