@@ -42,8 +42,6 @@
                             <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="{{route('subjects.index',$teacher->id)}}" >My Subjects </a> </div>
                         <div class="col mb-12">
                             <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href={{route('subject.create')}} >Add new Subject </a> </div>
-                        <div class="col mb-12">
-                            <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="#" >My Students</a> </div>
                     </div>
             </div>
 

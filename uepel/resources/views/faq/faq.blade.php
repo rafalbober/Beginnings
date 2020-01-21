@@ -73,16 +73,21 @@
     </head>
     <body>
             <div class="content">
-                <h4>FAQ</h4>
-                <p>
-                    1. Why can't I see some sites?<br>
-                    - Because some of them are available only for specific user types.<br>
-                    2. Should we order sth to eat? I'm really hungry :/ <br>
-                    - Rafał - YEEEEEEESSSSSSSSSS!<br>
-                    - Frasio -<br>
-                    - Kasia -yep<br>
-                    - Łuki - Kebab z Luny pls<br>
-                </p>
+                <div>
+                    <h4>FAQ</h4>
+                    <ol>
+                        <li>How can I get my password back?</li>
+                        <p> - Please contact Your deanery via email or physically.</p>
+                        <li>How to join the subject?</li>
+                        <p> - Go to Available Subjects and join it, r u dumb?</p>
+                        <li>How to create subject as a teacher?</li>
+                        <p> - There is a button for it literally everywhere.</p>
+                        <li>I didn't make to the next semester. What now?</li>
+                        <p> - Well, we will drop you from the database. Good luck!</p>
+                        <li>My teacher gave me wrong degree. How can I fix it?</li>
+                        <p> - Just hack his account and change it for you and your colleges!</p>
+                    </ol>
+                </div>
             </div>
     </body>
 </html>

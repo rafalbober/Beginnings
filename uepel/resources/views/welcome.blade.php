@@ -153,7 +153,7 @@
         </div>
         <div class="col-md-8 offset-md-2 info ">
             <h1 class="text-center">WELCOME TO ÜPEL</h1>
-            <p class="text-center">firtst time here eher ehreh? </p>
+            <p class="text-center">Die Beste Stundeplatforme </p>
 
             <div class="button-box col-lg-12 text-center">
                 <a href="{{route('student.home')}}" class="btn text-center">Student Panel</a>
