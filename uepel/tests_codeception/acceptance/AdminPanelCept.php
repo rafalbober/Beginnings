@@ -22,3 +22,11 @@ $I->click("Deanery Home");
 $I->click("Teachers");
 $I->see("Teachers");
 $I->seeCurrentUrlEquals("/deaneries/teacher_index");
+
+$I->click("Deanery Home");
+
+$I->wantTo("Logout");
+$I->click("admin");
+$I->click("Logout");
+$I->seeCurrentUrlEquals("/admin/login");
+

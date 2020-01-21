@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2>Edit subject:</h2>
+            <h2>Change password:</h2>
             @if( $errors->any() )
                 <div class="alert alert-danger">
                     <ul>
