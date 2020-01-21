@@ -29,6 +29,8 @@ class TeacherController extends Controller
     public function index($index)
     {
         $teacher = Teacher::findOrFail($index);
+        if($teacher->id != Auth::user()->id)
+            return redirect('/teachers/home');
         return view('teachers.index', ['teacher' => $teacher]);
     }
 
