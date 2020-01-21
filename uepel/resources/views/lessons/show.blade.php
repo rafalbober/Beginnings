@@ -27,6 +27,7 @@
     <style>
         label, input, button, form {
             display: inline;
+            margin: 5px;
         }
     </style>
     <?php
