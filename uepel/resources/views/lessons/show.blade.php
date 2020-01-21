@@ -115,11 +115,18 @@
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="list_students">
                                         <?php
-                                        $Student = \App\Student::all();
+                                        //$Student = \App\Student::all();
+                                        $List = \App\Student_list::all();
                                         foreach ($Student as $student)
-                                        {
-                                            echo "<p class='dropdown-item' >$student->name</p>";
-                                        }
+                                            {
+                                            foreach ($List as $list)
+                                                {
+                                                if($student->id == $list->index && $list->subject_id == $lesson->subject_id)
+                                                    {
+                                                        echo "<p class='dropdown-item' >$student->name</p>";
+                                                    }
+                                                }
+                                            }
                                         ?>
                                     </div>
                                     <a class="btn btm-md " style="margin-left:2%;background-color: #D3D3D3;" href="{{route('lesson.edit',$lesson->id)}}">Edit Lesson</a>
