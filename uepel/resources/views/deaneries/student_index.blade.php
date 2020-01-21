@@ -5,7 +5,7 @@
         <div>
             <div class="col-md-6" style="margin-bottom: 2%">
                 <h2>Students</h2>
-                <a class="btn btm-md " style="background-color: #D3D3D3; font-size: 13px " href={{route('deaneries.student_create')}}>Create new...</a>
+                <a class="btn btm-md " style="background-color: #D3D3D3; font-size: 13px " href={{route('deaneries.student_create')}}>Create new Student</a>
             </div>
         </div>
         <div class="col-md-8" style=" margin-right: 10% ">
