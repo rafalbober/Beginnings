@@ -21,10 +21,7 @@
                                  <img src="{{URL::asset('/images/subject.jpg')}}" width="30%"  >
                                  <div class="media-body text-muted" style="margin-left: 2%; margin-top: 1%">
                                     <h2>{{ $lesson->title }}</h2>
-                                    <p>tu powinien byc opis przedmiotu ktory zostal oddany chyba, ale nie wiem to nowy koncept.
-                                        Co sądzicie dzieciaczki wypowiedzcie się i podlączcie mi tu php jesli ja zapomne
-                                        loftki <3 buziaczek
-                                        </br> ps całość powinna byc w tej hujowej pętli foricz </p>
+                                    <p>{{ $lesson->description }} </p>
                                     <a class="btn btm-md " style="background-color: #D3D3D3;"href={{route("lesson.show",$lesson->id)}}> details</a>
                                  </div>
                                 </div>

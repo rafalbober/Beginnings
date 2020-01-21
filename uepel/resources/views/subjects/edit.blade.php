@@ -35,9 +35,10 @@
                 <label style="padding-left: 10px">Current Name: {{$subject->name}}</label><br>
                 <input type="text" name="name" placeholder="New name" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br><br>
                 <label style="padding-left: 10px">Current Description: {{$subject->description}}</label><br>
-                <input type="text" name="name" placeholder="Description" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br><br>
+                <input type="text" name="description" placeholder="Description" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br><br>
                 <label style="padding-left: 10px">Current Capacity: {{$subject->signup_capacity}}   Current Signup Students number: {{$subject->signup_current}}</label><br>
-                <input type="text" name="name" placeholder="Capacity" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br><br>
+                <input type="text" name="capacity" placeholder="Capacity" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br><br>
+                <input type="hidden" name="current" placeholder="Current" value="{{$subject->signup_current}}" style="width:100%;background: transparent; border-radius: 0px; border: 0px; border-bottom: 1px solid gray; color: white; height: 40px; padding-left:10px; font-size: 15px "><br><br>
                 <div class="col-md-12 text-center" style=""><input class="btn text-center" type="submit" name="update" value="Update" style="margin-top: 2%;margin-bottom:2%;font-size: 15px ;background-color:#ebebeb; background-opacity:10%; border: 1px #ebebeb;width: 50%"></div>
             </form>
             <form method="POST" action="{{route('subject.delete', $subject->id)}}">

@@ -32,10 +32,6 @@ class LessonController extends Controller
 
     public function create($index)
     {
-        $lesson = Subject::findOrFail($index);
-        $subject = Subject::findOrFail($lesson->subject_id);
-        if( $subject->teacher_id != Auth::user()->id )
-            return redirect('/teachers/home');
         return view('lessons.create',['index'=>$index]);
     }
 

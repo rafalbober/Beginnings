@@ -23,7 +23,7 @@
                             @if ($notJoined == 0)
                                 <li>
                                     <strong>{{ $subject->name }}</strong>
-                                    <a href="{{route('student.resign',$subject->id)}}">Resign</a>
+                                    <a href="{{route('student.resign',$subject->id)}}">Resign -> You can't join the course again</a>
                                 </li>
                                     <a href={{route("student_lessons.show",$subject->id)}}> See topics</a>
                                 @endif
