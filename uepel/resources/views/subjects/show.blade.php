@@ -9,6 +9,40 @@
                 <h2>{{ $subject->name }} ({{ $subject->signup_capacity }})</h2>
                 <a href="{{route('subject.edit',$subject)}}">edit subject</a>
                 <p>{{ $subject->description }}</p>
+            </div>
+            <div class="dropdown ">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="list_students" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Students who joined the course
+                </button>
+                <div class="dropdown-menu" aria-labelledby="list_students">
+                    <?php
+                    $Student = \App\Student::all();
+                    $Degree = \App\Degree::all();
+                    foreach($Student as $student){
+                    foreach ($Degree as $degree)
+                    {
+                    if($student->id == $degree->student_index && is_null($degree->lesson_number) && $degree->subject_id == $subject->id)
+                    {
+                    $i = $student->id;
+                    ?>
+                        <li>
+                            <div>
+                                <div > <h2>
+                                        <form method="POST" action="{{route('subject.student_details',$degree->student_index)}}">
+                                            @csrf
+                                            <input type = "hidden" name = "subject" value ="{{$degree->subject_id}}">
+                                            <input type = "hidden" name = "degree" value ="{{$degree->id}}">
+                                            <button class='dropdown-item' type="submit" style="font-size: 15px">{{$student->name}}</button></form>
+                                    </h2>
+                                </div>
+                                <?php
+                                }
+                                }
+                                }
+                                ?>
+                            </div>
+                        </li>
+                </div>
                 <a class="btn btm-md " style="background-color: #D3D3D3;  " href={{route('lesson.create',$subject->id)}}>Create new lesson</a>
             </div>
             </div>
@@ -31,36 +65,5 @@
                   @endforeach
             </div>
         </div>
-        <?php
-        $Student = \App\Student::all();
-        $Degree = \App\Degree::all();
-
-        foreach($Student as $student){
-        foreach ($Degree as $degree)
-        {
-        if($student->id == $degree->student_index && is_null($degree->lesson_number) && $degree->subject_id == $subject->id){
-        $i = $student->id;
-        ?>
-        <li>
-            <div>
-            <div > <h2>{{$student->name}}
-                    <form method="POST" action="{{route('subject.student_details',$degree->student_index)}}">
-                        @csrf
-                        <input type = "hidden" name = "subject" value ="{{$degree->subject_id}}">
-                        <input type = "hidden" name = "degree" value ="{{$degree->id}}">
-                        <button type="submit">Student details</button></form>
-                </h2>
-            </div>
-
-                <?php
-
-                }
-
-            }
-        }
-        ?>
-        </div>
-
-    </li>
 </div>
 @endsection
