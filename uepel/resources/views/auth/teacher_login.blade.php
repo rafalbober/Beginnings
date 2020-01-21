@@ -4,7 +4,6 @@
             background-image: url({{ URL::asset('images/b1.jpg') }});
             background-attachment: fixed;
             background-size: cover;
-
         }
         h1{
             color: white;
