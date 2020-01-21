@@ -1,10 +1,11 @@
 <?php
 $I = new AcceptanceTester($scenario);
-$I->wantTo('check Student Login page');
+$I->wantTo("see Üpel link");
 
 $I->amOnPage("/student/home");
 $I->seeCurrentUrlEquals("/student/login");
 $I->seeLink("Üpel","/");
+$I->see("Login Student");
 
 $I->wantTo("use homepage link");
 $I->click("Üpel");
@@ -23,4 +24,4 @@ $I->click('#login_button');
 
 $I->seeCurrentUrlEquals('/student/home');
 
-$I->see("Üpel Student");
+$I->see("Student Panel");
