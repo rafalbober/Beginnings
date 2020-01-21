@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Degree;
 use App\Lesson;
 use App\Presence;
+use App\Student;
 use App\Student_list;
+use App\Subject;
 use Illuminate\Http\Request;
 
 class PresenceController extends Controller
@@ -60,7 +63,22 @@ class PresenceController extends Controller
 
         $presence->update();
 
-        return redirect( '/lessons/show/'.$presence->lesson_number);
+        $subject = Subject::findOrFail($presence->subject_id);
+        $student = Student::findOrFail($presence->student_index);
+        $subjectDegree = 0;
+        foreach($student->degree as $degrees)
+        {
+            if($degrees->subject_id == $presence->subject_id && is_null($degrees->lesson_number))
+            {
+                $subjectDegree = Degree::findOrFail($degrees->id);
+                break;
+            }
+
+        }
+
+
+        return view('subjects.student_details',  ['subject' => $subject, 'student'=>$student, 'subjectDegree'=>$subjectDegree]);
+
 
     }
 

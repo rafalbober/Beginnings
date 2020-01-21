@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Degree;
 use App\Lesson;
 use App\Student;
+use App\Subject;
 use Illuminate\Http\Request;
 use App\Student_list;
 use Illuminate\Support\Facades\Auth;
@@ -64,7 +65,21 @@ class DegreeController extends Controller
         $degree->__set('degree',request()->input('degree'));
         $degree->update();
 
-        return redirect( '/lessons/show/'.$degree->lesson_number);
+        $subject = Subject::findOrFail($degree->subject_id);
+        $student = Student::findOrFail($degree->student_index);
+        $subjectDegree = 0;
+        foreach($student->degree as $degrees)
+        {
+            if($degrees->subject_id == $degree->subject_id && is_null($degrees->lesson_number))
+            {
+                $subjectDegree = Degree::findOrFail($degrees->id);
+                break;
+            }
+
+        }
+
+
+        return view('subjects.student_details',  ['subject' => $subject, 'student'=>$student, 'subjectDegree'=>$subjectDegree]);
 
     }
 
