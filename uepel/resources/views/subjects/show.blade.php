@@ -34,4 +34,36 @@
                   @endforeach
             </div>
         </div>
+        <?php
+        $Student = \App\Student::all();
+        $Degree = \App\Degree::all();
+
+        foreach($Student as $student){
+        foreach ($Degree as $degree)
+        {
+        if($student->id == $degree->student_index && is_null($degree->lesson_number) && $degree->subject_id == $subject->id){
+        $i = $student->id;
+        ?>
+        <li>
+            <div>
+            <div > <h2>{{$student->name}}
+                    <form method="POST" action="{{route('subject.student_details',$degree->student_index)}}">
+                        @csrf
+                        <input type = "hidden" name = "subject" value ="{{$degree->subject_id}}">
+                        <input type = "hidden" name = "degree" value ="{{$degree->id}}">
+                        <button type="submit">Student details</button></form>
+                </h2>
+            </div>
+
+                <?php
+
+                }
+
+            }
+        }
+        ?>
+        </div>
+
+    </li>
+</div>
 @endsection

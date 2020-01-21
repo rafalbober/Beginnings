@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="container-fluid mb-6"  >
+               <div class="container-fluid mb-6"  >
                     <div class="row">
                         <div class="col-md-10" style="background: rgba(0,0,0,0.4); margin-top: 90px;  box-shadow: 1px 4px 40px black">
                             <div class=" md-12">
@@ -27,6 +27,11 @@
                                     <h2 style="margin-top: 2%">{{$student->name." ".$student->surname}}</h2>
                                     <h2>Email: {{$student->email}}</h2>
                                     <button style="color:#3f3f3f;background-color: #D3D3D3; margin: 5%; width: 50%" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#resetModal" onclick="document.getElementById('reset').disabled = true; document.getElementById('newpassword').value = ''">Reset password</button>
+                                    <form method="POST" action="{{route('student.delete', $student->id)}}">
+                                        @csrf
+                                        {{ method_field('DELETE')  }}
+                                        <input type="submit" value="Delete" name="delete">
+                                    </form>
                                     <!-- Pop up modal -->
                                     <div class="modal fade" id="resetModal" tabindex="-1" role="dialog">
                                         <div class="modal-dialog" role="document">
@@ -60,6 +65,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>

@@ -35,6 +35,8 @@ Route::get('/student/edit/{id}',"StudentController@edit")->name('student.edit')-
 Route::PATCH('/student/edit/update/{id}',"StudentController@update")->name('student.update')->middleware('auth:student');
 Route::get('/student/my_subjects', 'StudentController@showMySubjects')->name('student.my_subjects')->middleware('auth:student');
 Route::get('/student/my_subjects/show/{id}',"StudentController@showLessons")->name('student_lessons.show')->middleware('auth:student');
+Route::get('/student/my_subjects/resign/{id}',"StudentController@subjectResign")->name('student.resign')->middleware('auth:student');
+
 
 
 
@@ -67,6 +69,8 @@ Route::get('/subjects/show/{id}',"SubjectController@show")->name('subject.show')
 Route::get('/subjects/edit/{id}',"SubjectController@edit")->name('subject.edit')->middleware('auth:teacher');
 Route::DELETE('/subjects/edit/delete/{id}',"SubjectController@delete")->name('subject.delete')->middleware('auth:teacher');
 Route::PATCH('/subjects/edit/update/{id}',"SubjectController@update")->name('subject.update')->middleware('auth:teacher');
+Route::post('/subjects/show/student_details/{id}',"SubjectController@showStudent")->name('subject.student_details')->middleware('auth:teacher');
+
 
 // Lessons
 Route::get('/lessons/create/{id}', "LessonController@create")->name('lesson.create')->middleware('auth:teacher');
@@ -75,6 +79,15 @@ Route::get('/lessons/show/{id}',"LessonController@show")->name('lesson.show')->m
 Route::get('/lessons/edit/{id}',"LessonController@edit")->name('lesson.edit')->middleware('auth:teacher');
 Route::PATCH('/lessons/edit/update/{id}',"LessonController@update")->name('lesson.update')->middleware('auth:teacher');
 Route::DELETE('/lessons/edit/delete/{id}',"LessonController@delete")->name('lesson.delete')->middleware('auth:teacher');
+
+
+// Degree
+Route::PATCH('/lessons/add_Degree/{id}',"DegreeController@addDegreeLesson")->name('lesson.addDegree')->middleware('auth:teacher');
+Route::PATCH('/subjects/add_Degree/{id}',"DegreeController@addDegreeSubject")->name('subject.addDegree')->middleware('auth:teacher');
+
+Route::PATCH('/lessons/add_Presence/{id}',"PresenceController@addPresenceLesson")->name('lesson.addPresence')->middleware('auth:teacher');
+
+
 
 
 // Users
@@ -88,6 +101,10 @@ Route::get('/deaneries/student_show/{id}',"DeanerieController@showStudent")->nam
 Route::get('/deaneries/teacher_show/{id}',"DeanerieController@showTeacher")->name('deaneries.teacher_show')->middleware('auth:admin');
 Route::PATCH('/deaneries/student_show/update/{id}',"DeanerieController@resetStudentPass")->name('deaneries.student_resetPass')->middleware('auth:admin');
 Route::PATCH('/deaneries/teacher_show/update/{id}',"DeanerieController@resetTeacherPass")->name('deaneries.teacher_resetPass')->middleware('auth:admin');
+Route::DELETE('/deaneries/teacher_show/delete/{id}',"DeanerieController@deleteTeacher")->name('teacher.delete')->middleware('auth:admin');
+Route::DELETE('/deaneries/student_show/delete/{id}',"DeanerieController@deleteStudent")->name('student.delete')->middleware('auth:admin');
+
+
 
 
 

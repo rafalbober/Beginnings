@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Presence;
+use App\Student;
 use App\Student_list;
 use App\Subject;
 use App\Teacher;
@@ -79,6 +80,16 @@ class SubjectController extends Controller
 
         //\App\Subject::create($data);
         return redirect('/subjects/'.Auth::id());
+    }
+
+    public function showStudent($index)
+    {
+        $student = Student::findOrFail($index);
+        $subject = Subject::findOrFail(request()->input('subject'));
+        $subjectDegree = Degree::findOrFail(request()->input('degree'));
+
+
+        return view('subjects.student_details',  ['subject' => $subject, 'student'=>$student, 'subjectDegree'=>$subjectDegree]);
     }
 
     public function delete($index)

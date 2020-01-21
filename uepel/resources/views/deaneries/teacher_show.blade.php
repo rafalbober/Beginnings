@@ -27,6 +27,11 @@
                                     <h2 style="margin-top: 2%">{{$teacher->name." ".$teacher->surname}}</h2>
                                     <h2>Email: {{$teacher->email}}</h2>
                                     <button style="color:#3f3f3f;background-color: #D3D3D3; margin: 5%; width: 50%" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#resetModal" onclick="document.getElementById('reset').disabled = true; document.getElementById('newpassword').value = ''">Reset password</button>
+                                    <form method="POST" action="{{route('teacher.delete', $teacher->id)}}">
+                                        @csrf
+                                        {{ method_field('DELETE')  }}
+                                        <input type="submit" value="Delete" name="delete" class="btn btn-primary" style="color:#3f3f3f;background-color: #D3D3D3; margin: 5%; width: 50%" >
+                                    </form>
                                     <!-- Pop up modal -->
                                     <div class="modal fade" id="resetModal" tabindex="-1" role="dialog">
                                         <div class="modal-dialog" role="document">
