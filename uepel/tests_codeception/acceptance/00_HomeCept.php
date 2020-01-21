@@ -6,13 +6,10 @@ $I->amOnPage('/');
 $I->seeInTitle('Üpel');
 
 $I->wantTo('see login and FAQ links');
-$I->seeLink('FAQ');
-//$I->seeLink("TEACHER LOGIN", "/teacher/login");
-$I->seeLink("TEACHER LOGIN", "/teachers/home");
-//$I->seeLink("ADMIN LOGIN", "/admin/login");
-$I->seeLink("ADMIN LOGIN", "/admin");
-//$I->seeLink('STUDENT LOGIN, '/student/login');
-$I->seeLink('STUDENT LOGIN','/student/home');
+$I->seeLink('Faq');
+$I->seeLink("Teacher Panel", "/teachers/home");
+$I->seeLink("Deanery Panel", "/admin");
+$I->seeLink('Student Panel','/student/home');
 
 $I->wantTo("use Faq link");
 $I->click("Faq");
@@ -23,19 +20,19 @@ $I->see("Faq");
 $I->wantTo("use login links");
 
 $I->amOnPage("/");
-$I->click("Teacher Login");
+$I->click("Teacher Panel");
 $I->seeCurrentUrlEquals("/teacher/login");
-$I->see("Login (teacher)");
+$I->see("Login Teacher");
 
 $I->amOnPage("/");
-$I->click("Admin Login");
+$I->click("Deanery Panel");
 $I->seeCurrentUrlEquals("/admin/login");
-$I->see("Login (admin)");
+$I->see("Login Admin");
 
 $I->amOnPage("/");
-$I->click("Student Login");
+$I->click("Student Panel");
 $I->seeCurrentUrlEquals("/student/login");
-$I->see("Login");
+$I->see("Login Student");
 
 
 
