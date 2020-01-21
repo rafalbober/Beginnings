@@ -43,6 +43,8 @@ class TeacherController extends Controller
     public function request($index)
     {
         $subject = Subject::findOrFail($index);
+        if( $subject->teacher_id != Auth::user()->id )
+            return redirect('/teachers/home');
         $list = Student_list::all();
         return view('teachers.request', ['subject' => $subject],['list'=>$list]);
     }
