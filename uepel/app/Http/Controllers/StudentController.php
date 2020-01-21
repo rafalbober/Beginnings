@@ -56,6 +56,8 @@ class StudentController extends Controller
     public function index($index)
     {
         $student = Student::findOrFail($index);
+        if($student->id != Auth::user()->id)
+            return redirect('/student/home');
         return view('students.index',['student'=>$student]);
     }
 
