@@ -67,6 +67,12 @@ class StudentController extends Controller
         return view('students.lessons',  ['subject' => $subject]);
     }
 
+    public function showLessonDetails($id) {
+        $lesson = Lesson::findOrFail($id);
+
+        return view('students.lessonDetails',  ['lesson' => $lesson]);
+    }
+
     public function edit($index)
     {
         $student = Student::findOrFail($index);
@@ -88,6 +94,7 @@ class StudentController extends Controller
     {
         $student = Student::findOrFail(Auth::id());
         $degrees = Degree::all();
+        $subject = Subject::findOrFail($index);
         foreach($degrees as $degree)
         {
             if($degree->subject_id ==$index && $degree->student_index == Auth::id()) {
@@ -106,11 +113,13 @@ class StudentController extends Controller
         foreach($lists as $list)
         {
             if($list->subject_id ==$index && $list->index == Auth::id()) {
-                $list->__set('joined', 0);
+                $list->__set('joined', 2);
                 $list->update();
             }
         }
 
+        $subject->__set('signup_current',($subject->signup_current - 1));
+        $subject->update();
         $subjects = Subject::all();
         $list = Student_list::all();
         return view('students.my_subjects', ['subjects' => $subjects], ['list' => $list]);
