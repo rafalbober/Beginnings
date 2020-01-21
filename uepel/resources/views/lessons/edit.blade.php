@@ -23,7 +23,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6" style="background: rgba(0,0,0,0.4); margin-top: 2%;  box-shadow: 1px 4px 40px black">
-            <h2 class="text-center" style="margin: 3%">Edit subject:</h2>
+            <h2 class="text-center" style="margin: 3%">Edit lesson:</h2>
             @if( $errors->any() )
                 <div class="alert alert-danger">
                     <ul>
