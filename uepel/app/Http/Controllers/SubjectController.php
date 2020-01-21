@@ -46,7 +46,8 @@ class SubjectController extends Controller
         $data =request()->validate([
             'description' => '',
             'name' => 'required',
-            'capacity' => ['required','integer']
+            'capacity' => ['required','integer','min:1','gte:current'],
+            'current' => ''
         ]);
 
 
@@ -63,7 +64,7 @@ class SubjectController extends Controller
         $data =request()->validate([
             'description' => '',
             'name' => 'required',
-            'capacity' => ['required','integer']
+            'capacity' => ['required','integer','min:1']
 
         ]);
 
@@ -79,7 +80,7 @@ class SubjectController extends Controller
         //auth()->user()->subjects()->create($data);
 
         //\App\Subject::create($data);
-        return redirect('/subjects/'.Auth::id());
+        return redirect('/teachers/home');
     }
 
     public function showStudent($index)

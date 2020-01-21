@@ -22,7 +22,7 @@
                                     echo 'No Degree';
                             ?>
                         </li>
-                        <a href={{route("student_lessons.show",$lesson->id)}}> details</a>
+                        <a href={{route("student_lessonShowDetails",$lesson->id)}}> details</a>
                     @endforeach
 
                         <?php if ($avg != 0)

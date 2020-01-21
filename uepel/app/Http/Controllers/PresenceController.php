@@ -76,7 +76,6 @@ class PresenceController extends Controller
 
         }
 
-
         return view('subjects.student_details',  ['subject' => $subject, 'student'=>$student, 'subjectDegree'=>$subjectDegree]);
 
 

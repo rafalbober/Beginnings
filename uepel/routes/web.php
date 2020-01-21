@@ -35,6 +35,7 @@ Route::get('/student/edit/{id}',"StudentController@edit")->name('student.edit')-
 Route::PATCH('/student/edit/update/{id}',"StudentController@update")->name('student.update')->middleware('auth:student');
 Route::get('/student/my_subjects', 'StudentController@showMySubjects')->name('student.my_subjects')->middleware('auth:student');
 Route::get('/student/my_subjects/show/{id}',"StudentController@showLessons")->name('student_lessons.show')->middleware('auth:student');
+Route::get('/student/my_subjects/showDetails/{id}',"StudentController@showLessonDetails")->name('student_lessonShowDetails')->middleware('auth:student');
 Route::get('/student/my_subjects/resign/{id}',"StudentController@subjectResign")->name('student.resign')->middleware('auth:student');
 
 
