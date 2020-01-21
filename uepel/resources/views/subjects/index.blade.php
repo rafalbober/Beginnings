@@ -21,7 +21,7 @@
                             </div>
                             <div class="subject-description" style="padding:30px 30px 20px;font-size: 15px;font-weight: 400">
                                 <p style="padding-top: 10%">sth abuout the subject idk loremm lorem weuyrter wuegr ewyr weygruweyt wueygr weugrs fwye fweyf </p>
-                                <a class="btn btm-md " style="background-color: #D3D3D3;" href={{route("teacher.request",$subject->id)}}>request</a>
+                                <a class="btn btm-md " style="background-color: #D3D3D3;" href={{route("teacher.request",$subject->id)}}>requests</a>
                                 <a class="btn btm-md " style="background-color: #D3D3D3;" href={{route("subject.show",$subject->id)}}>more details</a>
                             </div>
                            </div>

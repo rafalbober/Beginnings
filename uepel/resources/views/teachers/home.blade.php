@@ -32,9 +32,9 @@
 
                         <img src="{{URL::asset('/images/avatar1.jpg')}}" class="rounded-circle">
                         <h3 class="card-title mt-3">  {{$teacher->name}}</h3>
-                        <h4 class="card-title mt-3">  {{$teacher->email}}</h4>
+                        <h5 class="card-title mt-3">  {{$teacher->email}}</h5>
                         <p>
-                            I admire good jokes, passats and some lemonade.
+                            Teacher account. Adding subjects, lessons and assigning students to subjects (+ degrees) allowed.
                         </p>
                         <div class="col mb-12">
                             <a class="btn btm-md " style="background-color: #D3D3D3; margin: 5%; width: 80%" href="{{route('teacher.index',$teacher->id)}}" >About me </a> </div>
@@ -52,7 +52,7 @@
                 <div class="container mb-5">
 <div>
                 <h2 class="text-left">
-                    My Subjetcs
+                    My Subjects
                 </h2>
     <a class="btn btm-md " style="background-color: #D3D3D3;  " href={{route('subject.create')}} >Add new Subject </a> </div>
                     <div class="row" style=" margin-right: 10% ">
@@ -68,11 +68,8 @@
                                             <img src="{{URL::asset('/images/subject.jpg')}}" width="30%"  >
                                             <div class="media-body text-muted" style="margin-left: 2%; margin-top: 1%">
                                                 <h2>{{ $subject->name }}</h2>
-                                                <p>tu powinien byc opis przedmiotu ktory zostal oddany chyba, ale nie wiem to nowy koncept.
-                                                    Co sądzicie dzieciaczki wypowiedzcie się i podlączcie mi tu php jesli ja zapomne
-                                                    loftki <3 buziaczek
-                                                    </br> ps całość powinna byc w tej hujowej pętli foricz </p>
-                                                <a class="btn btm-md " style="background-color: #D3D3D3;" href={{route("teacher.request",$subject->id)}}>request</a>
+                                                <p>{{ $subject->description }}</p>
+                                                <a class="btn btm-md " style="background-color: #D3D3D3;" href={{route("teacher.request",$subject->id)}}>requests</a>
                                                 <a class="btn btm-md " style="background-color: #D3D3D3;" href={{route("subject.show",$subject->id)}}>more details</a>
 
                                             </div>

@@ -1,10 +1,11 @@
 <?php
 $I = new AcceptanceTester($scenario);
-$I->wantTo('check Teacher Login page');
+$I->wantTo('see homepage link');
 
 $I->amOnPage("/teachers/home");
 $I->seeCurrentUrlEquals("/teacher/login");
 $I->seeLink("Üpel","/");
+$I->see("Login Teacher");
 
 $I->wantTo("use homepage link");
 $I->click("Üpel");
@@ -23,5 +24,5 @@ $I->click('#login_button');
 
 $I->seeCurrentUrlEquals('/teachers/home');
 
-$I->see("Üpel Teacher");
+$I->see("Teacher Panel");
 

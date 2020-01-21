@@ -19,6 +19,8 @@ class SubjectController extends Controller
     {
 
         $teacher = Teacher::findOrFail($teacher);
+        if( $teacher->id != Auth::user()->id )
+            return redirect('/teachers/home');
         return view('subjects.index' , ['teacher' => $teacher]);
     }
 
@@ -31,18 +33,24 @@ class SubjectController extends Controller
     public function show($index)
     {
         $subject = Subject::findOrFail($index);
+        if( $subject->teacher_id != Auth::user()->id )
+            return redirect('/teachers/home');
         return view('subjects.show',  ['subject' => $subject]);
     }
 
     public function edit($index)
     {
         $subject = Subject::findOrFail($index);
+        if( $subject->teacher_id != Auth::user()->id )
+            return redirect('/teachers/home');
         return view('subjects.edit',['subject' => $subject]);
     }
 
     public function update($index)
     {
         $subject = Subject::findOrFail($index);
+        if( $subject->teacher_id != Auth::user()->id )
+            return redirect('/teachers/home');
         $data =request()->validate([
             'description' => '',
             'name' => 'required',
@@ -89,6 +97,9 @@ class SubjectController extends Controller
         $subject = Subject::findOrFail(request()->input('subject'));
         $subjectDegree = Degree::findOrFail(request()->input('degree'));
 
+        if( $subject->teacher_id != Auth::user()->id )
+            return redirect('/teachers/home');
+
 
         return view('subjects.student_details',  ['subject' => $subject, 'student'=>$student, 'subjectDegree'=>$subjectDegree]);
     }
@@ -96,6 +107,8 @@ class SubjectController extends Controller
     public function delete($index)
     {
         $subject = Subject::findOrFail($index);
+        if( $subject->teacher_id != Auth::user()->id )
+            return redirect('/teachers/home');
 
         $this->deleteAllDependences($index);
 
@@ -107,6 +120,8 @@ class SubjectController extends Controller
     public function deleteAllDependences($index)
     {
         $subject = Subject::findOrFail($index);
+        if( $subject->teacher_id != Auth::user()->id )
+            return redirect('/teachers/home');
         foreach ($subject->lesson as $value) {
             $degree = Degree::all();
             $presence = Presence::all();
