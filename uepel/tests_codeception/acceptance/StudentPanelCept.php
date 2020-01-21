@@ -2,23 +2,35 @@
 $I = new AcceptanceTester($scenario);
 $I->wantTo('see all links');
 
-$I->amOnPage('/admin');
-$I->fillField('email', 'admin@ggios.pl');
-$I->fillField('password', 'admin');
+$I->amOnPage('/student/home');
+$I->fillField('email', 'hehe@xd.pl');
+$I->fillField('password', 'hehe');
 $I->click('#login_button');
-$I->see("Admin Panel");
+$I->see("Student Panel");
 
-$I->seeLink("Deanery Home", "/admin");
-$I->seeLink("Students", "/deaneries/student_index");
-$I->seeLink("Teachers", "/deaneries/teacher_index");
+$I->seeLink("Student Home", "/student/home");
+$I->seeLink("About me", "/student/index/1");
+$I->seeLink("My Subjects", "/student/my_subjects");
+$I->seeLink("Available Subjects", "/student/subjects_show");
 
-$I->wantTo("use all links on Admin Panel page");
-$I->click("Students");
-$I->see("Students");
-$I->seeCurrentUrlEquals("/deaneries/student_index");
+$I->wantTo("use all links on Student Panel page");
+$I->click("About me");
+$I->seeCurrentUrlEquals("/student/index/1");
 
-$I->click("Deanery Home");
+$I->click("Student Home");
 
-$I->click("Teachers");
-$I->see("Teachers");
-$I->seeCurrentUrlEquals("/deaneries/teacher_index");
+$I->click("My Subjects");
+$I->seeCurrentUrlEquals("/student/my_subjects");
+
+$I->click("Student Home");
+
+$I->click("Available Subjects");
+$I->seeCurrentUrlEquals("/student/subjects_show");
+
+$I->click("Student Home");
+
+$I->wantTo("Logout");
+$I->click("Rafał");
+$I->click("Logout");
+$I->seeCurrentUrlEquals("/student/login");
+

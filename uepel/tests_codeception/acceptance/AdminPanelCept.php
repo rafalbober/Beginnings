@@ -26,7 +26,6 @@ $I->seeCurrentUrlEquals("/deaneries/teacher_index");
 $I->click("Deanery Home");
 
 $I->wantTo("Logout");
-$I->seeCurrentUrlEquals("/admin");
 $I->click("admin");
 $I->click("Logout");
 $I->seeCurrentUrlEquals("/admin/login");
