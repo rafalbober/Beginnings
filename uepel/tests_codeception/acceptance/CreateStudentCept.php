@@ -47,10 +47,6 @@ $I->SeeInDatabase('students', [
     //'password' => $pas
 ]);
 
-//$I->SeeInDatabase('students', [
-   // 'surname' => $surname,
-//]);
-
 $I->seeCurrentUrlEquals("/deaneries/student_store");
 
 $I->see($email);
@@ -66,3 +62,7 @@ $I->amOnPage($id);
 $I->see($name . " " . $surname );
 
 $I->click("Reset password");
+
+$I->seeElementInDOM('#resetModal'); //- przez chwile działało !!!!
+
+$I->click('Reset','#resetModal');
