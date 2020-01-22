@@ -88,3 +88,5 @@ $I->dontSeeInDatabase('students', [
 ]);
 
 $I->seeCurrentUrlEquals("/deaneries/student_index");
+
+//resetModal poprawic oraz surname i password
