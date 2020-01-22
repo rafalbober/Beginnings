@@ -25,7 +25,7 @@ $I->see("The capacity field is required.", "li");
 $I->dontSeeInDatabase('subjects', [
     'name' => $name,
     'description' => $description,
-    //"signup_capacity" => $capacity
+    "signup_capacity" => $capacity
 ]);
 
 $I->fillField('name', $name);
@@ -39,7 +39,7 @@ $I->see("The capacity must be an integer.", "li");
 $I->dontSeeInDatabase('subjects', [
     'name' => $name,
     'description' => $description,
-    //'signup capacity' => $capacity
+    'signup_capacity' => $capacity
 ]);
 
 $I->fillField('name', $name);
@@ -52,11 +52,11 @@ $I->dontSee("The name field is required.", "li");
 $I->dontSee("The capacity field is required.", "li");
 $I->dontSee("The capacity must be an integer.", "li");
 
-//$I->SeeInDatabase('subjects', [
-    //'name' => $name,
-    //'description' => $description,
-    //'signup capacity' => $capacity
-//]);
+/*$I->SeeInDatabase('subjects', [
+    'name' => $name,
+    'description' => $description,
+    'signup_capacity' => $capacity
+]);
 
 $I->seeCurrentUrlEquals("/teachers/home");
 
@@ -80,8 +80,8 @@ $I->click("Delete");
 $I->dontSeeInDatabase('subjects', [
     'name' => $name,
     'description' => $description,
-    //'signup capacity' => $capacity
-]);
+    'signup_capacity' => $capacity
+]);*/
 
+// dziwny błąd z bazą danych
 
-// Nie widzi w bazach danych dodanych przedmiotów oraz nie widzi kolumny signup capacity

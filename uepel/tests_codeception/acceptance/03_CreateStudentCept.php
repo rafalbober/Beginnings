@@ -10,7 +10,7 @@ $I->click("Students");
 $I->click("Create new Student");
 
 $name = 'Katarzyna';
-$surname = 'Żołądź';
+$surname = 'Głaz';
 $email = 'email@ggios.pl';
 $pas = "hehe";
 
@@ -49,7 +49,6 @@ $I->SeeInDatabase('students', [
     'name' => $name,
     //'surname' => $surname,
     'email' => $email,
-    //'password' => $pas
 ]);
 
 $I->seeCurrentUrlEquals("/deaneries/student_store");
@@ -89,4 +88,4 @@ $I->dontSeeInDatabase('students', [
 
 $I->seeCurrentUrlEquals("/deaneries/student_index");
 
-//resetModal poprawic oraz surname i password
+//resetModal działa raz na 5 razy

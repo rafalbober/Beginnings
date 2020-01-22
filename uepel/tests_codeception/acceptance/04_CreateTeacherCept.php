@@ -50,7 +50,6 @@ $I->SeeInDatabase('teachers', [
     'name' => $name,
     //'surname' => $surname,
     'email' => $email,
-    //'password' => $pas
 ]);
 
 $I->seeCurrentUrlEquals("/deaneries/teacher_store");
@@ -90,4 +89,4 @@ $I->dontSeeInDatabase('teachers', [
 
 $I->seeCurrentUrlEquals("/deaneries/teacher_index");
 
-//resetModal poprawic i surname i password ( zakomentowane )
+//zakomentowane działa raz na 5 razy
