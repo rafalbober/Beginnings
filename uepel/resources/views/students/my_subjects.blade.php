@@ -3,10 +3,10 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-8 card">
                 <h1></h1>
                 <h2>Subjects I belong to: </h2>
-                <ul>
+                <div>
                     @foreach ($subjects as $subject)
                         <?php $notJoined = 1;
                         $exist = 0?>
@@ -21,15 +21,17 @@
                         @endforeach
                         @if($exist == 1)
                             @if ($notJoined == 0)
-                                <li>
-                                    <strong>{{ $subject->name }}</strong>
+                                <div class="card-body">
+                                    <strong>{{ $subject->name }}</strong><br>
+                                    <a href="{{route("student_lessons.show",$subject->id)}}"> See topics</a><br>
                                     <a href="{{route('student.resign',$subject->id)}}">Resign -> You can't join the course again</a>
-                                </li>
-                                    <a href={{route("student_lessons.show",$subject->id)}}> See topics</a>
+
+                                </div>
+
                                 @endif
                         @endif
                     @endforeach
-                </ul>
+                </div>
             </div>
         </div>
     </div>
