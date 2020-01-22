@@ -33,6 +33,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <h3><a href="{{route("subject.show",$subject->id)}}>">Back to Subject</a></h3>
                 <h1></h1>
                 <div class="card">
                 <h2 style="margin: 2%">Subject: {{$subject->name}} </h2>
