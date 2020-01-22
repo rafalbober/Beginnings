@@ -22,7 +22,7 @@ class TeachersTableSeeder extends Seeder
         DB::table('teachers')->insert([
             'name' => 'Maciej',
             'surname' => 'Przywodziciel',
-            'email' => 'chudy@ggios.pl',
+            'email' => 'rudy@ggios.pl',
             'password' => bcrypt('hahaha'),
         ]);
     }
