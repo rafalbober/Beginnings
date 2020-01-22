@@ -1,6 +1,6 @@
 <?php
 $I = new AcceptanceTester($scenario);
-$I->wantTo('');
+$I->wantTo('add subject and delete it');
 
 $I->amOnPage('/teachers/home');
 $I->fillField('email', 'siwy@ggios.pl');
@@ -61,5 +61,27 @@ $I->dontSee("The capacity must be an integer.", "li");
 $I->seeCurrentUrlEquals("/teachers/home");
 
 $I->see($name);
+
+$id = $I->grabFromDatabase('subjects', 'id', [
+    'name' => $name
+]);
+
+
+$I->amOnPage("subjects/show/" . $id);
+
+$I->wait(10);
+
+$I->click("edit subject");
+
+$I->seeCurrentUrlEquals("/subjects/edit/" . $id);
+
+$I->click("Delete");
+
+$I->dontSeeInDatabase('subjects', [
+    'name' => $name,
+    'description' => $description,
+    //'signup capacity' => $capacity
+]);
+
 
 // Nie widzi w bazach danych dodanych przedmiotów oraz nie widzi kolumny signup capacity
