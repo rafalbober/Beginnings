@@ -32,5 +32,4 @@ $I->click("Teacher Home");
 
 $I->wantTo("Logout");
 $I->click("Zdzisław");
-$I->click("Logout");
-$I->seeCurrentUrlEquals("/teachers/login");
+
