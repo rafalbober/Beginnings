@@ -42,11 +42,15 @@ $I->click("Create");
 
 $I->SeeInDatabase('students', [
     'name' => $name,
-    //'surname' => $surname,
+    'surname' => $surname,
     'email' => $email,
-    //'password' => $pas
+    'password' => $pas
 ]);
 
-$I->SeeInDatabase('students', [
-    'surname' => $surname,
-]);
+//$I->SeeInDatabase('students', [
+   // 'surname' => $surname,
+//]);
+
+$I->seeCurrentUrlEquals("/deaneries/student_store");
+
+$I->see($email);
