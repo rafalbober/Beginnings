@@ -42,7 +42,11 @@ $I->click("Create");
 
 $I->SeeInDatabase('students', [
     'name' => $name,
-    'surname' => $surname,
+    //'surname' => $surname,
     'email' => $email,
-    'password' => $pas
+    //'password' => $pas
+]);
+
+$I->SeeInDatabase('students', [
+    'surname' => $surname,
 ]);
