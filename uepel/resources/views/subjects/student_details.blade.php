@@ -66,7 +66,7 @@
                                         @csrf
                                         {{ method_field('PATCH') }}
                                     <input type="range" oninput="displayDegree({{$i}})" onchange="displayDegree({{$i}})" min="2" max="5" step="0.5" id="range{{$i}}">
-                                    <input type="text" name="degree"  readonly ="true" id="val{{$i}}">
+                                    <input type="text" name="degree" value = "2"  readonly ="true" id="val{{$i}}">
                                     <button type="submit"class="btn btm-md " style="font-size:10px;background-color: #D3D3D3;  width: 30%">Update degree</button></form></span>
                                     </div>
                                 </li>
@@ -130,7 +130,7 @@
                                 @csrf
                                 {{ method_field('PATCH') }}
                                 <input type="range" oninput="displayDegree({{$i}})" onchange="displayDegree({{$i}})" min="2" max="5" step="0.5" id="range{{$i}}">
-                                <input type="text" name="degree"  readonly ="true" id="val{{$i}}">
+                                <input type="text" name="degree" value = "2"  readonly ="true" id="val{{$i}}">
                                 <button type="submit"class="btn btm-md " style="font-size:10px;background-color: #D3D3D3;  width: 30%">Update degree</button>
                             </form>
                         </span>
