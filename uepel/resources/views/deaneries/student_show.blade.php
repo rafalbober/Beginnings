@@ -37,7 +37,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h4 class="modal-title">Reset teacher password</h4>
+                                                    <h4 class="modal-title">Reset student password</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <p>Click randomize to create new password. It will appear here.</p>
