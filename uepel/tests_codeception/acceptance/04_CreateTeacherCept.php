@@ -40,6 +40,12 @@ $I->fillField('password', $pas);
 
 $I->click("Create");
 
+$I->dontSee("The name field is required.", "li");
+$I->dontSee("The surname field is required.", "li");
+$I->dontSee("The email field is required.", "li");
+$I->dontSee("The password field is required.", "li");
+
+
 $I->SeeInDatabase('teachers', [
     'name' => $name,
     //'surname' => $surname,
