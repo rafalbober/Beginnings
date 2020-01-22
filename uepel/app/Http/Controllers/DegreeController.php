@@ -95,7 +95,10 @@ class DegreeController extends Controller
         $degree->__set('degree',request()->input('degree'));
         $degree->update();
 
-        return redirect( '/subjects/show/'.$degree->student_index);
+        $subject = Subject::findOrFail($degree->subject_id);
+        $student = Student::findOrFail($degree->student_index);
+
+        return view('subjects.student_details',  ['subject' => $subject, 'student'=>$student, 'subjectDegree'=>$degree]);
 
     }
 
