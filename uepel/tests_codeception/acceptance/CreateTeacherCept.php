@@ -6,8 +6,8 @@ $I->amOnPage('/admin');
 $I->fillField('email', 'admin@ggios.pl');
 $I->fillField('password', 'admin');
 $I->click('#login_button');
-$I->click("Students");
-$I->click("Create new Student");
+$I->click("Teachers");
+$I->click("Create new Teacher");
 
 $name = 'Katarzyna';
 $surname = 'Żołądź';
@@ -26,7 +26,7 @@ $I->see("The surname field is required.", "li");
 $I->see("The email field is required.", "li");
 $I->see("The password field is required.", "li");
 
-$I->dontSeeInDatabase('students', [
+$I->dontSeeInDatabase('teachers', [
     'name' => $name,
     'surname' => $surname,
     'email' => $email,
@@ -40,22 +40,22 @@ $I->fillField('password', $pas);
 
 $I->click("Create");
 
-$I->SeeInDatabase('students', [
+$I->SeeInDatabase('teachers', [
     'name' => $name,
     //'surname' => $surname,
     'email' => $email,
     //'password' => $pas
 ]);
 
-$I->seeCurrentUrlEquals("/deaneries/student_store");
+$I->seeCurrentUrlEquals("/deaneries/teacher_store");
 
 $I->see($email);
 
-$id = $I->grabFromDatabase('students', 'id', [
+$id = $I->grabFromDatabase('teachers', 'id', [
     'name' => $name
-    ]);
+]);
 
-$id = "deaneries/student_show/" . $id;
+$id = "deaneries/teacher_show/" . $id;
 
 $I->amOnPage($id);
 
@@ -75,11 +75,11 @@ $I->see($name . " " . $surname );
 
 $I->click("Delete");
 
-$I->dontSeeInDatabase('students', [
+$I->dontSeeInDatabase('teachers', [
     'name' => $name,
     'surname' => $surname,
     'email' => $email,
     'password' => $pas
 ]);
 
-$I->seeCurrentUrlEquals("/deaneries/student_index");
+$I->seeCurrentUrlEquals("/deaneries/teacher_index");
