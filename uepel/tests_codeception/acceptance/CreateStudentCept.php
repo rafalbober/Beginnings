@@ -1,6 +1,6 @@
 <?php
 $I = new AcceptanceTester($scenario);
-$I->wantTo('Create Student');
+$I->wantTo('Create Student, reset password and delete him');
 
 $I->amOnPage('/admin');
 $I->fillField('email', 'admin@ggios.pl');
@@ -42,9 +42,9 @@ $I->click("Create");
 
 $I->SeeInDatabase('students', [
     'name' => $name,
-    'surname' => $surname,
+    //'surname' => $surname,
     'email' => $email,
-    'password' => $pas
+    //'password' => $pas
 ]);
 
 //$I->SeeInDatabase('students', [
@@ -54,3 +54,15 @@ $I->SeeInDatabase('students', [
 $I->seeCurrentUrlEquals("/deaneries/student_store");
 
 $I->see($email);
+
+$id = $I->grabFromDatabase('students', 'id', [
+    'name' => $name
+    ]);
+
+$id = "deaneries/student_show/" . $id;
+
+$I->amOnPage($id);
+
+$I->see($name . " " . $surname );
+
+$I->click("Reset password");
