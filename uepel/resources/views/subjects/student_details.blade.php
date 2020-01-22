@@ -34,9 +34,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h1></h1>
-                <h2>Subject: {{$subject->name}} </h2>
-                <h2>Student: {{$student->name}} {{$student->surname}}</h2>
-                <ol type = "1">
+                <div class="card">
+                <h2 style="margin: 2%">Subject: {{$subject->name}} </h2>
+                <h3 style="margin: 2%; margin-bottom: 5%">Student: {{$student->name}} {{$student->surname}}</h3>
+                <div ><ol type = "1">
                     <?php $j = 0; $i = 0; $g = 0; $avg = 0; ?>
                     @foreach ($subject->lesson as $lessons)
                         @foreach($student->degree as $degrees)
@@ -58,17 +59,17 @@
 
                                     ?>
                                     <div class="row">
-                                        <button onclick="showSlider({{$i}})" id="showSlider{{$i}}">Edit Degree</button>
+                                        <button onclick="showSlider({{$i}})" id="showSlider{{$i}}" class="btn btm-md " style="font-size:10px;background-color: #D3D3D3;  width: 30%">Edit Degree</button>
                                         <span style="display:none" id="span{{$i}}">
                                     <form method="POST" action="{{route('lesson.addDegree',$degrees->id)}}">
                                         @csrf
                                         {{ method_field('PATCH') }}
                                     <input type="range" oninput="displayDegree({{$i}})" onchange="displayDegree({{$i}})" min="2" max="5" step="0.5" id="range{{$i}}">
                                     <input type="text" name="degree"  readonly ="true" id="val{{$i}}">
-                                    <button type="submit">Update degree</button></form></span>
+                                    <button type="submit"class="btn btm-md " style="font-size:10px;background-color: #D3D3D3;  width: 30%">Update degree</button></form></span>
                                     </div>
                                 </li>
-                                <br>
+
                                 <?php $i = $i+1?>
                             @endif
                         @endforeach
@@ -84,55 +85,57 @@
 
                                     @endif
                                     <div class = "row">
-                                        <button onclick="showCheck({{$g}})" id="showCheck{{$g}}">Edit Presence</button>
+                                        <button onclick="showCheck({{$g}})" id="showCheck{{$g}}"class="btn btm-md " style="font-size:10px;background-color: #D3D3D3;  width: 30%">Edit Presence</button>
                                         <span style="display:none" id="szpan{{$g}}">
                                                 <form method="POST" action="{{route('lesson.addPresence',$presences->id)}}">
                                                     @csrf
                                                     {{ method_field('PATCH') }}
                                                 <label>Presence: </label><input type="checkbox" name="presence">
-                                                <button type="submit">Update Presence</button></form></span>
+                                                <button type="submit"class="btn btm-md " style="font-size:10px;background-color: #D3D3D3;  width: 30%">Update Presence</button></form></span>
                                     </div>
+                                    <br>
                                     <?php $g = $g + 1?>
                                 @endif
                             @endforeach
                     @endforeach
                 </ol>
+                </div>
 
                 <?php if ($avg != 0)
                     $avg = $avg / $j;
                 ?>
 
 
-                Average:
-                <?php
-                if ($avg != 0)
-                    echo $avg;
-                ?>
-                    <br>
-                        Ocena koncowa:
-                                    <?php
-                                    if(!is_null($subjectDegree->degree))
-                                    {
-                                        echo $subjectDegree->degree;
-                                    }
-                                    else
-                                    {
-                                        echo 'No Degree';
-                                    }
+                <p class="text-center" style="margin-left: 2%">Average:
+                    <?php
+                    if ($avg != 0)
+                        echo $avg;
+                     ?></p>
+                <p class="text-center" style="margin-left: 2%">Ocena koncowa:
+                    <?php
+                    if(!is_null($subjectDegree->degree))
+                    {
+                        echo $subjectDegree->degree;
+                    }
+                    else
+                        {
+                            echo 'No Degree';
+                        }
+                    ?></p>
+                    <div style="margin-left: 3%;margin-bottom: 2%" class="col-md-12 justify-content-center">
+                        <button onclick="showSlider({{$i}})" id="showSlider{{$i}}" class="btn btm-md justify-content-center " style=" font-size:10px;background-color: #D3D3D3;  width: 90%">Edit Degree</button>
+                        <span style="display:none" id="span{{$i}}">
+                            <form method="POST" action="{{route('subject.addDegree',$subjectDegree->id)}}">
+                                @csrf
+                                {{ method_field('PATCH') }}
+                                <input type="range" oninput="displayDegree({{$i}})" onchange="displayDegree({{$i}})" min="2" max="5" step="0.5" id="range{{$i}}">
+                                <input type="text" name="degree"  readonly ="true" id="val{{$i}}">
+                                <button type="submit"class="btn btm-md " style="font-size:10px;background-color: #D3D3D3;  width: 30%">Update degree</button>
+                            </form>
+                        </span>
+                    </div>
 
-                                    ?>
-                        <div class="row">
-                                            <button onclick="showSlider({{$i}})" id="showSlider{{$i}}">Edit Degree</button>
-                                            <span style="display:none" id="span{{$i}}">
-                                                            <form method="POST" action="{{route('subject.addDegree',$subjectDegree->id)}}">
-                                                                @csrf
-                                                                {{ method_field('PATCH') }}
-                                                            <input type="range" oninput="displayDegree({{$i}})" onchange="displayDegree({{$i}})" min="2" max="5" step="0.5" id="range{{$i}}">
-                                                            <input type="text" name="degree"  readonly ="true" id="val{{$i}}">
-                                                            <button type="submit">Update degree</button></form></span>
-                                        </div>
-
-
+                </div>
             </div>
         </div>
     </div>
