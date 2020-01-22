@@ -1,6 +1,6 @@
 <?php
 $I = new AcceptanceTester($scenario);
-$I->wantTo('Create Student, reset password and delete him');
+$I->wantTo('Create Teacher, reset password and delete him');
 
 $I->amOnPage('/admin');
 $I->fillField('email', 'admin@ggios.pl');
@@ -9,10 +9,10 @@ $I->click('#login_button');
 $I->click("Teachers");
 $I->click("Create new Teacher");
 
-$name = 'Katarzyna';
-$surname = 'Żołądź';
+$name = 'Jurek';
+$surname = 'Głaz';
 $email = 'email@ggios.pl';
-$pas = "hehe";
+$pas = "hahaha";
 
 $I->fillField('name', " ");
 $I->fillField('surname', " ");
